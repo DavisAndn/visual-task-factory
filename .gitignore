@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+dist/
+build/
+
+# Generated datasets (vtf generate --out)
+out/
+
+# Local secrets, such as model API keys
+.env
+
+# macOS
+.DS_Store

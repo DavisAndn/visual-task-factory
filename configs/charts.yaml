@@ -1,0 +1,38 @@
+# Settings for: vtf generate --family charts --config configs/charts.yaml
+# Every value here matches the built-in default; edit what you want to change and delete the rest.
+
+questions_per_scene: 3   # questions asked about each image (each from a different template)
+max_scenes: null         # stop after this many images even if --n isn't reached (default: 5 x n)
+
+# Target share of accepted tasks per template, relative to each other.
+templates:
+  count_categories: 0.5
+  read_value: 1
+  extremum: 1
+  compare_pair: 1
+  count_above: 1
+  difference: 1
+  rank_then_read: 1
+  what_if: 1
+  trend_decreases: 1
+  largest_increase: 1
+
+scene:
+  chart_types: {bar: 0.3, hbar: 0.2, grouped_bar: 0.25, line: 0.25}
+  style:
+    value_labels: 0.5    # probability that exact values are printed on the chart
+    fonts: [DejaVu Sans, DejaVu Serif, DejaVu Sans Mono]   # bundled with matplotlib
+    font_size: [9.0, 12.0]
+    figsizes: [[6.4, 4.0], [7.2, 4.5], [5.6, 4.2], [6.0, 5.0]]
+    dpi: 110
+    label_rotations: [0, 0, 30, 45]
+
+validation:
+  min_font_px: 9           # smallest text counted as readable
+  min_mark_px: 3           # smallest bar or point counted as visible
+  overlap_tol_px: 1        # overlap allowed between two items before it counts
+  clean_text: true         # reject images where any two pieces of text collide, used by the question or not
+  visual_gap: 0.05         # without printed values, deciding gaps must exceed this share of the axis
+  max_relative_tolerance: 0.2  # numbers read off an axis must be readable to within this share
+  dedup_max_hamming: 8     # image-hash distance at or below which two images are near-copies
+  determinism_sample: 0.1  # share of images rebuilt from their seed to confirm identical output
