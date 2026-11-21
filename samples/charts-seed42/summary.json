@@ -1,0 +1,209 @@
+{
+  "family": "charts",
+  "seed": 42,
+  "requested": 300,
+  "accepted": 300,
+  "candidates": 443,
+  "acceptance_rate": 0.677,
+  "scenes_rendered": 153,
+  "elapsed_seconds": 6.32,
+  "funnel": [
+    {
+      "gate": "determinism",
+      "rejected": 0,
+      "remaining": 443
+    },
+    {
+      "gate": "grounding",
+      "rejected": 22,
+      "remaining": 421
+    },
+    {
+      "gate": "ambiguity",
+      "rejected": 121,
+      "remaining": 300
+    },
+    {
+      "gate": "dedup",
+      "rejected": 0,
+      "remaining": 300
+    }
+  ],
+  "rejection_reasons": {
+    "ambiguity: too_close": 107,
+    "grounding: cluttered_image": 15,
+    "ambiguity: imprecise": 14,
+    "grounding: label_on_mark": 4,
+    "grounding: too_small": 3
+  },
+  "coverage": {
+    "skill": {
+      "extremum": 36,
+      "retrieval": 35,
+      "arithmetic": 35,
+      "comparison": 34,
+      "multi_hop": 34,
+      "counting": 33,
+      "counterfactual": 25,
+      "aggregation": 23,
+      "composition": 19,
+      "structure": 16,
+      "trend": 10
+    },
+    "template": {
+      "read_value": 25,
+      "what_if": 25,
+      "extremum": 25,
+      "compare_pair": 24,
+      "difference": 24,
+      "rank_then_read": 24,
+      "count_above": 24,
+      "stack_total": 23,
+      "largest_segment": 19,
+      "count_categories": 16,
+      "pie_extremum": 11,
+      "pie_combined": 11,
+      "trend_decreases": 10,
+      "largest_increase": 10,
+      "pie_share": 10,
+      "pie_compare": 10,
+      "pie_count_above": 9
+    },
+    "chart type": {
+      "bar": 74,
+      "stacked_bar": 54,
+      "pie": 51,
+      "hbar": 48,
+      "line": 37,
+      "grouped_bar": 36
+    },
+    "values": {
+      "not printed": 152,
+      "printed": 148
+    },
+    "topic": {
+      "apps": 84,
+      "population": 67,
+      "tourism": 55,
+      "energy": 48,
+      "sales": 46
+    },
+    "categories": {
+      "2\u20134": 130,
+      "5\u20136": 121,
+      "7+": 49
+    },
+    "label angle": {
+      "0\u00b0": 191,
+      "45\u00b0": 58,
+      "30\u00b0": 51
+    }
+  },
+  "answer_prior": {
+    "compare_pair": {
+      "tasks": 24,
+      "most_common_answer": "yes",
+      "share": 0.5
+    },
+    "count_above": {
+      "tasks": 24,
+      "most_common_answer": "2",
+      "share": 0.333
+    },
+    "count_categories": {
+      "tasks": 16,
+      "most_common_answer": "3",
+      "share": 0.375
+    },
+    "difference": {
+      "tasks": 24,
+      "most_common_answer": "17",
+      "share": 0.083
+    },
+    "extremum": {
+      "tasks": 25,
+      "most_common_answer": "Portugal",
+      "share": 0.08,
+      "named_in_question": 0.0
+    },
+    "largest_increase": {
+      "tasks": 10,
+      "most_common_answer": "Greece",
+      "share": 0.1,
+      "named_in_question": 0.0
+    },
+    "largest_segment": {
+      "tasks": 19,
+      "most_common_answer": "Fitness",
+      "share": 0.105,
+      "named_in_question": 0.0
+    },
+    "pie_combined": {
+      "tasks": 11,
+      "most_common_answer": "58",
+      "share": 0.182
+    },
+    "pie_compare": {
+      "tasks": 10,
+      "most_common_answer": "no",
+      "share": 0.6
+    },
+    "pie_count_above": {
+      "tasks": 9,
+      "most_common_answer": "2",
+      "share": 0.444
+    },
+    "pie_extremum": {
+      "tasks": 11,
+      "most_common_answer": "Notes",
+      "share": 0.182,
+      "named_in_question": 0.0
+    },
+    "pie_share": {
+      "tasks": 10,
+      "most_common_answer": "28",
+      "share": 0.1
+    },
+    "rank_then_read": {
+      "tasks": 24,
+      "most_common_answer": "296",
+      "share": 0.083
+    },
+    "read_value": {
+      "tasks": 25,
+      "most_common_answer": "434",
+      "share": 0.04
+    },
+    "stack_total": {
+      "tasks": 23,
+      "most_common_answer": "112.5",
+      "share": 0.043
+    },
+    "trend_decreases": {
+      "tasks": 10,
+      "most_common_answer": "4",
+      "share": 0.4
+    },
+    "what_if": {
+      "tasks": 25,
+      "most_common_answer": "Harlow",
+      "share": 0.08,
+      "named_in_question": 0.2
+    }
+  },
+  "determinism": {
+    "checked": 16,
+    "passed": 16
+  },
+  "versions": {
+    "vtf": "0.1.0",
+    "python": "3.13.2",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.5"
+  },
+  "balance_skips": {
+    "count_categories": 3,
+    "trend_decreases": 2,
+    "pie_count_above": 1
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "family": "charts",
+  "seed": 7,
+  "requested": 150,
+  "accepted": 150,
+  "candidates": 347,
+  "acceptance_rate": 0.432,
+  "scenes_rendered": 120,
+  "elapsed_seconds": 5.74,
+  "funnel": [
+    {
+      "gate": "determinism",
+      "rejected": 0,
+      "remaining": 347
+    },
+    {
+      "gate": "grounding",
+      "rejected": 8,
+      "remaining": 339
+    },
+    {
+      "gate": "ambiguity",
+      "rejected": 189,
+      "remaining": 150
+    },
+    {
+      "gate": "dedup",
+      "rejected": 0,
+      "remaining": 150
+    }
+  ],
+  "rejection_reasons": {
+    "ambiguity: too_close": 149,
+    "ambiguity: imprecise": 40,
+    "grounding: too_small": 5,
+    "grounding: cluttered_image": 3
+  },
+  "coverage": {
+    "skill": {
+      "multi_hop": 28,
+      "retrieval": 17,
+      "comparison": 17,
+      "extremum": 17,
+      "arithmetic": 17,
+      "counterfactual": 14,
+      "counting": 14,
+      "aggregation": 11,
+      "structure": 10,
+      "trend": 3,
+      "composition": 2
+    },
+    "template": {
+      "what_if": 14,
+      "largest_increase": 14,
+      "read_value": 14,
+      "count_above": 14,
+      "compare_pair": 14,
+      "extremum": 14,
+      "difference": 14,
+      "rank_then_read": 14,
+      "stack_total": 11,
+      "count_categories": 10,
+      "trend_decreases": 3,
+      "pie_share": 3,
+      "pie_combined": 3,
+      "pie_compare": 3,
+      "pie_extremum": 3,
+      "largest_segment": 2
+    },
+    "chart type": {
+      "grouped_bar": 45,
+      "bar": 41,
+      "hbar": 20,
+      "line": 17,
+      "stacked_bar": 15,
+      "pie": 12
+    },
+    "values": {
+      "not printed": 150
+    },
+    "topic": {
+      "population": 33,
+      "apps": 32,
+      "tourism": 31,
+      "energy": 30,
+      "sales": 24
+    },
+    "categories": {
+      "7+": 89,
+      "5\u20136": 61
+    },
+    "label angle": {
+      "0\u00b0": 96,
+      "45\u00b0": 39,
+      "30\u00b0": 15
+    }
+  },
+  "answer_prior": {
+    "compare_pair": {
+      "tasks": 14,
+      "most_common_answer": "no",
+      "share": 0.571
+    },
+    "count_above": {
+      "tasks": 14,
+      "most_common_answer": "3",
+      "share": 0.286
+    },
+    "count_categories": {
+      "tasks": 10,
+      "most_common_answer": "9",
+      "share": 0.4
+    },
+    "difference": {
+      "tasks": 14,
+      "most_common_answer": "222",
+      "share": 0.071
+    },
+    "extremum": {
+      "tasks": 14,
+      "most_common_answer": "2000",
+      "share": 0.071,
+      "named_in_question": 0.0
+    },
+    "largest_increase": {
+      "tasks": 14,
+      "most_common_answer": "Maps",
+      "share": 0.143,
+      "named_in_question": 0.0
+    },
+    "largest_segment": {
+      "tasks": 2,
+      "most_common_answer": "Chile",
+      "share": 0.5,
+      "named_in_question": 0.0
+    },
+    "pie_combined": {
+      "tasks": 3,
+      "most_common_answer": "33",
+      "share": 0.333
+    },
+    "pie_compare": {
+      "tasks": 3,
+      "most_common_answer": "yes",
+      "share": 0.667
+    },
+    "pie_extremum": {
+      "tasks": 3,
+      "most_common_answer": "Vietnam",
+      "share": 0.333,
+      "named_in_question": 0.0
+    },
+    "pie_share": {
+      "tasks": 3,
+      "most_common_answer": "22",
+      "share": 0.333
+    },
+    "rank_then_read": {
+      "tasks": 14,
+      "most_common_answer": "279",
+      "share": 0.071
+    },
+    "read_value": {
+      "tasks": 14,
+      "most_common_answer": "130",
+      "share": 0.071
+    },
+    "stack_total": {
+      "tasks": 11,
+      "most_common_answer": "112.7",
+      "share": 0.091
+    },
+    "trend_decreases": {
+      "tasks": 3,
+      "most_common_answer": "3",
+      "share": 0.333
+    },
+    "what_if": {
+      "tasks": 14,
+      "most_common_answer": "West",
+      "share": 0.143,
+      "named_in_question": 0.143
+    }
+  },
+  "determinism": {
+    "checked": 12,
+    "passed": 12
+  },
+  "versions": {
+    "vtf": "0.1.0",
+    "python": "3.13.2",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.5"
+  },
+  "balance_skips": {
+    "compare_pair": 3
+  }
+}

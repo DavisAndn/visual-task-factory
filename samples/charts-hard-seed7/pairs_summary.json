@@ -1,0 +1,73 @@
+{
+  "share": 1.0,
+  "seed": 0,
+  "tasks": 150,
+  "pairs": 129,
+  "median_edit": 0.121,
+  "by_template": {
+    "compare_pair": {
+      "tasks": 14,
+      "pairs": 8
+    },
+    "count_above": {
+      "tasks": 14,
+      "pairs": 14
+    },
+    "count_categories": {
+      "tasks": 10,
+      "pairs": 0
+    },
+    "difference": {
+      "tasks": 14,
+      "pairs": 13
+    },
+    "extremum": {
+      "tasks": 14,
+      "pairs": 13
+    },
+    "largest_increase": {
+      "tasks": 14,
+      "pairs": 14
+    },
+    "largest_segment": {
+      "tasks": 2,
+      "pairs": 1
+    },
+    "pie_combined": {
+      "tasks": 3,
+      "pairs": 3
+    },
+    "pie_compare": {
+      "tasks": 3,
+      "pairs": 3
+    },
+    "pie_extremum": {
+      "tasks": 3,
+      "pairs": 3
+    },
+    "pie_share": {
+      "tasks": 3,
+      "pairs": 3
+    },
+    "rank_then_read": {
+      "tasks": 14,
+      "pairs": 12
+    },
+    "read_value": {
+      "tasks": 14,
+      "pairs": 14
+    },
+    "stack_total": {
+      "tasks": 11,
+      "pairs": 11
+    },
+    "trend_decreases": {
+      "tasks": 3,
+      "pairs": 3
+    },
+    "what_if": {
+      "tasks": 14,
+      "pairs": 14
+    }
+  }
+}

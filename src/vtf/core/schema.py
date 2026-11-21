@@ -98,3 +98,13 @@ class Task(BaseModel):
     trace: list[str]
     validation: dict[str, GateResult]
     scene: dict[str, Any]
+
+
+class Pair(BaseModel):
+    """A contrast pair: the same question about a minimally edited image, with a different answer."""
+
+    id: str
+    a: str  # id of the original task in tasks.jsonl
+    b: Task  # the twin task, on the edited image
+    change: str  # what was edited, e.g. "Peru in 2023: 55 → 92"
+    size: float  # the edit as a share of the value range the reader sees (0.1 = a tenth of the axis)

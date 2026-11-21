@@ -2,7 +2,7 @@ from vtf.core.family import Candidate, Question, Solution
 from vtf.core.schema import Answer, BBox, LayoutItem, LayoutManifest, Task
 from vtf.validators import AmbiguityGate, GroundingGate
 from vtf.validators.grounding import overlap_px
-from vtf.validators.models import BlindBaselineGate, score_response
+from vtf.validators.models import BlindBaselineGate, Reply, score_response
 
 META = {
     "value_axis": [0.0, 100.0],
@@ -91,6 +91,9 @@ def test_score_response():
     assert score_response(Answer(value="Spain", type="label"), " spain. ")
     assert score_response(Answer(value="no", type="yes_no"), "No, it was lower.")
     assert not score_response(Answer(value="yes", type="yes_no"), "No")
+    assert score_response(Answer(value="yes", type="yes_no"), "**Yes**")  # models sometimes answer in markdown
+    assert score_response(Answer(value=133, type="number"), "**133**")
+    assert score_response(Answer(value="Harlow", type="label"), "**Harlow**")
 
 
 class FakeClient:
@@ -100,7 +103,7 @@ class FakeClient:
         self.reply = reply
 
     def ask(self, prompt, image_path):
-        return self.reply
+        return Reply(text=self.reply, model="fake")
 
 
 def make_task(answer):
@@ -117,3 +120,11 @@ def test_blind_baseline_fails_questions_answerable_without_the_image():
     assert BlindBaselineGate(FakeClient("Peru")).check(task).status == "pass"
     yes_no = make_task(Answer(value="yes", type="yes_no"))
     assert BlindBaselineGate(FakeClient("yes")).check(yes_no).status == "pass"
+
+
+def test_scoring_reads_the_final_answer_after_shown_working():
+    assert score_response(Answer(value=97, type="number"), "335 - 238 = 97\n\n**97**")
+    assert score_response(Answer(value=14.5, type="number"), "18.1-3.6=14.5\n\n<tag>\n</tag>\n\n14.5")
+    assert score_response(Answer(value=97, type="number"), "335 - 238 = 97")
+    assert score_response(Answer(value="yes", type="yes_no"), "Photos 369, Maps 258.\nYes")
+    assert not score_response(Answer(value=5.6, type="number"), "-5.6")  # a signed answer to an absolute question

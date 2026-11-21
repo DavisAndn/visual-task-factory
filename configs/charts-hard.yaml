@@ -1,0 +1,22 @@
+# Harder charts, for finding where strong models break:
+#   uv run vtf generate --config configs/charts-hard.yaml --n 150 --seed 7 --out samples/charts-hard-seed7
+# Nothing is printed, so every value is read off an axis or a slice's angle; charts carry more
+# categories and series; gridlines are rarer; type is smaller (still above the 9 px legibility
+# floor). The gates are unchanged, so every task stays answerable by a careful person.
+
+scene:
+  chart_types: {bar: 0.2, hbar: 0.1, grouped_bar: 0.2, stacked_bar: 0.2, line: 0.2, pie: 0.1}
+  sizes:
+    bar: [8, 12]
+    hbar: [8, 12]
+    grouped_bar: [5, 7]
+    grouped_series: [3, 4]
+    stacked_bar: [5, 8]
+    stacked_series: [4, 5]
+    line: [8, 12]
+    line_series: [3, 4]
+    pie: [5, 5]
+  style:
+    value_labels: 0
+    grid: 0.2
+    font_size: [8.0, 10.0]

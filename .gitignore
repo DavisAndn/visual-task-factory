@@ -14,3 +14,6 @@ out/
 
 # macOS
 .DS_Store
+
+# Audit pages embed every image; regenerate them with vtf audit
+samples/**/audit.html

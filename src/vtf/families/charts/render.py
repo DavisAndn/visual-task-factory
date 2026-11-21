@@ -23,9 +23,20 @@ class _Drawn:
     value_axis: str  # "x" for horizontal bars, otherwise "y"
     marks: list[tuple[str, Any]] = field(default_factory=list)
     points: list[tuple[str, float, float, float]] = field(default_factory=list)  # id, x, y, marker size (pt)
+    # Line segments between points: id, x0, y0, x1, y1 in data units, line width (pt). They are marks
+    # too, so the grounding gate rejects printed values that a line runs through.
+    segments: list[tuple[str, float, float, float, float, float]] = field(default_factory=list)
     values: list[tuple[str, Any]] = field(default_factory=list)
     legend: Any = None
     legend_inside: bool = False
+    has_axes: bool = True  # False for pies: no ticks or axis labels to record
+    category_texts: list[Any] = field(default_factory=list)  # pie slice labels (other charts use ticks)
+
+
+def _text_on(color: str) -> str:
+    """Dark or white text, whichever reads better on a fill of this color."""
+    r, g, b = (int(color.lstrip("#")[i : i + 2], 16) / 255 for i in (0, 2, 4))
+    return INK if 0.299 * r + 0.587 * g + 0.114 * b > 0.6 else "#FFFFFF"
 
 
 def render(scene: ChartScene) -> tuple[Image.Image, LayoutManifest]:
@@ -82,7 +93,7 @@ def _draw(ax: Any, scene: ChartScene) -> _Drawn:
                 drawn.values.append((f"val:0:{i}", label))
         ax.set_yticks(pos, scene.categories)
         ax.set_ylim(n - 0.4, -0.6)  # first category on top
-        ax.set_xlim(0, top * 1.2)
+        ax.set_xlim(*(st.value_limits or (0, top * 1.2)))
         ax.set_xlabel(scene.value_axis)
         ax.set_ylabel(scene.category_axis)
     elif scene.chart_type == "line":
@@ -90,6 +101,9 @@ def _draw(ax: Any, scene: ChartScene) -> _Drawn:
         for s_idx, s in enumerate(scene.series):
             color = st.palette[s_idx % len(st.palette)]
             (line,) = ax.plot(pos, s.values, marker="o", markersize=5.5, linewidth=2, color=color, label=s.name, zorder=2)
+            for i in range(n - 1):
+                ends = (float(pos[i]), s.values[i], float(pos[i + 1]), s.values[i + 1])
+                drawn.segments.append((f"seg:{s_idx}:{i}-{i + 1}", *ends, line.get_linewidth()))
             for i, value in enumerate(s.values):
                 drawn.points.append((f"point:{s_idx}:{i}", float(pos[i]), value, line.get_markersize()))
                 if st.value_labels:
@@ -99,9 +113,62 @@ def _draw(ax: Any, scene: ChartScene) -> _Drawn:
         ax.set_xlim(-0.4, n - 0.6)
         low = min(min(s.values) for s in scene.series)
         pad = max((top - low) * 0.12, 1.0)
-        ax.set_ylim(max(0.0, low - pad), top + pad * (3.0 if legend_inside else 1.5))
+        ax.set_ylim(*(st.value_limits or (max(0.0, low - pad), top + pad * (3.0 if legend_inside else 1.5))))
         ax.set_xlabel(scene.category_axis)
         ax.set_ylabel(scene.value_axis)
+    elif scene.chart_type == "stacked_bar":
+        drawn = _Drawn(value_axis="y")
+        bottoms = np.zeros(n)
+        for s_idx, s in enumerate(scene.series):
+            color = st.palette[s_idx % len(st.palette)]
+            bars = ax.bar(
+                pos, s.values, bottom=bottoms, width=st.bar_width, color=color, label=s.name, zorder=2,
+                edgecolor=st.background, linewidth=0.8,
+            )
+            for i, rect in enumerate(bars.patches):
+                drawn.marks.append((f"bar:{s_idx}:{i}", rect))
+                if st.value_labels:  # printed inside the segment
+                    xy = (rect.get_x() + rect.get_width() / 2, bottoms[i] + s.values[i] / 2)
+                    label = ax.annotate(
+                        _fmt(scene, s.values[i]), xy, xytext=(0, 0), ha="center", va="center", color=_text_on(color), **label_kw
+                    )
+                    drawn.values.append((f"val:{s_idx}:{i}", label))
+            bottoms = bottoms + np.asarray(s.values)
+        if st.value_labels:  # each stack's total, above it
+            for i, total in enumerate(bottoms):
+                label = ax.annotate(_fmt(scene, total), (pos[i], total), xytext=(0, 2), ha="center", va="bottom", **label_kw)
+                drawn.values.append((f"tot:{i}", label))
+        ax.set_xticks(pos, scene.categories, **tick_kw)
+        ax.set_xlim(-0.6, n - 0.4)
+        headroom = 1.1 + (0.08 if st.value_labels else 0.0) + (0.35 if legend_inside else 0.0)
+        ax.set_ylim(*(st.value_limits or (0, float(bottoms.max()) * headroom)))
+        ax.set_xlabel(scene.category_axis)
+        ax.set_ylabel(scene.value_axis)
+    elif scene.chart_type == "pie":
+        drawn = _Drawn(value_axis="y", has_axes=False)
+        s = scene.series[0]
+        colors = [st.palette[i % len(st.palette)] for i in range(n)]
+        wedges, texts, *auto = ax.pie(
+            s.values,
+            labels=scene.categories,
+            colors=colors,
+            startangle=st.start_angle,
+            counterclock=False,
+            labeldistance=1.08,
+            autopct=(lambda pct: f"{pct:.{scene.decimals}f}%") if st.value_labels else None,
+            pctdistance=0.68,
+            wedgeprops={"edgecolor": st.background, "linewidth": 1.2},
+            textprops={"color": INK},
+        )
+        for i, wedge in enumerate(wedges):
+            drawn.marks.append((f"wedge:0:{i}", wedge))
+        drawn.category_texts = list(texts)
+        for i, text in enumerate(auto[0] if auto else []):
+            text.set_color(_text_on(colors[i]))
+            text.set_fontsize(st.font_size * 0.85)
+            drawn.values.append((f"pct:{i}", text))
+        ax.set_aspect("equal")
+        ax.axis("off")
     else:  # bar, grouped_bar
         drawn = _Drawn(value_axis="y")
         width = st.bar_width / k
@@ -118,12 +185,12 @@ def _draw(ax: Any, scene: ChartScene) -> _Drawn:
         ax.set_xticks(pos, scene.categories, **tick_kw)
         ax.set_xlim(-0.6, n - 0.4)
         headroom = 1.1 + (0.08 if st.value_labels else 0.0) + (0.35 if legend_inside else 0.0)
-        ax.set_ylim(0, top * headroom)
+        ax.set_ylim(*(st.value_limits or (0, top * headroom)))
         ax.set_xlabel(scene.category_axis)
         ax.set_ylabel(scene.value_axis)
 
     ax.set_title(scene.title)
-    if st.grid:
+    if st.grid and drawn.has_axes:
         ax.grid(True, axis=drawn.value_axis, color="#d4d4d4", linewidth=0.8)
         ax.set_axisbelow(True)
     if st.hide_spines:
@@ -162,24 +229,28 @@ def _layout(canvas: FigureCanvasAgg, ax: Any, scene: ChartScene, drawn: _Drawn) 
             )
         )
 
-    cat_axis, val_axis = (ax.yaxis, ax.xaxis) if drawn.value_axis == "x" else (ax.xaxis, ax.yaxis)
     add_text("title", ax.title)
-    add_text("axis:category", cat_axis.label)
-    add_text("axis:value", val_axis.label)
-
     index = {name: i for i, name in enumerate(scene.categories)}
-    for label in cat_axis.get_ticklabels():
-        if label.get_text() in index:
-            add_text(f"cat:{index[label.get_text()]}", label)
-
-    low, high = sorted(float(v) for v in val_axis.get_view_interval())
     ticks: list[float] = []
-    for tick in val_axis.get_major_ticks():
-        loc = tick.get_loc()
-        if loc is None or not (low - 1e-9 <= loc <= high + 1e-9) or not tick.label1.get_visible():
-            continue
-        add_text(f"vtick:{len(ticks)}", tick.label1)
-        ticks.append(float(loc))
+    if drawn.has_axes:
+        cat_axis, val_axis = (ax.yaxis, ax.xaxis) if drawn.value_axis == "x" else (ax.xaxis, ax.yaxis)
+        add_text("axis:category", cat_axis.label)
+        add_text("axis:value", val_axis.label)
+        for label in cat_axis.get_ticklabels():
+            if label.get_text() in index:
+                add_text(f"cat:{index[label.get_text()]}", label)
+        low, high = sorted(float(v) for v in val_axis.get_view_interval())
+        for tick in val_axis.get_major_ticks():
+            loc = tick.get_loc()
+            if loc is None or not (low - 1e-9 <= loc <= high + 1e-9) or not tick.label1.get_visible():
+                continue
+            add_text(f"vtick:{len(ticks)}", tick.label1)
+            ticks.append(float(loc))
+    else:  # pie: shares in percent, labels beside the slices
+        low, high = 0.0, 100.0
+        for text in drawn.category_texts:
+            if text.get_text() in index:
+                add_text(f"cat:{index[text.get_text()]}", text)
 
     for element_id, text in drawn.values:
         add_text(element_id, text)
@@ -197,8 +268,18 @@ def _layout(canvas: FigureCanvasAgg, ax: Any, scene: ChartScene, drawn: _Drawn) 
         r = size_pt * px_per_pt / 2
         box = BBox(x0=cx - r, y0=height - cy - r, x1=cx + r, y1=height - cy + r)
         items.append(LayoutItem(element_id=element_id, kind="mark", bbox=box))
+    for element_id, x0, y0, x1, y1, width_pt in drawn.segments:
+        (ax0, ay0), (ax1, ay1) = (tuple(float(v) for v in ax.transData.transform(p)) for p in ((x0, y0), (x1, y1)))
+        ay0, ay1 = height - ay0, height - ay1
+        length = math.hypot(ax1 - ax0, ay1 - ay0) or 1.0
+        half = width_pt * px_per_pt / 2
+        nx, ny = -(ay1 - ay0) / length * half, (ax1 - ax0) / length * half
+        quad = [(ax0 + nx, ay0 + ny), (ax1 + nx, ay1 + ny), (ax1 - nx, ay1 - ny), (ax0 - nx, ay0 - ny)]
+        xs, ys = [p[0] for p in quad], [p[1] for p in quad]
+        box = BBox(x0=min(xs), y0=min(ys), x1=max(xs), y1=max(ys))
+        items.append(LayoutItem(element_id=element_id, kind="mark", bbox=box, quad=quad))
 
-    step = min((b - a for a, b in zip(ticks, ticks[1:])), default=(high - low) / 5)
+    step = min((b - a for a, b in zip(ticks, ticks[1:])), default=(high - low) / 10)
     meta = {
         "value_axis": [low, high],
         "value_ticks": ticks,

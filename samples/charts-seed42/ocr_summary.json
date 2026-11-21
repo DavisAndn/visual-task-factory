@@ -1,0 +1,68 @@
+{
+  "engine": "tesseract 5.5.3",
+  "labels": 1264,
+  "read_back": 1260,
+  "read_on_second_attempt": 23,
+  "tasks": 300,
+  "tasks_fully_read_back": 295,
+  "by_kind": {
+    "cat": {
+      "labels": 553,
+      "read_back": 553
+    },
+    "legend": {
+      "labels": 102,
+      "read_back": 102
+    },
+    "pct": {
+      "labels": 39,
+      "read_back": 39
+    },
+    "title": {
+      "labels": 57,
+      "read_back": 57
+    },
+    "tot": {
+      "labels": 11,
+      "read_back": 11
+    },
+    "val": {
+      "labels": 147,
+      "read_back": 146
+    },
+    "vtick": {
+      "labels": 355,
+      "read_back": 352
+    }
+  },
+  "misses": [
+    {
+      "image": "images/charts-000006.png",
+      "element": "vtick:1",
+      "expected": "50",
+      "got": "30",
+      "crop": "ocr/miss-0000.png"
+    },
+    {
+      "image": "images/charts-000040.png",
+      "element": "val:0:3",
+      "expected": "5.2",
+      "got": "3.2",
+      "crop": "ocr/miss-0001.png"
+    },
+    {
+      "image": "images/charts-000046.png",
+      "element": "vtick:1",
+      "expected": "50",
+      "got": "30",
+      "crop": "ocr/miss-0002.png"
+    },
+    {
+      "image": "images/charts-000050.png",
+      "element": "vtick:4",
+      "expected": "525",
+      "got": "325",
+      "crop": "ocr/miss-0003.png"
+    }
+  ]
+}

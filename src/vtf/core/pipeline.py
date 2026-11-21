@@ -22,7 +22,7 @@ from ..families import get_family
 from ..report import write_report
 from ..validators import AmbiguityGate, DedupGate, GroundingGate, dhash
 from .family import Candidate, Family, Template
-from .schema import GateResult, LayoutManifest, Task
+from .schema import Answer, GateResult, LayoutManifest, Task
 
 GATE_ORDER = ("determinism", "grounding", "ambiguity", "dedup")
 
@@ -69,6 +69,16 @@ def pick_templates(
     return pool[:k]
 
 
+def over_represented(answer: Answer, counts: Counter[str], balance: dict[str, Any]) -> bool:
+    """Whether accepting this answer would push its value past the template's cap (see config.py)."""
+    total = sum(counts.values())
+    if not balance or total < balance["warmup"]:
+        return False
+    cap = balance["max_yes_no_share"] if answer.type == "yes_no" else balance["max_answer_share"]
+    # One task of slack, so small counts aren't forced into strict alternation; it fades as runs grow.
+    return counts[str(answer.value)] + 1 > cap * (total + 1) + 1
+
+
 def run(
     family: Family,
     n_tasks: int,
@@ -95,6 +105,8 @@ def run(
     accepted: list[Task] = []
     rejected: list[Task] = []
     per_template: Counter[str] = Counter()
+    answers: dict[str, Counter[str]] = defaultdict(Counter)
+    balance_skips: Counter[str] = Counter()
     determinism = {"checked": 0, "passed": 0}
     started = time.perf_counter()
     index = 0
@@ -157,6 +169,10 @@ def run(
                 )
                 line = task.model_dump_json() + "\n"
                 if all(r.status != "fail" for r in results.values()):
+                    if over_represented(solution.answer, answers[template.id], cfg.get("balance", {})):
+                        balance_skips[template.id] += 1  # valid, just not needed: not a rejection
+                        continue
+                    answers[template.id][str(solution.answer.value)] += 1
                     accepted.append(task)
                     ok_file.write(line)
                     per_template[template.id] += 1
@@ -172,6 +188,7 @@ def run(
 
     elapsed = time.perf_counter() - started
     summary = _summarize(family, seed, n_tasks, index, elapsed, accepted, rejected, determinism)
+    summary["balance_skips"] = dict(balance_skips.most_common())
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2))
     write_report(out_dir, summary, accepted, rejected)
     return summary

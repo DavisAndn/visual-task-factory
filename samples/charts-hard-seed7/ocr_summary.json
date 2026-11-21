@@ -1,0 +1,27 @@
+{
+  "engine": "tesseract 5.5.3",
+  "labels": 1040,
+  "read_back": 1040,
+  "read_on_second_attempt": 20,
+  "tasks": 150,
+  "tasks_fully_read_back": 150,
+  "by_kind": {
+    "cat": {
+      "labels": 520,
+      "read_back": 520
+    },
+    "legend": {
+      "labels": 72,
+      "read_back": 72
+    },
+    "title": {
+      "labels": 31,
+      "read_back": 31
+    },
+    "vtick": {
+      "labels": 417,
+      "read_back": 417
+    }
+  },
+  "misses": []
+}

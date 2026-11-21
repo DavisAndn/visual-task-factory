@@ -1,0 +1,125 @@
+{
+  "family": "charts",
+  "questions_per_scene": 3,
+  "max_scenes": null,
+  "templates": {
+    "count_categories": 0.5,
+    "read_value": 1.0,
+    "extremum": 1.0,
+    "compare_pair": 1.0,
+    "count_above": 1.0,
+    "difference": 1.0,
+    "rank_then_read": 1.0,
+    "what_if": 1.0,
+    "trend_decreases": 1.0,
+    "largest_increase": 1.0,
+    "stack_total": 1.0,
+    "largest_segment": 1.0,
+    "pie_share": 1.0,
+    "pie_extremum": 1.0,
+    "pie_compare": 1.0,
+    "pie_combined": 1.0,
+    "pie_count_above": 1.0
+  },
+  "scene": {
+    "chart_types": {
+      "bar": 0.2,
+      "hbar": 0.1,
+      "grouped_bar": 0.2,
+      "stacked_bar": 0.2,
+      "line": 0.2,
+      "pie": 0.1
+    },
+    "sizes": {
+      "bar": [
+        8,
+        12
+      ],
+      "hbar": [
+        8,
+        12
+      ],
+      "grouped_bar": [
+        5,
+        7
+      ],
+      "grouped_series": [
+        3,
+        4
+      ],
+      "stacked_bar": [
+        5,
+        8
+      ],
+      "stacked_series": [
+        4,
+        5
+      ],
+      "line": [
+        8,
+        12
+      ],
+      "line_series": [
+        3,
+        4
+      ],
+      "pie": [
+        5,
+        5
+      ]
+    },
+    "style": {
+      "value_labels": 0,
+      "fonts": [
+        "DejaVu Sans",
+        "DejaVu Serif",
+        "DejaVu Sans Mono"
+      ],
+      "font_size": [
+        8.0,
+        10.0
+      ],
+      "figsizes": [
+        [
+          6.4,
+          4.0
+        ],
+        [
+          7.2,
+          4.5
+        ],
+        [
+          5.6,
+          4.2
+        ],
+        [
+          6.0,
+          5.0
+        ]
+      ],
+      "dpi": 110,
+      "label_rotations": [
+        0,
+        0,
+        30,
+        45
+      ],
+      "grid": 0.2
+    }
+  },
+  "validation": {
+    "min_font_px": 9.0,
+    "min_mark_px": 3.0,
+    "overlap_tol_px": 1.0,
+    "clean_text": true,
+    "visual_gap": 0.05,
+    "max_relative_tolerance": 0.2,
+    "dedup_max_hamming": 8,
+    "determinism_sample": 0.1
+  },
+  "balance": {
+    "max_answer_share": 0.35,
+    "max_yes_no_share": 0.55,
+    "warmup": 8
+  }
+}

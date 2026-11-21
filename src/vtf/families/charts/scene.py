@@ -2,13 +2,14 @@
 
 from __future__ import annotations
 
+import math
 import random
 from dataclasses import dataclass
 from typing import Any, Literal
 
 from pydantic import BaseModel
 
-ChartType = Literal["bar", "hbar", "grouped_bar", "line"]
+ChartType = Literal["bar", "hbar", "grouped_bar", "stacked_bar", "line", "pie"]
 
 
 @dataclass(frozen=True)
@@ -130,7 +131,20 @@ BACKGROUNDS = ("#FFFFFF", "#FAFAF7", "#F3F5F8")
 LEGEND_LOCS = ("upper right", "upper left", "outside")
 
 DEFAULTS: dict[str, Any] = {
-    "chart_types": {"bar": 0.3, "hbar": 0.2, "grouped_bar": 0.25, "line": 0.25},
+    "chart_types": {"bar": 0.2, "hbar": 0.14, "grouped_bar": 0.16, "stacked_bar": 0.16, "line": 0.18, "pie": 0.16},
+    # How many categories (and series) each chart type gets, as [min, max]; capped by the topic's
+    # word lists and by the 5 colors in a palette. line_series is a list to pick from.
+    "sizes": {
+        "bar": [3, 8],
+        "hbar": [3, 8],
+        "grouped_bar": [3, 6],
+        "grouped_series": [2, 3],
+        "stacked_bar": [3, 6],
+        "stacked_series": [2, 4],
+        "line": [5, 9],
+        "line_series": [1, 1, 2, 3],
+        "pie": [3, 5],
+    },
     "style": {
         "value_labels": 0.5,  # probability that exact values are printed on the chart
         # Matplotlib ships these fonts, so images are pixel-identical on any machine.
@@ -139,8 +153,10 @@ DEFAULTS: dict[str, Any] = {
         "figsizes": [[6.4, 4.0], [7.2, 4.5], [5.6, 4.2], [6.0, 5.0]],
         "dpi": 110,
         "label_rotations": [0, 0, 30, 45],
+        "grid": 0.6,  # probability of gridlines
     },
 }
+MAX_COLORS = 5  # every palette has five
 
 
 class Series(BaseModel):
@@ -161,6 +177,10 @@ class ChartStyle(BaseModel):
     figsize: tuple[float, float]
     dpi: int
     hide_spines: bool
+    # Pinned value-axis range. Unset for sampled scenes; contrast pairs set it so that editing one
+    # value leaves the axis, gridlines and every other mark exactly where they were.
+    value_limits: tuple[float, float] | None = None
+    start_angle: int = 90  # pie charts: where the first slice starts, in degrees
 
 
 class ChartScene(BaseModel):
@@ -177,31 +197,64 @@ class ChartScene(BaseModel):
     style: ChartStyle
 
 
+def _count(rng: random.Random, bounds: list[int], cap: int) -> int:
+    low, high = bounds
+    return rng.randint(min(low, cap), min(high, cap))
+
+
 def sample_scene(rng: random.Random, cfg: dict[str, Any]) -> ChartScene:
     chart_type = _weighted(rng, cfg["chart_types"])
     d = rng.choice(DOMAINS)
+    sizes = cfg["sizes"]
     if chart_type in ("bar", "hbar"):
-        cats = rng.sample(d.entities, rng.randint(3, 8))
+        cats = rng.sample(d.entities, _count(rng, sizes[chart_type], len(d.entities)))
         period = rng.choice(d.periods)
         series = [Series(name=period, values=[_value(rng, d) for _ in cats])]
         title = f"{d.title} by {d.entity[0]}, {period}"
     elif chart_type == "grouped_bar":
-        cats = rng.sample(d.entities, rng.randint(3, 6))
-        k = rng.randint(2, 3)
+        cats = rng.sample(d.entities, _count(rng, sizes["grouped_bar"], len(d.entities)))
+        k = _count(rng, sizes["grouped_series"], min(len(d.periods), MAX_COLORS))
         start = rng.randrange(len(d.periods) - k + 1)
         periods = d.periods[start : start + k]
         bases = [_value(rng, d) for _ in cats]
         series = [Series(name=p, values=[_drift(rng, base, d) for base in bases]) for p in periods]
         title = f"{d.title} by {d.entity[0]}, {periods[0]}–{periods[-1]}"
-    else:
-        n = rng.randint(5, min(9, len(d.periods)))
+    elif chart_type == "stacked_bar":
+        # Periods along the axis, each bar split into one segment per entity.
+        n = _count(rng, sizes["stacked_bar"], len(d.periods))
         start = rng.randrange(len(d.periods) - n + 1)
         cats = list(d.periods[start : start + n])
-        names = rng.sample(d.entities, rng.choice((1, 1, 2, 3)))
+        names = rng.sample(d.entities, _count(rng, sizes["stacked_series"], MAX_COLORS))
+        series = [Series(name=name, values=[_drift(rng, base, d) for _ in cats]) for name, base in
+                  ((name, _value(rng, d)) for name in names)]
+        title = f"{d.title} by {d.entity[0]}, {cats[0]}–{cats[-1]}"
+    elif chart_type == "pie":
+        cats = rng.sample(d.entities, _count(rng, sizes["pie"], min(len(d.entities), MAX_COLORS)))
+        period = rng.choice(d.periods)
+        decimals = rng.choice((0, 1))
+        series = [Series(name=period, values=_shares(rng, len(cats), decimals))]
+        title = f"{d.title} by {d.entity[0]}, {period}: share of total"
+        return ChartScene(
+            chart_type=chart_type,
+            domain=d.key,
+            title=title,
+            category_axis=d.entity[0].capitalize(),
+            value_axis="Share of total (%)",
+            decimals=decimals,
+            categories=list(cats),
+            categories_are_periods=False,
+            series=series,
+            style=_style(rng, cfg["style"], chart_type, 1),
+        )
+    else:
+        n = _count(rng, sizes["line"], len(d.periods))
+        start = rng.randrange(len(d.periods) - n + 1)
+        cats = list(d.periods[start : start + n])
+        names = rng.sample(d.entities, min(rng.choice(sizes["line_series"]), MAX_COLORS))
         series = [Series(name=name, values=_walk(rng, d, n)) for name in names]
         span = f"{cats[0]}–{cats[-1]}"
         title = f"{d.title}: {names[0]}, {span}" if len(names) == 1 else f"{d.title}, {span}"
-    on_axis = d.period if chart_type == "line" else d.entity
+    on_axis = d.period if chart_type in ("line", "stacked_bar") else d.entity
     return ChartScene(
         chart_type=chart_type,
         domain=d.key,
@@ -210,7 +263,7 @@ def sample_scene(rng: random.Random, cfg: dict[str, Any]) -> ChartScene:
         value_axis=d.value_axis,
         decimals=d.decimals,
         categories=list(cats),
-        categories_are_periods=chart_type == "line",
+        categories_are_periods=chart_type in ("line", "stacked_bar"),
         series=series,
         style=_style(rng, cfg["style"], chart_type, len(series)),
     )
@@ -238,6 +291,17 @@ def _walk(rng: random.Random, d: Domain, n: int) -> list[float]:
     return out
 
 
+def _shares(rng: random.Random, n: int, decimals: int) -> list[float]:
+    """n percentages that add up to exactly 100 at the printed precision (largest remainder)."""
+    raw = [rng.uniform(0.15, 1.0) for _ in range(n)]
+    unit = 10.0 ** -decimals
+    exact = [r / sum(raw) * 100 / unit for r in raw]
+    counts = [math.floor(x) for x in exact]
+    for i in sorted(range(n), key=lambda i: exact[i] - counts[i], reverse=True)[: round(100 / unit) - sum(counts)]:
+        counts[i] += 1
+    return [round(c * unit, decimals) for c in counts]
+
+
 def _style(rng: random.Random, cfg: dict[str, Any], chart_type: str, n_series: int) -> ChartStyle:
     # Printed values on multi-series charts often collide, so they are rarer there.
     p_labels = cfg["value_labels"] * (0.5 if n_series > 1 else 1.0)
@@ -247,12 +311,13 @@ def _style(rng: random.Random, cfg: dict[str, Any], chart_type: str, n_series: i
         font_size=round(rng.uniform(low, high) * 2) / 2,
         palette=list(rng.choice(list(PALETTES.values()))),
         background=rng.choice(BACKGROUNDS),
-        grid=rng.random() < 0.6,
+        grid=rng.random() < cfg["grid"],
         value_labels=rng.random() < p_labels,
-        label_rotation=0 if chart_type == "hbar" else int(rng.choice(cfg["label_rotations"])),
+        label_rotation=0 if chart_type in ("hbar", "pie") else int(rng.choice(cfg["label_rotations"])),
         legend_loc=rng.choice(LEGEND_LOCS),
         bar_width=round(rng.uniform(0.55, 0.85), 2),
         figsize=tuple(rng.choice(cfg["figsizes"])),
         dpi=int(cfg["dpi"]),
         hide_spines=rng.random() < 0.5,
+        start_angle=rng.choice((90, 0, 45)) if chart_type == "pie" else 90,
     )

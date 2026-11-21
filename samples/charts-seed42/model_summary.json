@@ -1,0 +1,981 @@
+{
+  "sample": 300,
+  "of": 300,
+  "seed": 0,
+  "models": {
+    "claude-opus-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 300,
+        "of": 300
+      },
+      "blind": {
+        "correct": 39,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 22,
+        "of": 266
+      },
+      "pairs": {
+        "both_correct": 271,
+        "of": 271
+      },
+      "by_template": {
+        "compare_pair": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.583,
+          "always_guess": 0.5
+        },
+        "count_above": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.292,
+          "always_guess": 0.333
+        },
+        "count_categories": {
+          "tasks": 16,
+          "with_image": 1.0,
+          "blind": 0.062,
+          "always_guess": 0.375
+        },
+        "difference": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.083
+        },
+        "extremum": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.04,
+          "always_guess": 0.08
+        },
+        "largest_increase": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.1
+        },
+        "largest_segment": {
+          "tasks": 19,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.105
+        },
+        "pie_combined": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.182
+        },
+        "pie_compare": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.3,
+          "always_guess": 0.6
+        },
+        "pie_count_above": {
+          "tasks": 9,
+          "with_image": 1.0,
+          "blind": 0.111,
+          "always_guess": 0.444
+        },
+        "pie_extremum": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.182
+        },
+        "pie_share": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.2,
+          "always_guess": 0.1
+        },
+        "rank_then_read": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.042,
+          "always_guess": 0.083
+        },
+        "read_value": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.04
+        },
+        "stack_total": {
+          "tasks": 23,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.043
+        },
+        "trend_decreases": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.4,
+          "always_guess": 0.4
+        },
+        "what_if": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.2,
+          "always_guess": 0.08
+        }
+      },
+      "by_skill": {
+        "aggregation": {
+          "tasks": 23,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "arithmetic": {
+          "tasks": 35,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "comparison": {
+          "tasks": 34,
+          "with_image": 1.0,
+          "blind": 0.5
+        },
+        "composition": {
+          "tasks": 19,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "counterfactual": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.2
+        },
+        "counting": {
+          "tasks": 33,
+          "with_image": 1.0,
+          "blind": 0.242
+        },
+        "extremum": {
+          "tasks": 36,
+          "with_image": 1.0,
+          "blind": 0.028
+        },
+        "multi_hop": {
+          "tasks": 34,
+          "with_image": 1.0,
+          "blind": 0.029
+        },
+        "retrieval": {
+          "tasks": 35,
+          "with_image": 1.0,
+          "blind": 0.057
+        },
+        "structure": {
+          "tasks": 16,
+          "with_image": 1.0,
+          "blind": 0.062
+        },
+        "trend": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.4
+        }
+      },
+      "by_facet": {
+        "categories": {
+          "2\u20134": {
+            "tasks": 130,
+            "with_image": 1.0,
+            "blind": 0.1
+          },
+          "5\u20136": {
+            "tasks": 121,
+            "with_image": 1.0,
+            "blind": 0.14
+          },
+          "7+": {
+            "tasks": 49,
+            "with_image": 1.0,
+            "blind": 0.184
+          }
+        },
+        "chart type": {
+          "bar": {
+            "tasks": 74,
+            "with_image": 1.0,
+            "blind": 0.108
+          },
+          "grouped_bar": {
+            "tasks": 36,
+            "with_image": 1.0,
+            "blind": 0.083
+          },
+          "hbar": {
+            "tasks": 48,
+            "with_image": 1.0,
+            "blind": 0.188
+          },
+          "line": {
+            "tasks": 37,
+            "with_image": 1.0,
+            "blind": 0.297
+          },
+          "pie": {
+            "tasks": 51,
+            "with_image": 1.0,
+            "blind": 0.118
+          },
+          "stacked_bar": {
+            "tasks": 54,
+            "with_image": 1.0,
+            "blind": 0.037
+          }
+        },
+        "label angle": {
+          "0\u00b0": {
+            "tasks": 191,
+            "with_image": 1.0,
+            "blind": 0.131
+          },
+          "30\u00b0": {
+            "tasks": 51,
+            "with_image": 1.0,
+            "blind": 0.098
+          },
+          "45\u00b0": {
+            "tasks": 58,
+            "with_image": 1.0,
+            "blind": 0.155
+          }
+        },
+        "topic": {
+          "apps": {
+            "tasks": 84,
+            "with_image": 1.0,
+            "blind": 0.083
+          },
+          "energy": {
+            "tasks": 48,
+            "with_image": 1.0,
+            "blind": 0.104
+          },
+          "population": {
+            "tasks": 67,
+            "with_image": 1.0,
+            "blind": 0.179
+          },
+          "sales": {
+            "tasks": 46,
+            "with_image": 1.0,
+            "blind": 0.152
+          },
+          "tourism": {
+            "tasks": 55,
+            "with_image": 1.0,
+            "blind": 0.145
+          }
+        },
+        "values": {
+          "not printed": {
+            "tasks": 152,
+            "with_image": 1.0,
+            "blind": 0.132
+          },
+          "printed": {
+            "tasks": 148,
+            "with_image": 1.0,
+            "blind": 0.128
+          }
+        }
+      },
+      "guessable": [
+        "charts-000003-what_if",
+        "charts-000005-count_above",
+        "charts-000010-count_above",
+        "charts-000022-pie_share",
+        "charts-000025-count_categories",
+        "charts-000028-count_above",
+        "charts-000034-trend_decreases",
+        "charts-000036-what_if",
+        "charts-000052-trend_decreases",
+        "charts-000057-pie_count_above",
+        "charts-000066-extremum",
+        "charts-000078-count_above",
+        "charts-000082-trend_decreases",
+        "charts-000088-what_if",
+        "charts-000100-pie_share",
+        "charts-000103-trend_decreases",
+        "charts-000107-rank_then_read",
+        "charts-000116-count_above",
+        "charts-000130-what_if",
+        "charts-000132-what_if",
+        "charts-000137-count_above",
+        "charts-000148-count_above"
+      ],
+      "unsolved": [],
+      "reading_precision": {
+        "readings": 60,
+        "median_error": 0.0002,
+        "p90_error": 0.0055,
+        "max_error": 0.027
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 2.6586,
+      "spent_this_run_usd": 0.2386
+    },
+    "claude-sonnet-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 300,
+        "of": 300
+      },
+      "blind": {
+        "correct": 40,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 24,
+        "of": 266
+      },
+      "pairs": {
+        "both_correct": 270,
+        "of": 271
+      },
+      "by_template": {
+        "compare_pair": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.458,
+          "always_guess": 0.5
+        },
+        "count_above": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.083,
+          "always_guess": 0.333
+        },
+        "count_categories": {
+          "tasks": 16,
+          "with_image": 1.0,
+          "blind": 0.25,
+          "always_guess": 0.375
+        },
+        "difference": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.083
+        },
+        "extremum": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.04,
+          "always_guess": 0.08
+        },
+        "largest_increase": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.1
+        },
+        "largest_segment": {
+          "tasks": 19,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.105
+        },
+        "pie_combined": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.182,
+          "always_guess": 0.182
+        },
+        "pie_compare": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.5,
+          "always_guess": 0.6
+        },
+        "pie_count_above": {
+          "tasks": 9,
+          "with_image": 1.0,
+          "blind": 0.667,
+          "always_guess": 0.444
+        },
+        "pie_extremum": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.182
+        },
+        "pie_share": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.2,
+          "always_guess": 0.1
+        },
+        "rank_then_read": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.042,
+          "always_guess": 0.083
+        },
+        "read_value": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.04
+        },
+        "stack_total": {
+          "tasks": 23,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.043
+        },
+        "trend_decreases": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.2,
+          "always_guess": 0.4
+        },
+        "what_if": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.16,
+          "always_guess": 0.08
+        }
+      },
+      "by_skill": {
+        "aggregation": {
+          "tasks": 23,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "arithmetic": {
+          "tasks": 35,
+          "with_image": 1.0,
+          "blind": 0.057
+        },
+        "comparison": {
+          "tasks": 34,
+          "with_image": 1.0,
+          "blind": 0.471
+        },
+        "composition": {
+          "tasks": 19,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "counterfactual": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.16
+        },
+        "counting": {
+          "tasks": 33,
+          "with_image": 1.0,
+          "blind": 0.242
+        },
+        "extremum": {
+          "tasks": 36,
+          "with_image": 1.0,
+          "blind": 0.028
+        },
+        "multi_hop": {
+          "tasks": 34,
+          "with_image": 1.0,
+          "blind": 0.029
+        },
+        "retrieval": {
+          "tasks": 35,
+          "with_image": 1.0,
+          "blind": 0.057
+        },
+        "structure": {
+          "tasks": 16,
+          "with_image": 1.0,
+          "blind": 0.25
+        },
+        "trend": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.2
+        }
+      },
+      "by_facet": {
+        "categories": {
+          "2\u20134": {
+            "tasks": 130,
+            "with_image": 1.0,
+            "blind": 0.138
+          },
+          "5\u20136": {
+            "tasks": 121,
+            "with_image": 1.0,
+            "blind": 0.132
+          },
+          "7+": {
+            "tasks": 49,
+            "with_image": 1.0,
+            "blind": 0.122
+          }
+        },
+        "chart type": {
+          "bar": {
+            "tasks": 74,
+            "with_image": 1.0,
+            "blind": 0.095
+          },
+          "grouped_bar": {
+            "tasks": 36,
+            "with_image": 1.0,
+            "blind": 0.083
+          },
+          "hbar": {
+            "tasks": 48,
+            "with_image": 1.0,
+            "blind": 0.167
+          },
+          "line": {
+            "tasks": 37,
+            "with_image": 1.0,
+            "blind": 0.162
+          },
+          "pie": {
+            "tasks": 51,
+            "with_image": 1.0,
+            "blind": 0.294
+          },
+          "stacked_bar": {
+            "tasks": 54,
+            "with_image": 1.0,
+            "blind": 0.019
+          }
+        },
+        "label angle": {
+          "0\u00b0": {
+            "tasks": 191,
+            "with_image": 1.0,
+            "blind": 0.157
+          },
+          "30\u00b0": {
+            "tasks": 51,
+            "with_image": 1.0,
+            "blind": 0.059
+          },
+          "45\u00b0": {
+            "tasks": 58,
+            "with_image": 1.0,
+            "blind": 0.121
+          }
+        },
+        "topic": {
+          "apps": {
+            "tasks": 84,
+            "with_image": 1.0,
+            "blind": 0.155
+          },
+          "energy": {
+            "tasks": 48,
+            "with_image": 1.0,
+            "blind": 0.125
+          },
+          "population": {
+            "tasks": 67,
+            "with_image": 1.0,
+            "blind": 0.164
+          },
+          "sales": {
+            "tasks": 46,
+            "with_image": 1.0,
+            "blind": 0.087
+          },
+          "tourism": {
+            "tasks": 55,
+            "with_image": 1.0,
+            "blind": 0.109
+          }
+        },
+        "values": {
+          "not printed": {
+            "tasks": 152,
+            "with_image": 1.0,
+            "blind": 0.158
+          },
+          "printed": {
+            "tasks": 148,
+            "with_image": 1.0,
+            "blind": 0.108
+          }
+        }
+      },
+      "guessable": [
+        "charts-000003-what_if",
+        "charts-000005-count_above",
+        "charts-000008-count_categories",
+        "charts-000022-pie_share",
+        "charts-000032-trend_decreases",
+        "charts-000036-what_if",
+        "charts-000051-trend_decreases",
+        "charts-000057-pie_count_above",
+        "charts-000063-pie_combined",
+        "charts-000065-pie_combined",
+        "charts-000083-pie_count_above",
+        "charts-000097-pie_count_above",
+        "charts-000099-count_above",
+        "charts-000107-rank_then_read",
+        "charts-000117-count_categories",
+        "charts-000123-pie_share",
+        "charts-000126-pie_count_above",
+        "charts-000130-extremum",
+        "charts-000132-count_categories",
+        "charts-000132-what_if",
+        "charts-000134-pie_count_above",
+        "charts-000138-pie_count_above",
+        "charts-000142-what_if",
+        "charts-000151-count_categories"
+      ],
+      "unsolved": [],
+      "reading_precision": {
+        "readings": 60,
+        "median_error": 0.0014,
+        "p90_error": 0.0081,
+        "max_error": 0.027
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 1.4533,
+      "spent_this_run_usd": 0.1616
+    },
+    "claude-haiku-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 300,
+        "of": 300
+      },
+      "blind": {
+        "correct": 44,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 28,
+        "of": 266
+      },
+      "pairs": {
+        "both_correct": 270,
+        "of": 271
+      },
+      "by_template": {
+        "compare_pair": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.542,
+          "always_guess": 0.5
+        },
+        "count_above": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.333,
+          "always_guess": 0.333
+        },
+        "count_categories": {
+          "tasks": 16,
+          "with_image": 1.0,
+          "blind": 0.312,
+          "always_guess": 0.375
+        },
+        "difference": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.083
+        },
+        "extremum": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.08
+        },
+        "largest_increase": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.1
+        },
+        "largest_segment": {
+          "tasks": 19,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.105
+        },
+        "pie_combined": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.091,
+          "always_guess": 0.182
+        },
+        "pie_compare": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.3,
+          "always_guess": 0.6
+        },
+        "pie_count_above": {
+          "tasks": 9,
+          "with_image": 1.0,
+          "blind": 0.444,
+          "always_guess": 0.444
+        },
+        "pie_extremum": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.182
+        },
+        "pie_share": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.2,
+          "always_guess": 0.1
+        },
+        "rank_then_read": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.042,
+          "always_guess": 0.083
+        },
+        "read_value": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.04
+        },
+        "stack_total": {
+          "tasks": 23,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "always_guess": 0.043
+        },
+        "trend_decreases": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.3,
+          "always_guess": 0.4
+        },
+        "what_if": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.16,
+          "always_guess": 0.08
+        }
+      },
+      "by_skill": {
+        "aggregation": {
+          "tasks": 23,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "arithmetic": {
+          "tasks": 35,
+          "with_image": 1.0,
+          "blind": 0.029
+        },
+        "comparison": {
+          "tasks": 34,
+          "with_image": 1.0,
+          "blind": 0.471
+        },
+        "composition": {
+          "tasks": 19,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "counterfactual": {
+          "tasks": 25,
+          "with_image": 1.0,
+          "blind": 0.16
+        },
+        "counting": {
+          "tasks": 33,
+          "with_image": 1.0,
+          "blind": 0.364
+        },
+        "extremum": {
+          "tasks": 36,
+          "with_image": 1.0,
+          "blind": 0.0
+        },
+        "multi_hop": {
+          "tasks": 34,
+          "with_image": 1.0,
+          "blind": 0.029
+        },
+        "retrieval": {
+          "tasks": 35,
+          "with_image": 1.0,
+          "blind": 0.057
+        },
+        "structure": {
+          "tasks": 16,
+          "with_image": 1.0,
+          "blind": 0.312
+        },
+        "trend": {
+          "tasks": 10,
+          "with_image": 1.0,
+          "blind": 0.3
+        }
+      },
+      "by_facet": {
+        "categories": {
+          "2\u20134": {
+            "tasks": 130,
+            "with_image": 1.0,
+            "blind": 0.138
+          },
+          "5\u20136": {
+            "tasks": 121,
+            "with_image": 1.0,
+            "blind": 0.157
+          },
+          "7+": {
+            "tasks": 49,
+            "with_image": 1.0,
+            "blind": 0.143
+          }
+        },
+        "chart type": {
+          "bar": {
+            "tasks": 74,
+            "with_image": 1.0,
+            "blind": 0.122
+          },
+          "grouped_bar": {
+            "tasks": 36,
+            "with_image": 1.0,
+            "blind": 0.056
+          },
+          "hbar": {
+            "tasks": 48,
+            "with_image": 1.0,
+            "blind": 0.25
+          },
+          "line": {
+            "tasks": 37,
+            "with_image": 1.0,
+            "blind": 0.27
+          },
+          "pie": {
+            "tasks": 51,
+            "with_image": 1.0,
+            "blind": 0.196
+          },
+          "stacked_bar": {
+            "tasks": 54,
+            "with_image": 1.0,
+            "blind": 0.019
+          }
+        },
+        "label angle": {
+          "0\u00b0": {
+            "tasks": 191,
+            "with_image": 1.0,
+            "blind": 0.162
+          },
+          "30\u00b0": {
+            "tasks": 51,
+            "with_image": 1.0,
+            "blind": 0.098
+          },
+          "45\u00b0": {
+            "tasks": 58,
+            "with_image": 1.0,
+            "blind": 0.138
+          }
+        },
+        "topic": {
+          "apps": {
+            "tasks": 84,
+            "with_image": 1.0,
+            "blind": 0.143
+          },
+          "energy": {
+            "tasks": 48,
+            "with_image": 1.0,
+            "blind": 0.104
+          },
+          "population": {
+            "tasks": 67,
+            "with_image": 1.0,
+            "blind": 0.164
+          },
+          "sales": {
+            "tasks": 46,
+            "with_image": 1.0,
+            "blind": 0.152
+          },
+          "tourism": {
+            "tasks": 55,
+            "with_image": 1.0,
+            "blind": 0.164
+          }
+        },
+        "values": {
+          "not printed": {
+            "tasks": 152,
+            "with_image": 1.0,
+            "blind": 0.138
+          },
+          "printed": {
+            "tasks": 148,
+            "with_image": 1.0,
+            "blind": 0.155
+          }
+        }
+      },
+      "guessable": [
+        "charts-000003-what_if",
+        "charts-000005-count_above",
+        "charts-000008-count_categories",
+        "charts-000010-count_above",
+        "charts-000022-pie_share",
+        "charts-000028-what_if",
+        "charts-000028-count_above",
+        "charts-000034-trend_decreases",
+        "charts-000051-count_above",
+        "charts-000052-trend_decreases",
+        "charts-000057-pie_count_above",
+        "charts-000064-trend_decreases",
+        "charts-000065-pie_combined",
+        "charts-000077-count_categories",
+        "charts-000078-count_above",
+        "charts-000083-pie_count_above",
+        "charts-000099-count_above",
+        "charts-000099-count_categories",
+        "charts-000100-pie_share",
+        "charts-000107-rank_then_read",
+        "charts-000115-what_if",
+        "charts-000116-count_above",
+        "charts-000117-count_categories",
+        "charts-000126-pie_count_above",
+        "charts-000127-count_above",
+        "charts-000132-what_if",
+        "charts-000138-pie_count_above",
+        "charts-000151-count_categories"
+      ],
+      "unsolved": [],
+      "reading_precision": {
+        "readings": 60,
+        "median_error": 0.0019,
+        "p90_error": 0.0081,
+        "max_error": 0.027
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.0901,
+      "spent_this_run_usd": 0.0092
+    }
+  }
+}

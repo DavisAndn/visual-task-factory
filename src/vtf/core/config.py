@@ -22,6 +22,15 @@ VALIDATION_DEFAULTS: dict[str, Any] = {
 }
 
 
+BALANCE_DEFAULTS: dict[str, Any] = {
+    # Skip (don't reject) a task whose answer value would exceed this share of its template's
+    # accepted tasks, so always guessing a template's most common answer stays near chance.
+    "max_answer_share": 0.35,
+    "max_yes_no_share": 0.55,  # yes/no is balanced by construction; this only trims drift
+    "warmup": 8,  # accepted tasks per template before the caps apply
+}
+
+
 def load_config(path: Path | None, family: Family) -> dict[str, Any]:
     cfg: dict[str, Any] = {
         "family": family.name,
@@ -30,6 +39,7 @@ def load_config(path: Path | None, family: Family) -> dict[str, Any]:
         "templates": {t.id: t.weight for t in family.templates},
         "scene": copy.deepcopy(family.defaults),
         "validation": dict(VALIDATION_DEFAULTS),
+        "balance": dict(BALANCE_DEFAULTS),
     }
     if path is not None:
         overrides = yaml.safe_load(Path(path).read_text()) or {}
