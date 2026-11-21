@@ -323,7 +323,7 @@
       "errors": 0,
       "answered_by_fallback": 0,
       "cost_usd": 2.6586,
-      "spent_this_run_usd": 0.2386
+      "spent_this_run_usd": 0.0
     },
     "claude-sonnet-5-5 (high effort)": {
       "tasks": 300,
@@ -647,7 +647,7 @@
       "errors": 0,
       "answered_by_fallback": 0,
       "cost_usd": 1.4533,
-      "spent_this_run_usd": 0.1616
+      "spent_this_run_usd": 0.0
     },
     "claude-haiku-5-5 (high effort)": {
       "tasks": 300,
@@ -975,7 +975,7 @@
       "errors": 0,
       "answered_by_fallback": 0,
       "cost_usd": 0.0901,
-      "spent_this_run_usd": 0.0092
+      "spent_this_run_usd": 0.0
     }
   }
 }

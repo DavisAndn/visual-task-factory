@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import base64
 import html
+import re
 import json
 from collections import Counter
 from pathlib import Path
@@ -39,6 +40,7 @@ th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--lin
 th { color: var(--muted); font-size: 13px; font-weight: 600; }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.cols.wide { grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 28px; }
 .cols h3 { margin-top: 0; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
 .card { border: 1px solid var(--line); border-radius: 10px; background: var(--card); padding: 12px; }
@@ -92,6 +94,15 @@ def _e(value: Any) -> str:
     return html.escape(str(value))
 
 
+def _short_model(name: str) -> str:
+    """'claude-opus-5-5 (high effort)' -> 'Opus 5.5 (high effort)'; other names stay as they are."""
+    match = re.match(r"claude-([a-z]+)-(\d+)(?:-(\d+))?(.*)", name)
+    if not match:
+        return name
+    family, major, minor, rest = match.groups()
+    return f"{family.capitalize()} {major}{'.' + minor if minor else ''}{rest}"
+
+
 def _pct(value: float | None) -> str:
     return "–" if value is None else f"{value:.0%}"
 
@@ -133,7 +144,7 @@ def _funnel(s: dict[str, Any]) -> str:
     rows += [[row["gate"], row["rejected"], row["remaining"]] for row in s["funnel"]]
     reasons = [[reason, count] for reason, count in s["rejection_reasons"].items()]
     return (
-        "<h2>Rejection funnel</h2>"
+        "<h2 id='funnel'>Rejection funnel</h2>"
         "<p class='note'>Every candidate goes through every gate; each rejection is counted at the first gate it failed.</p>"
         f"<div class='cols'><div>{_table(['Gate', 'Rejected', 'Remaining'], rows, {1, 2})}</div>"
         f"<div>{_table(['Reason', 'Count'], reasons or [['none', 0]], {1})}</div></div>"
@@ -145,7 +156,7 @@ def _coverage(s: dict[str, Any]) -> str:
     for facet, counts in s["coverage"].items():
         rows = [[value, count] for value, count in counts.items()]
         blocks.append(f"<div><h3>{_e(facet.capitalize())}</h3>{_table(['Value', 'Tasks'], rows, {1})}</div>")
-    return "<h2>Coverage of accepted tasks</h2>" f"<div class='cols'>{''.join(blocks)}</div>"
+    return "<h2 id='coverage'>Coverage of accepted tasks</h2>" f"<div class='cols'>{''.join(blocks)}</div>"
 
 
 def _prior(s: dict[str, Any]) -> str:
@@ -160,7 +171,7 @@ def _prior(s: dict[str, Any]) -> str:
         for template, p in s["answer_prior"].items()
     ]
     return (
-        "<h2>Guessing without the image</h2>"
+        "<h2 id='guessing'>Guessing without the image</h2>"
         "<p class='note'>Two shortcuts a model could use without looking: always giving a template's most "
         "common answer, or answering with a name the question itself mentions. High shares mean the "
         "template leaks its answer and needs rebalancing.</p>"
@@ -183,7 +194,7 @@ def _models(out_dir: Path, by_id: dict[str, Task]) -> str:
 
     rows = [
         [
-            name,
+            _short_model(name),
             m["tasks"],
             _share(m["with_image"]),
             _share(m["blind"]),
@@ -205,7 +216,8 @@ def _models(out_dir: Path, by_id: dict[str, Task]) -> str:
 
     def breakdown(title: str, tables: dict[str, dict[str, Any]], always_guess: bool = False) -> str:
         values = sorted({v for table in tables.values() for v in table})
-        headers = [title, "Tasks"] + [f"{name}: with image" for name in tables] + ["Without image (first model)"]
+        names = [_short_model(name).split(" (")[0] for name in tables]  # effort is in the overview
+        headers = [title, "Tasks"] + names + [f"{names[0]}, no image"]
         if always_guess:
             headers.append("Always-guess")
         first = next(iter(tables.values()))
@@ -249,13 +261,14 @@ def _models(out_dir: Path, by_id: dict[str, Task]) -> str:
 
     sampled = f"{summary['sample']} of {summary['of']} tasks, spread across templates"
     html_parts = [
-        "<h2>Model evaluation</h2>",
+        "<h2 id='models'>Model evaluation</h2>",
         "<p class='note'>Each sampled task was asked twice: with its image, and without it. Reference answers "
         "come from the scene data, never from a model, so a wrong model answer is the model's mistake unless "
         "the human audit finds otherwise. Contrast pairs ask the same question about a minimally edited image "
         f"with a different answer; a model that reads the image gets both right. Sample: {_e(sampled)}.</p>",
         overview,
-        "<div class='cols'>" + "".join(f"<div>{s}</div>" for s in sections) + "</div>",
+        "<p class='note'>Breakdown tables: accuracy with the image for each model, and without it for the first.</p>",
+        "<div class='cols wide'>" + "".join(f"<div>{s}</div>" for s in sections) + "</div>",
     ]
     html_parts += examples
     return "".join(html_parts)
@@ -286,7 +299,7 @@ def _pairs(out_dir: Path, by_id: dict[str, Task], limit: int = 6) -> str:
         )
     edit = f" The median edit moves one value by {summary['median_edit']:.0%} of the value axis." if summary["median_edit"] else ""
     return (
-        "<h2>Contrast pairs</h2>"
+        "<h2 id='pairs'>Contrast pairs</h2>"
         f"<p class='note'>{summary['pairs']} of {summary['tasks']} tasks have a twin: the same question about an image "
         f"where one value was edited so the answer changes, with the axis pinned so nothing else moves.{edit} Both "
         "images pass the same gates. A model that answers from the question text alone can't get both right.</p>"
@@ -331,7 +344,7 @@ def _ocr(out_dir: Path) -> str:
         )
     miss_html = f"<h3>Labels OCR could not read back</h3><div class='grid'>{''.join(misses)}</div>" if misses else ""
     return (
-        "<h2>OCR read-back</h2>"
+        "<h2 id='ocr'>OCR read-back</h2>"
         f"<p class='note'>An independent check of the grounding gate, which trusts the renderer's layout record. Every "
         f"label a question depends on was cropped out of the final PNG and read by {_e(summary['engine'])}, an OCR engine "
         "unrelated to the models being evaluated. A label counts as read back when the OCR text matches what was drawn "
@@ -370,7 +383,7 @@ def _audit(out_dir: Path, by_id: dict[str, Task]) -> str:
             problems.append(_card(out_dir, task, None, note=(note, False)))
     who = f" by {_e(summary['reviewer'])}" if summary.get("reviewer") else ""
     return (
-        "<h2>Human audit</h2>"
+        "<h2 id='audit'>Human audit</h2>"
         f"<p class='note'>A person{who} answered each sampled task from the image alone, then saw the reference answer and "
         "judged it valid, wrong, or ambiguous. The random sample gives an unbiased rate; tasks a model got wrong were "
         "reviewed separately because that is where a generator mistake would hide.</p>"
@@ -398,7 +411,7 @@ def _accepted_examples(out_dir: Path, tasks: list[Task], limit: int = 12) -> str
             picked.append(task)
             images.add(task.image)
     cards = "".join(_card(out_dir, task, None) for task in picked[:limit])
-    return f"<h2>Accepted examples</h2><div class='grid'>{cards}</div>"
+    return f"<h2 id='accepted'>Accepted examples</h2><div class='grid'>{cards}</div>"
 
 
 def _rejected_examples(out_dir: Path, tasks: list[Task], per_reason: int = 2, limit: int = 12) -> str:
@@ -415,7 +428,7 @@ def _rejected_examples(out_dir: Path, tasks: list[Task], per_reason: int = 2, li
         if len(cards) >= limit:
             break
     note = "<p class='note'>Red boxes mark the elements that failed the check.</p>"
-    return f"<h2>Rejected examples</h2>{note}<div class='grid'>{''.join(cards) or 'None.'}</div>"
+    return f"<h2 id='rejected'>Rejected examples</h2>{note}<div class='grid'>{''.join(cards) or 'None.'}</div>"
 
 
 def _image(out_dir: Path, task: Task, failure: tuple[str, GateResult] | None = None) -> str:
