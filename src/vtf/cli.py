@@ -229,6 +229,22 @@ def _share(counts: dict[str, int]) -> str:
 
 
 @app.command()
+def compare(
+    first: RunDir,
+    second: Annotated[Path, typer.Argument(exists=True, file_okay=False, help="Another run folder.")],
+) -> None:
+    """Check two runs hold the same tasks and pairs (pixel hashes aside); exit 1 if they don't."""
+    from .core.runs import compare_runs
+
+    differences = compare_runs(first, second)
+    if differences:
+        for line in differences:
+            typer.secho(line, fg="red")
+        raise typer.Exit(1)
+    typer.echo(f"{first} and {second} hold the same tasks and pairs.")
+
+
+@app.command()
 def report(run_dir: RunDir) -> None:
     """Rebuild report.html for a run, including evidence gathered after generation."""
     typer.echo(f"Report: {rebuild_report(run_dir)}")

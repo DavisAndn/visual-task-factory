@@ -28,14 +28,14 @@ have leaked, and every answer is computed from the data that drew the image.
 
 **How it solves the problem.** Each task comes with proof: the data and the derivation of its
 answer, a record of every element drawn, gate results, an OCR read-back of the labels it depends
-on, a contrast twin, and a seed that rebuilds it byte for byte.
+on, a contrast twin, and a seed that rebuilds it.
 
 **USP.**
 - Answers validated independently of the model under test (data, gates, OCR, human audit).
 - Contrast pairs: the same question about a minimally edited image whose answer changes, which
   separates reading the image from guessing.
 - Shortcut control: answer balancing keeps "always guess the commonest answer" near chance.
-- Byte-identical reproducibility, checked across operating systems in CI.
+- Reproducible: any task rebuilds from its seed, and CI regenerates the committed samples.
 
 ## 4. Features
 

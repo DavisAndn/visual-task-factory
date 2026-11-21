@@ -5,8 +5,8 @@ A pipeline that generates chart images, questions about them, and reference answ
 tasks to evaluate frontier multimodal models and map where they fail. Built for Track 2 (Visual
 Task Factory) of the Innodata AI Hackathon.
 
-One command makes 300 validated tasks in about 6 seconds, and the same seed always gives the same
-bytes (CI checks this on Linux against hashes recorded on macOS). Two evaluated runs are committed:
+One command makes 300 validated tasks in about 6 seconds, and any task can be rebuilt from its
+seed. Two evaluated runs are committed:
 [samples/charts-seed42](samples/charts-seed42) (300 tasks) and
 [samples/charts-hard-seed7](samples/charts-hard-seed7) (150 harder tasks); open their `report.html`.
 
@@ -88,7 +88,7 @@ both ends, and 3 percentage points per slice for unlabeled pies.
 
 | Check | What it rejects or measures | Result on the standard sample |
 |---|---|---|
-| **Determinism** | 10% of images are rebuilt from their seed; scene and pixel hashes must match. CI rebuilds a fixed run on Linux and compares it byte for byte with hashes recorded on macOS | 16 of 16 rebuilds identical |
+| **Determinism** | 10% of images are rebuilt from their seed during generation; scene and pixel hashes must match. CI regenerates the committed samples and checks they hold the same tasks | 16 of 16 rebuilds identical |
 | **Grounding** | Anything the question needs that is missing, cut off, under 9 px, overlapped by other text or the legend, or crossed by a line; label answers not legible in the image; any colliding text at all | 22 rejected |
 | **Ambiguity** | Answers decided by gaps smaller than the printed precision, or than 5% of the axis when values aren't printed; numbers that can't be read to within 20% | 121 rejected |
 | **Dedup** | Near-copies (256-bit image hash, Hamming distance ≤ 8) | 0 |
@@ -262,19 +262,19 @@ A run folder holds:
 
 ## Reproducibility
 
-The same seed and config give byte-identical `tasks.jsonl` and `pairs.jsonl`. Charts only use
-fonts that ship with matplotlib, `uv.lock` pins every dependency and `.python-version` pins
-Python, and [`tests/test_reproducible.py`](tests/test_reproducible.py) checks a fixed run against
-hashes recorded on macOS; CI runs it on Linux. Any single task can be re-derived and checked:
+The same seed and config give the same tasks: the same scenes, questions, answers and gate
+results. Charts only use fonts that ship with matplotlib, `uv.lock` pins every dependency and
+`.python-version` pins Python, and [`tests/test_reproducible.py`](tests/test_reproducible.py)
+checks a fixed run against recorded fingerprints. Any single task can be re-derived and checked:
 
 ```bash
 uv run vtf rebuild charts-000002-read_value --tasks samples/charts-seed42/tasks.jsonl
 ```
 
-CI ([.github/workflows/ci.yml](.github/workflows/ci.yml)) also regenerates both committed samples
-from their seeds and requires byte-identical `tasks.jsonl`, `rejected.jsonl` and `pairs.jsonl`, so
-the samples in this repository are provably what the code makes. It then generates a 200-task run
-with pairs and OCR and keeps the logs and report as a downloadable artifact.
+`vtf compare <run> <run>` checks that two runs hold the same tasks and pairs. CI
+([.github/workflows/ci.yml](.github/workflows/ci.yml)) uses it to regenerate both committed samples
+from their seeds and check them against the ones in this repository, then generates a 200-task
+run with pairs and OCR and keeps the logs and report as a downloadable artifact.
 
 ## Configuration
 
@@ -296,7 +296,7 @@ the layout record and the solvers report their deciding margins.
 
 ```
 src/vtf/
-  cli.py               vtf generate · pairs · ocr · models · audit · report · rebuild
+  cli.py               vtf generate · pairs · ocr · models · audit · report · rebuild · compare
   core/                data models, family contract, config, pipeline, contrast pairs
   families/charts/     scene sampler, renderer, question templates
   validators/          grounding, ambiguity, dedup, answer scoring
