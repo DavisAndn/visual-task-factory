@@ -37,7 +37,7 @@ VOICE, RATE, TAIL = "Samantha", 172, 0.8  # words per minute; seconds of quiet a
 # Each scene: what is on screen, and what the narrator says (also the captions).
 SCENES = [
     (("image", MEDIA / "slides" / "cover.png"),
-     "This is Visual Task Factory, our entry for Track 2 of the Innodata AI Hackathon. It generates chart "
+     "This is Visual Task Factory, my entry for Track 2 of the Innodata AI Hackathon. It generates chart "
      "images, questions about them, and reference answers that no model ever sets. It proves every task is "
      "valid, and uses the tasks to measure how well frontier models read charts."),
     (("image", FIGS / "examples.png"),
@@ -61,9 +61,9 @@ SCENES = [
      "same."),
     (("terminal", "uv run vtf ocr out/demo-run", "ocr"),
      "Then come the checks that don't trust the generator. Tesseract, an OCR engine unrelated to any model "
-     "we evaluate, reads every label each question depends on from the final image: 99.7 percent match. "
+     "being evaluated, reads every label each question depends on from the final image: 99.7 percent match. "
      "On its first run, this check found value labels that a line ran straight through, which the layout "
-     "check couldn't see, so we fixed the gate."),
+     "check couldn't see, so I fixed the gate."),
     (("image", FIGS / "contrast-pair.png"),
      "Contrast pairs ask the same question about a copy of the image with one value edited, so the answer "
      "changes, while the axis stays pinned and nothing else moves. A model that answers from the question "
@@ -72,7 +72,7 @@ SCENES = [
      "And a blind human audit: a person answers each task from the image alone, then sees the reference "
      "answer and judges it, and the valid rate comes with a 95 percent confidence interval."),
     (("terminal", "uv run vtf models samples/charts-seed42 -m claude-opus-5-5 -m claude-sonnet-5-5 -m claude-haiku-5-5", "models"),
-     "Finally, we evaluated three Claude models, Opus, Sonnet and Haiku 5.5, on 450 tasks, a standard "
+     "Finally, I evaluated three Claude models, Opus, Sonnet and Haiku 5.5, on 450 tasks, a standard "
      "set and a hard one with nothing printed, asking each task with and without the image, plus every "
      "contrast twin. Replies are cached, so this rerun cost nothing."),
     (("image", MEDIA / "slides" / "results.png"),
@@ -83,7 +83,7 @@ SCENES = [
      "What separated them was consistency. Here Sonnet answered Metro for both charts, even after South's "
      "printed value rose from 112 to 237. Haiku did the same once. Opus never did."),
     (("image", MEDIA / "slides" / "evidence.png"),
-     "The evaluation also found defects in our own factory: a scorer that read the working instead of the "
+     "The evaluation also found defects in the factory itself: a scorer that read the working instead of the "
      "answer, two ambiguous questions, and two margins that were too thin. Every one was fixed and "
      "re-checked."),
     (("image", MEDIA / "slides" / "deliverables.png"),

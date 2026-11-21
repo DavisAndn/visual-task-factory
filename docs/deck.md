@@ -7,8 +7,8 @@ PDF (under 5 MB). Figures are in [figures/](figures/); rebuild them with
 
 ## 1. Title
 
-- **Team name:** _your team name_
-- **Team leader name:** _your name_
+- **Team name:** Plot Twist (a team of one)
+- **Team leader name:** Davis Andherson
 - **Problem statement:** Visual Task Factory: chart understanding for document AI
 
 ## 2. Brief about the idea
