@@ -11,7 +11,7 @@ on 6 Dec 2026 at 11:55 PM IST.
 | Prototype brief (max 1024 characters) | Below |
 | Technology stack (max 1024 characters) | Below |
 | GitHub public repository link | The repository URL. **Make the repository public before submitting.** |
-| Demo video link | Your upload (outline below) |
+| Demo video link | https://github.com/DavisAndn/visual-task-factory/blob/main/docs/demo.mp4 (works once the repository is public) |
 | Solution deck | The template, filled from [deck.md](deck.md), exported as a PDF under 5 MB |
 
 ### Prototype brief (944 characters)
@@ -22,18 +22,18 @@ on 6 Dec 2026 at 11:55 PM IST.
 
 > Python 3.13 with uv and a locked dependency set. matplotlib (Agg renderer, bundled DejaVu fonts) for deterministic chart rendering; NumPy and Pillow for pixel hashes, crops and image processing; pydantic v2 for the task, layout and answer schemas; Typer for the vtf command line; PyYAML for configs. Validation: a grounding gate using separating-axis polygon overlap on the renderer's layout record, ambiguity and dedup (256-bit dHash) gates, and Tesseract 5 OCR for independent label read-back. Model evaluation: the Anthropic Python SDK with Claude Opus 5.5, Sonnet 5.5 and Haiku 5.5 (adaptive thinking, explicit effort, server-side refusal fallback where supported), threaded requests and a per-run reply cache. Human audit: a self-contained HTML/JS page with blind answering and Wilson confidence intervals. Self-contained HTML reports. pytest suite and GitHub Actions CI that regenerates the committed samples and checks them.
 
-## Demo video outline (about 4 minutes)
+## Demo video
 
-1. **The problem (30 s).** Charts carry the numbers in reports; a model that misreads one returns
-   a plausible wrong figure that nobody catches. Show a stacked bar and a pie from the sample.
-2. **One command (30 s).** `uv run vtf generate --n 300 --seed 42`: 300 tasks in 6 seconds. Open
-   `report.html`: the rejection funnel and a rejected example with its red box.
-3. **Why the answers are right (60 s).** A task's trace; `vtf rebuild` printing "same" three
-   times; the OCR read-back table and the line-through-label miss that led to a new gate rule; a
-   contrast pair side by side.
-4. **Evaluating models (60 s).** `vtf models` output; the accuracy breakdown by skill and chart
-   type; two tasks the model got wrong, and the same model getting one twin of a pair right and
-   the other wrong.
-5. **Human audit (30 s).** Answer two tasks blind in `audit.html`, import, show the valid rate and
-   its interval.
-6. **Close (30 s).** What it would take to add a new image family, and the CI run passing.
+[demo.mp4](demo.mp4) is a 3.5-minute narrated walkthrough with burned-in captions, in this order:
+
+1. The problem, and one task per chart type.
+2. `vtf generate`: 300 tasks in about 6 seconds; the report's rejection funnel and rejected
+   examples.
+3. `vtf rebuild` on one task.
+4. The checks that don't trust the generator: OCR read-back, contrast pairs and the blind audit
+   page.
+5. `vtf models` on three Claude models, the results, and the contrast twin Sonnet got wrong.
+6. The defects the evaluation found in the factory, and the deliverables.
+
+It is built from real command output, report screenshots, the figures and the deck's slides by
+[video/make_video.py](video/make_video.py).

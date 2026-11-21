@@ -9,6 +9,7 @@ One command makes 300 validated tasks in about 6 seconds, and any task can be re
 seed. Two evaluated runs are committed:
 [samples/charts-seed42](samples/charts-seed42) (300 tasks) and
 [samples/charts-hard-seed7](samples/charts-hard-seed7) (150 harder tasks); open their `report.html`.
+A 3.5-minute narrated walkthrough is in [docs/demo.mp4](docs/demo.mp4).
 
 **Headline result:** Claude Opus 5.5, Sonnet 5.5 and Haiku 5.5 each answered all 450 tasks
 correctly and read unprinted values with a median error of 0.2% or less; without the image they
