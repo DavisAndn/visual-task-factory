@@ -297,32 +297,7 @@ class Factory(Scene):
 
 
 # ---------------------------------------------------------------------------------------------
-# 5. One command, then the checks.
-
-
-class Terminal(Scene):
-    def __init__(self, command: str, output: list[str]) -> None:
-        self.command, self.output = command, output
-
-    def draw(self, f, t, T, cue):
-        left, top, right, bottom = 190, 190, W - 190, 780
-        a = fade(t, 0, 0.4)
-        s = Sketch((right - left, bottom - top), ss=2)
-        s.rrect((0, 0, right - left, bottom - top), 22, fill=(22, 26, 38, 250), outline=(255, 255, 255, 30), width=1.5)
-        for i, color in enumerate(((237, 106, 94), (245, 191, 79), (98, 197, 84))):
-            s.circle((36 + i * 30, 30), 8, fill=(*color, 255))
-        paste(f, s.image(), left, top, a)
-        typed = round(len(self.command) * ramp(t, 0.4, 1.4))
-        cursor = "_" if typed < len(self.command) and int(t * 3) % 2 == 0 else ""
-        put_text(f, "$", left + 50, top + 78, "mono", 36, (126, 211, 130), a, "lt")
-        put_text(f, self.command[:typed] + cursor, left + 96, top + 78, "mono", 36, INK, a, "lt")
-        shown = ramp(t, 2.0, 1.0)
-        y = top + 156
-        for i, line in enumerate(self.output):
-            if shown > 0 and i < shown * len(self.output):
-                color = (140, 220, 150) if line.lstrip().startswith("Accepted") else (192, 200, 216)
-                put_text(f, line[:80], left + 50, y, "mono", 31, color, a, "lt")
-            y += 50
+# 5. The checks.
 
 
 class Checks(Scene):
@@ -722,3 +697,79 @@ class Value(Scene):
             place(f, s.image(), x, 470 + (1 - k) * 40, k)
             put_text(f, who, x, 320 + (1 - k) * 40, "demi", 34, ACCENT, k, "mt")
             put_lines(f, what, x, 400 + (1 - k) * 40, 24, "bold", 48, INK, k, align="m")
+
+
+# ---------------------------------------------------------------------------------------------
+# 10. The real pipeline, end to end, then the report it made.
+
+
+class Walkthrough(Scene):
+    """Each recorded command typed on its cue, then what it printed (docs/video/capture_walkthrough.py
+    ran them), and from the "report" cue a pan down the report they made."""
+
+    KEEP = {"pairs": 4, "ocr": 5}  # lines of long listings to keep before "…"
+
+    def __init__(self, steps: list[dict], report: str) -> None:
+        self.steps = [(s["cue"], s["command"], self._trim(s["cue"], s["output"])) for s in steps if s["cue"] != "report"]
+        page = Image.open(report).convert("RGB")
+        self.view = (1240, 760)
+        self.page = page.resize((self.view[0], round(page.height * self.view[0] / page.width)), Image.Resampling.LANCZOS)
+        from gfx import _round_mask, _shadow
+
+        self.mask = _round_mask(self.view, 14)
+        self.shadow = _shadow(self.view, 14, 34, 170)
+        self.tag = pill("report.html", "demi", 26, (20, 20, 20), (*ACCENT, 255))
+
+    @classmethod
+    def _trim(cls, cue: str, lines: list[str]) -> list[str]:
+        """The output as shown: no progress labels, path lines or notes, long listings cut short."""
+        shown = [line for line in lines if " " in line.strip() and not line.startswith(("Note:", "Tasks:", "Pairs:", "Photos:", "Report:"))]
+        if cue == "models":
+            shown = [line for line in shown if not line.strip().startswith(("without it", "reading error"))]
+        keep = cls.KEEP.get(cue)
+        if keep and len(shown) > keep:
+            shown = shown[:keep] + ["  …"]
+        return shown
+
+    def draw(self, f, t, T, cue):
+        rep = cue("report")
+        away = ease_in_out(ramp(t, rep - 0.1, 0.6))
+        if away < 1:
+            left, top, right, bottom = 150, 96, W - 150, 900
+            a = fade(t, 0, 0.4) * (1 - away)
+            dx = -away * 500
+            s = Sketch((right - left, bottom - top), ss=2)
+            s.rrect((0, 0, right - left, bottom - top), 22, fill=(22, 26, 38, 250), outline=(255, 255, 255, 30), width=1.5)
+            for i, color in enumerate(((237, 106, 94), (245, 191, 79), (98, 197, 84))):
+                s.circle((36 + i * 30, 30), 8, fill=(*color, 255))
+            paste(f, s.image(), left + dx, top, a)
+            log: list[tuple[str, str]] = []
+            for name, command, output in self.steps:
+                at = cue(name)
+                if t < at:
+                    break
+                typed = round(len(command) * ramp(t, at, 0.55))
+                log.append(("cmd", command[:typed] + ("_" if typed < len(command) else "")))
+                if t > at + 0.7:
+                    log += [("out", line) for line in output]
+            pitch, rows = 37, 20
+            y = top + 70
+            for kind, line in log[-rows:]:
+                if kind == "cmd":
+                    put_text(f, "$", left + 44 + dx, y, "mono", 27, (126, 211, 130), a, "lt")
+                    put_text(f, line[:92], left + 80 + dx, y, "mono", 27, INK, a, "lt")
+                else:
+                    green = line.lstrip().startswith(("Accepted", "Paired", "Made", "tesseract", "Tasks with"))
+                    color = (140, 220, 150) if green else (186, 195, 212)
+                    put_text(f, line[:96], left + 44 + dx, y, "mono", 25, color, a, "lt")
+                y += pitch
+        if t >= rep - 0.1:
+            k = ease_out(ramp(t, rep, 0.7))
+            travel = (self.page.height - self.view[1]) * 0.72
+            y0 = round(ease_in_out(ramp(t, rep + 1.2, max(1.0, T - rep - 2.0))) * travel)
+            crop = self.page.crop((0, y0, self.view[0], y0 + self.view[1])).convert("RGBA")
+            crop.putalpha(self.mask)
+            card = self.shadow.copy()
+            card.alpha_composite(crop, (34, 34))
+            place(f, card, W / 2 + (1 - k) * 400, 500, k)
+            place(f, self.tag, W / 2 - self.view[0] / 2 + 90, 100, fade(t, rep + 0.4))

@@ -1,0 +1,89 @@
+[
+ {
+  "cue": "gen",
+  "command": "uv run vtf generate --family instruments --n 300 --out out/instruments",
+  "output": [
+   "Generating",
+   "Accepted 300 of 349 candidates from 195 images in 5.2s.",
+   "  rejected   47  dedup: near_duplicate",
+   "  rejected    2  ambiguity: imprecise",
+   "Tasks:  out/instruments/tasks.jsonl",
+   "Report: out/instruments/report.html"
+  ]
+ },
+ {
+  "cue": "pairs",
+  "command": "uv run vtf pairs out/instruments",
+  "output": [
+   "Pairing",
+   "Paired 300 of 300 tasks; median edit 2% of the scale.",
+   "    64/64   clock_time",
+   "    64/64   clock_until",
+   "     6/6    gauge_headroom",
+   "    24/24   gauge_read",
+   "    15/15   gauge_read_inner",
+   "    63/63   syringe_read",
+   "    64/64   syringe_top_up",
+   "Pairs:  out/instruments/pairs.jsonl",
+   "Report: out/instruments/report.html"
+  ]
+ },
+ {
+  "cue": "photos",
+  "command": "uv run vtf photos out/instruments",
+  "output": [
+   "Photographing",
+   "Made 300 photo twins of 300 tasks.",
+   "Photos: out/instruments/photos.jsonl",
+   "Report: out/instruments/report.html"
+  ]
+ },
+ {
+  "cue": "ocr",
+  "command": "uv run vtf ocr out/instruments --photos",
+  "output": [
+   "Reading",
+   "tesseract 5.5.3 read back 1135 of 1282 labels (88.5%).",
+   "Tasks with every label read back: 172 of 300.",
+   "  images/instruments-000000-photo.jpg slabel:2: expected '10', read '\\\\Q'",
+   "  images/instruments-000000-photo.jpg slabel:3: expected '15', read 'AS'",
+   "  images/instruments-000000-photo.jpg slabel:4: expected '20', read '29'",
+   "  images/instruments-000000-photo.jpg slabel:8: expected '40', read 'AQ'",
+   "  images/instruments-000000-photo.jpg unit: expected 'units', read 'LUNAS'",
+   "  images/instruments-000001-photo.jpg slabel:4: expected '4', read 'A'",
+   "  images/instruments-000001-photo.jpg slabel:10: expected '10', read '190'",
+   "  images/instruments-000003-photo.jpg unit: expected 'units', read 'uryits'",
+   "  images/instruments-000004-photo.jpg slabel:8: expected '40', read 'AY'",
+   "  images/instruments-000004-photo.jpg unit: expected 'units', read 'ur\\\\itts'",
+   "Report: out/instruments/report.html"
+  ]
+ },
+ {
+  "cue": "models",
+  "command": "uv run vtf models out/instruments -m claude-opus-5-5 -m gpt-6.2-sol --sample 75",
+  "output": [
+   "Note: requests go to https://api.anthropic.com (ANTHROPIC_BASE_URL is set).",
+   "Asking",
+   "claude-opus-5-5 (high effort)",
+   "  with the image     75/75 (100%)",
+   "  without it         0/75 (0%)  (open-ended only: 0/75 (0%))",
+   "  contrast pairs     75/75 with both answers right",
+   "  phone photos       70/75 (the same tasks clean: 75/75)",
+   "  reading error      median 0.0%, 90% within 0.0% (unprinted values)",
+   "  cost               $2.02 ($0.00 new this run)",
+   "gpt-6.2-sol (high effort)",
+   "  with the image     75/75 (100%)",
+   "  without it         0/75 (0%)  (open-ended only: 0/75 (0%))",
+   "  contrast pairs     75/75 with both answers right",
+   "  phone photos       75/75 (the same tasks clean: 75/75)",
+   "  reading error      median 0.0%, 90% within 0.0% (unprinted values)",
+   "  cost               $0.40 ($0.00 new this run)",
+   "Report: out/instruments/report.html"
+  ]
+ },
+ {
+  "cue": "report",
+  "command": "open out/instruments/report.html",
+  "output": []
+ }
+]

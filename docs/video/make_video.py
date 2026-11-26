@@ -11,7 +11,8 @@ follow the voice: a {cue} in the script marks the word a picture waits for, and 
 delivery without being spoken or shown. The music is an instrumental from the ElevenLabs Music
 API, ducked under the voice. Both need ELEVENLABS_API_KEY (from the environment or the .env file)
 and are cached in out/narration/, so rebuilding with an unchanged script costs nothing. Every
-number on screen is read from samples/*/model_summary.json by data.py.
+number on screen is read from samples/*/model_summary.json by data.py, and the walkthrough shows
+the real commands and output that capture_walkthrough.py recorded in assets/.
 """
 
 from __future__ import annotations
@@ -143,8 +144,6 @@ def script() -> list[tuple[sc.Scene, str]]:
          "[building energy] {factory}So I built a factory. It doesn't collect pictures. It manufactures them, from data: "
          "{families}charts, instruments, connection diagrams and dense plots. {proof}And because it drew every picture, it "
          "knows every answer. {guess}No labelling. No guesswork."),
-        (sc.Terminal("uv run vtf generate --family instruments --n 300", terminal_output()),
-         "One command makes 300 verified tasks in seconds, on a laptop."),
         (sc.Checks(),
          "Then the factory tries to break its own work. {gates}Gates reject anything illegible, ambiguous or duplicated. "
          "{probes}Pixel probes check each drawing matches its data. {ocr}An OCR engine reads the labels back. {twins}Contrast "
@@ -174,6 +173,11 @@ def script() -> list[tuple[sc.Scene, str]]:
          "{draw}Turn up the size dial, and every model hits a wall. {lower}Claude Haiku and Sonnet break at about 300 points. "
          "{opus}Opus holds until about 500. At 800, even Opus gets just one in eight right. {note}On the biggest plots, GPT "
          "and Qwen hit the same wall. {blind}And without the image? Not one count right, from any model."),
+        (sc.Walkthrough(json.loads((sc.ASSETS / "walkthrough.json").read_text()), str(sc.ASSETS / "report.png")),
+         "{gen}And it's all one pipeline you can run yourself, on a laptop or in Docker. Here it is, end to end: three "
+         "hundred tasks in seconds. {pairs}Their contrast twins. {photos}Their phone photos. {ocr}An OCR check of every "
+         "label. {models}Then the models, with every reply cached, so this rerun cost nothing. {report}And one report holds "
+         "it all: every task, every answer, and where each model breaks."),
         (sc.Anecdote(str(sc.ASSETS / "gear-out-of-mesh.png"), "Gear A is driven clockwise. Which gears turn counterclockwise?",
                      "“None.”", "Claude Opus 5.5"),
          "[warm] The models even keep me honest. {ask}In an early prototype, I asked which gears turn counterclockwise, "
@@ -196,17 +200,6 @@ def script() -> list[tuple[sc.Scene, str]]:
          "{title}Clean pictures are solved. The real world is next. This is Visual Task Factory, from team Plot Twist. "
          "[confident] Turn the dial. Find the edge."),
     ]
-
-
-def terminal_output() -> list[str]:
-    """The real output of the command the terminal scene types, run into out/video/demo-run."""
-    run_dir = WORK / "demo-run"
-    result = subprocess.run(
-        ["uv", "run", "vtf", "generate", "--family", "instruments", "--n", "300", "--out", str(run_dir)],
-        cwd=ROOT, capture_output=True, text=True, check=True,
-    )
-    lines = [line.replace(str(ROOT) + "/", "") for line in result.stdout.splitlines() if not line.startswith("Generating")]
-    return ["Generating  [####################################]  100%", *lines]
 
 
 def morph_frames(run: str, name: str, steps: int = 14) -> list[Image.Image]:

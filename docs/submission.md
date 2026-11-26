@@ -24,12 +24,15 @@ on 6 Dec 2026 at 11:55 PM IST.
 
 ## Demo video
 
-[demo.mp4](demo.mp4) is a pitch of just under four minutes. It opens on a syringe that six models
-from three labs all read right as a clean drawing, and half of them misread as a phone photo. It
-then covers why fixed benchmarks get used up, the factory and how it checks its own work, the two
-dials (size and photo mode), the six models compared on the same tasks, where each model breaks,
-the bug a model caught in a prototype, and why a factory beats a benchmark. It says on screen and
-aloud that Claude answered all 990 tasks and GPT and Qwen a 255-task sample. It is narrated in Indian English by the ElevenLabs voice "Jeevan" (Eleven v4) over an
+[demo.mp4](demo.mp4) is a four-minute pitch with a walkthrough. It opens on a syringe that six
+models from three labs all read right as a clean drawing, and half of them misread as a phone
+photo. It then covers why fixed benchmarks get used up, the factory and how it checks its own work,
+the two dials (size and photo mode), the six models compared on the same tasks, and where each model
+breaks. Then the pipeline runs end to end, with real terminal output recorded by
+[video/capture_walkthrough.py](video/capture_walkthrough.py): generate, contrast twins, photos, OCR,
+model checks (from the cache) and the report. It closes on the bug a model caught in a prototype
+and why a factory beats a benchmark. It says on screen and aloud that Claude answered all 990 tasks
+and GPT and Qwen a 255-task sample. It is narrated in Indian English by the ElevenLabs voice "Jeevan" (Eleven v4) over an
 instrumental from the ElevenLabs Music API. The animation is drawn from the committed samples by
 [video/make_video.py](video/make_video.py), with every number on screen read from the samples'
 model results. `--stills` and `--silent` preview it without any API calls.
