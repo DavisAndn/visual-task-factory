@@ -163,6 +163,24 @@ each provider's key (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `CEREBRAS_API_KEY`) 
 environment or a `.env` file (git-ignored). Tesseract: `brew install
 tesseract` or `apt install tesseract-ocr`. Tests: `uv run pytest`.
 
+### Run it in Docker
+
+The image holds Python 3.13, Tesseract and the locked dependencies, so nothing else needs
+installing; CI builds it and runs the pipeline inside it on every push.
+
+```bash
+docker build -t vtf .
+docker run --rm -v "$PWD/out:/app/out" vtf generate --family instruments --n 300 --out out/instruments
+docker run --rm -v "$PWD/out:/app/out" vtf pairs out/instruments
+docker run --rm -v "$PWD/out:/app/out" vtf photos out/instruments
+docker run --rm -v "$PWD/out:/app/out" vtf ocr out/instruments --photos
+docker run --rm --env-file .env -v "$PWD/out:/app/out" vtf models out/instruments -m claude-haiku-5-5 --sample 20
+docker run --rm --entrypoint pytest vtf -q
+```
+
+API keys are never part of the image: `--env-file .env` passes them in at run time. The committed
+samples are inside the image too, so `vtf compare` and `vtf report` work on them directly.
+
 ## How reference answers are established
 
 **Data first, image second.** Every task starts as a *scene*: values, positions and styling sampled
@@ -197,6 +215,7 @@ values follow ChartQA's 5%, never tighter than a tenth of a gridline step.
 | **OCR read-back** | Tesseract reads back every label each question depends on, from the clean image and from its photo |
 | **Independent solvers** | The tests re-derive answers another way: gear directions from which gears the drawing shows touching (not the generator's links), valve reachability by union-find instead of the family's search |
 | **Human audit** | A person answers a sample blind, then judges each reference answer; tasks a model got wrong are mixed in unmarked |
+| **Mutation tests** | Tests that break things on purpose and check the factory notices: a gear drawn out of mesh or a needle drawn in the wrong place fails the pixel probes; labels removed, overlapped, clipped or hidden behind the legend fail grounding; unreadable values fail the ambiguity gate; a contrast edit that doesn't flip the answer is refused; a fixed run must reproduce its recorded tasks exactly (`uv run pytest -k "catches or rejects or flip or reproducib"`) |
 
 | | Charts (300) | Instruments (300) | Connections (300) | Counting (150) |
 |---|---|---|---|---|
