@@ -8,6 +8,8 @@ What comes out of it:
   either hard or wrong, and only a person can tell which.
 - Contrast pairs (from `vtf pairs`). The edited twin of each sampled task is asked as well; a
   model that really reads the image gets both right.
+- Phone photos (from `vtf photos`). The photographed twin of each sampled task is asked too: the
+  same question and answer, so any drop is what the camera costs.
 """
 
 from __future__ import annotations
@@ -23,7 +25,7 @@ from pathlib import Path
 from typing import Any
 
 from ..clients import cost_usd
-from ..core.runs import read_json, read_pairs, read_tasks
+from ..core.runs import read_json, read_pairs, read_photos, read_tasks
 from ..core.schema import Task
 from ..families import get_family
 from ..validators.models import (
@@ -44,7 +46,7 @@ def reading(reply: str) -> float | None:
     match = _NUMBER.search(final_answer(reply).replace("−", "-"))
     return float(match.group(0).replace(",", "")) if match else None
 
-KINDS = ("image", "blind", "pair")
+KINDS = ("image", "blind", "pair", "photo")
 
 
 def sample_tasks(tasks: list[Task], n: int, seed: int) -> list[Task]:
@@ -69,7 +71,8 @@ def count_jobs(run_dir: Path, n_clients: int, sample: int, seed: int) -> int:
     """How many requests run_model_checks will make (before the cache answers any of them)."""
     chosen = sample_tasks(read_tasks(run_dir / "tasks.jsonl"), sample, seed)
     paired = {pair.a for pair in read_pairs(run_dir)}
-    return n_clients * sum(2 + (task.id in paired) for task in chosen)
+    photos = read_photos(run_dir)
+    return n_clients * sum(2 + (task.id in paired) + (task.id in photos) for task in chosen)
 
 
 def _ask(client: ModelClient, task: Task, kind: str, run_dir: Path) -> Reply:
@@ -93,6 +96,7 @@ def run_model_checks(
     tasks = read_tasks(run_dir / "tasks.jsonl")
     chosen = sample_tasks(tasks, sample, seed)
     pairs = {pair.a: pair for pair in read_pairs(run_dir)}
+    photos = read_photos(run_dir)
 
     jobs: list[tuple[ModelClient, Task, str]] = []
     for client in clients:
@@ -100,6 +104,8 @@ def run_model_checks(
             jobs += [(client, task, "image"), (client, task, "blind")]
             if task.id in pairs:
                 jobs.append((client, pairs[task.id].b, "pair"))
+            if task.id in photos:
+                jobs.append((client, photos[task.id], "photo"))
 
     replies: dict[tuple[str, str, str], Reply] = {}
     errors: dict[tuple[str, str, str], str] = {}
@@ -131,10 +137,11 @@ def run_model_checks(
                 "facets": get_family(task.family).facets(task.scene),
                 "answer": task.answer.model_dump(),
             }
+            twins = {"pair": pairs[task.id].b if task.id in pairs else None, "photo": photos.get(task.id)}
             for kind in KINDS:
-                target = pairs[task.id].b if kind == "pair" and task.id in pairs else task
-                if kind == "pair" and task.id not in pairs:
+                if kind in twins and twins[kind] is None:
                     continue
+                target = twins.get(kind) or task
                 key = (client.name, target.id, kind)
                 if key in replies:
                     reply = replies[key]
@@ -151,12 +158,22 @@ def run_model_checks(
                     record[kind] = {"task": target.id, "error": errors[key]}
             mine.append(record)
         records += mine
-        summaries[client.name] = summarize(mine, prior, requested_model=getattr(client, "model", None))
+        inner = getattr(client, "inner", client)  # the model behind a CachedClient
+        requested = getattr(inner, "api_model", None) or getattr(inner, "model", None)
+        summaries[client.name] = summarize(mine, prior, requested_model=requested)
 
+    # Each model records its own sample, so checking one model on fewer tasks doesn't relabel the
+    # others; entries written before that inherit the run-wide values they were made with.
+    for entry in summaries.values():
+        entry.update(sample=len(chosen), seed=seed)
     previous = read_json(run_dir / "model_summary.json") or {}
     models = {k: v for k, v in previous.get("models", {}).items() if k not in summaries}
+    for entry in models.values():
+        entry.setdefault("sample", previous.get("sample"))
+        entry.setdefault("seed", previous.get("seed"))
     models.update(summaries)
-    summary = {"sample": len(chosen), "of": len(tasks), "seed": seed, "models": models}
+    widest = max(models.values(), key=lambda m: m.get("sample") or 0)
+    summary = {"sample": widest["sample"], "of": len(tasks), "seed": widest["seed"], "models": models}
     (run_dir / "model_summary.json").write_text(json.dumps(summary, indent=2))
 
     kept = []
@@ -179,6 +196,7 @@ def summarize(records: list[dict[str, Any]], prior: dict[str, Any], requested_mo
     blind = [r for r in records if "reply" in r.get("blind", {})]
     open_blind = [r for r in blind if r["answer"]["type"] != "yes_no"]
     paired = [r for r in records if "reply" in r.get("pair", {}) and "reply" in r.get("image", {})]
+    shot = [r for r in records if "reply" in r.get("photo", {}) and "reply" in r.get("image", {})]
 
     by: dict[str, dict[str, Any]] = {}
     facet_names = ["template", "skill"] + sorted({f for r in records for f in r.get("facets", {})})
@@ -192,11 +210,16 @@ def summarize(records: list[dict[str, Any]], prior: dict[str, Any], requested_mo
         for name, group in sorted(groups.items()):
             img = [r for r in group if "reply" in r.get("image", {})]
             bl = [r for r in group if "reply" in r.get("blind", {})]
+            ph = [r for r in group if "reply" in r.get("photo", {}) and "reply" in r.get("image", {})]
             row: dict[str, Any] = {
                 "tasks": len(group),
                 "with_image": _rate(sum(correct(r, "image") for r in img), len(img)),
                 "blind": _rate(sum(correct(r, "blind") for r in bl), len(bl)),
             }
+            if ph:  # clean and photographed, on the same tasks
+                row["photo_tasks"] = len(ph)
+                row["clean_of_photographed"] = _rate(sum(correct(r, "image") for r in ph), len(ph))
+                row["photo"] = _rate(sum(correct(r, "photo") for r in ph), len(ph))
             if facet == "template" and name in prior:
                 row["always_guess"] = prior[name]["share"]
             table[name] = row
@@ -211,7 +234,9 @@ def summarize(records: list[dict[str, Any]], prior: dict[str, Any], requested_mo
                 spent += 0.0 if entry["cached"] else entry["cost_usd"]
                 served[entry["served_by"]] += 1
     errors = sum("error" in record.get(kind, {}) for record in records for kind in KINDS)
-    fallback = sum(n for model, n in served.items() if requested_model and model != requested_model)
+    # A provider may name a dated snapshot of the model asked for ("gpt-...-2026-10-01"), so only a
+    # reply from a model whose name doesn't start with the one requested counts as a fallback.
+    fallback = sum(n for model, n in served.items() if requested_model and not model.startswith(requested_model))
 
     # Reading precision: how far off the model's numbers are when values must be read rather than
     # copied (unprinted: the answer carries a tolerance), whether or not they fall within it.
@@ -237,6 +262,12 @@ def summarize(records: list[dict[str, Any]], prior: dict[str, Any], requested_mo
         "blind": {"correct": sum(correct(r, "blind") for r in blind), "of": len(blind)},
         "blind_open_ended": {"correct": sum(correct(r, "blind") for r in open_blind), "of": len(open_blind)},
         "pairs": {"both_correct": sum(correct(r, "image") and correct(r, "pair") for r in paired), "of": len(paired)},
+        "photos": {
+            "of": len(shot),
+            "clean_correct": sum(correct(r, "image") for r in shot),
+            "photo_correct": sum(correct(r, "photo") for r in shot),
+            "lost": [r["task"] for r in shot if correct(r, "image") and not correct(r, "photo")],
+        },
         "by_template": by.pop("template"),
         "by_skill": by.pop("skill"),
         "by_facet": by,  # image properties: chart type, printed values, rotation, ...

@@ -1,0 +1,10 @@
+{
+  "engine": "tesseract 5.5.3",
+  "labels": 0,
+  "read_back": 0,
+  "read_on_second_attempt": 0,
+  "tasks": 150,
+  "tasks_fully_read_back": 150,
+  "by_kind": {},
+  "misses": []
+}

@@ -1,0 +1,37 @@
+{
+  "share": 1.0,
+  "seed": 0,
+  "tasks": 300,
+  "pairs": 300,
+  "median_edit": 0.015,
+  "by_template": {
+    "clock_time": {
+      "tasks": 64,
+      "pairs": 64
+    },
+    "clock_until": {
+      "tasks": 64,
+      "pairs": 64
+    },
+    "gauge_headroom": {
+      "tasks": 6,
+      "pairs": 6
+    },
+    "gauge_read": {
+      "tasks": 24,
+      "pairs": 24
+    },
+    "gauge_read_inner": {
+      "tasks": 15,
+      "pairs": 15
+    },
+    "syringe_read": {
+      "tasks": 63,
+      "pairs": 63
+    },
+    "syringe_top_up": {
+      "tasks": 64,
+      "pairs": 64
+    }
+  }
+}

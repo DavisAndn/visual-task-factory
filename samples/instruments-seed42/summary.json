@@ -1,0 +1,147 @@
+{
+  "family": "instruments",
+  "seed": 42,
+  "requested": 300,
+  "accepted": 300,
+  "candidates": 349,
+  "acceptance_rate": 0.86,
+  "scenes_rendered": 195,
+  "elapsed_seconds": 4.5,
+  "funnel": [
+    {
+      "gate": "determinism",
+      "rejected": 0,
+      "remaining": 349
+    },
+    {
+      "gate": "render",
+      "rejected": 0,
+      "remaining": 349
+    },
+    {
+      "gate": "grounding",
+      "rejected": 0,
+      "remaining": 349
+    },
+    {
+      "gate": "ambiguity",
+      "rejected": 2,
+      "remaining": 347
+    },
+    {
+      "gate": "dedup",
+      "rejected": 47,
+      "remaining": 300
+    }
+  ],
+  "rejection_reasons": {
+    "dedup: near_duplicate": 47,
+    "ambiguity: imprecise": 2
+  },
+  "coverage": {
+    "skill": {
+      "read a scale": 87,
+      "read and subtract": 70,
+      "read a clock": 64,
+      "read and count on": 64,
+      "pick the right scale": 15
+    },
+    "template": {
+      "syringe_top_up": 64,
+      "clock_time": 64,
+      "clock_until": 64,
+      "syringe_read": 63,
+      "gauge_read": 24,
+      "gauge_read_inner": 15,
+      "gauge_headroom": 6
+    },
+    "instrument": {
+      "clock": 128,
+      "syringe": 127,
+      "gauge": 45
+    },
+    "level": {
+      "L4": 88,
+      "L2": 87,
+      "L3": 67,
+      "L1": 58
+    },
+    "difficulty": {
+      "syringe L4": 46,
+      "clock L2": 34,
+      "clock L4": 34,
+      "syringe L2": 32,
+      "clock L3": 32,
+      "syringe L3": 28,
+      "clock L1": 28,
+      "gauge L2": 21,
+      "syringe L1": 21,
+      "gauge L1": 9,
+      "gauge L4": 8,
+      "gauge L3": 7
+    },
+    "scale": {
+      "ticks only": 66,
+      "roman numerals": 34,
+      "one scale": 30,
+      "arabic numerals": 28,
+      "0.5 mL": 24,
+      "10 mL": 22,
+      "1 mL": 22,
+      "50 units": 20,
+      "two scales": 15,
+      "60 mL": 12,
+      "5 mL": 10,
+      "20 mL": 9,
+      "3 mL": 8
+    }
+  },
+  "answer_prior": {
+    "clock_time": {
+      "tasks": 64,
+      "most_common_answer": "7:25",
+      "share": 0.031
+    },
+    "clock_until": {
+      "tasks": 64,
+      "most_common_answer": "68",
+      "share": 0.047
+    },
+    "gauge_headroom": {
+      "tasks": 6,
+      "most_common_answer": "17.0",
+      "share": 0.167
+    },
+    "gauge_read": {
+      "tasks": 24,
+      "most_common_answer": "55.0",
+      "share": 0.083
+    },
+    "gauge_read_inner": {
+      "tasks": 15,
+      "most_common_answer": "1.5",
+      "share": 0.133
+    },
+    "syringe_read": {
+      "tasks": 63,
+      "most_common_answer": "0.8",
+      "share": 0.048
+    },
+    "syringe_top_up": {
+      "tasks": 64,
+      "most_common_answer": "1.2",
+      "share": 0.062
+    }
+  },
+  "determinism": {
+    "checked": 20,
+    "passed": 20
+  },
+  "versions": {
+    "vtf": "0.1.0",
+    "python": "3.13.2",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.5"
+  },
+  "balance_skips": {}
+}

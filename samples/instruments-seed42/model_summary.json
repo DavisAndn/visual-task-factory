@@ -1,0 +1,2711 @@
+{
+  "sample": 300,
+  "of": 300,
+  "seed": 0,
+  "models": {
+    "claude-haiku-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 295,
+        "of": 300
+      },
+      "blind": {
+        "correct": 9,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 9,
+        "of": 300
+      },
+      "pairs": {
+        "both_correct": 293,
+        "of": 300
+      },
+      "photos": {
+        "of": 300,
+        "clean_correct": 295,
+        "photo_correct": 235,
+        "lost": [
+          "instruments-000000-syringe_read",
+          "instruments-000000-syringe_top_up",
+          "instruments-000001-syringe_read",
+          "instruments-000003-syringe_read",
+          "instruments-000004-syringe_read",
+          "instruments-000004-syringe_top_up",
+          "instruments-000005-syringe_read",
+          "instruments-000005-syringe_top_up",
+          "instruments-000006-syringe_read",
+          "instruments-000006-syringe_top_up",
+          "instruments-000016-syringe_read",
+          "instruments-000016-syringe_top_up",
+          "instruments-000019-syringe_read",
+          "instruments-000021-syringe_read",
+          "instruments-000025-syringe_top_up",
+          "instruments-000031-syringe_read",
+          "instruments-000031-syringe_top_up",
+          "instruments-000035-syringe_top_up",
+          "instruments-000038-clock_until",
+          "instruments-000039-syringe_read",
+          "instruments-000039-syringe_top_up",
+          "instruments-000048-syringe_read",
+          "instruments-000048-syringe_top_up",
+          "instruments-000050-syringe_read",
+          "instruments-000050-syringe_top_up",
+          "instruments-000056-syringe_read",
+          "instruments-000056-syringe_top_up",
+          "instruments-000063-syringe_read",
+          "instruments-000073-syringe_read",
+          "instruments-000073-syringe_top_up",
+          "instruments-000077-syringe_top_up",
+          "instruments-000079-syringe_read",
+          "instruments-000079-syringe_top_up",
+          "instruments-000089-clock_until",
+          "instruments-000092-syringe_read",
+          "instruments-000094-syringe_read",
+          "instruments-000094-syringe_top_up",
+          "instruments-000095-syringe_read",
+          "instruments-000095-syringe_top_up",
+          "instruments-000096-syringe_read",
+          "instruments-000096-syringe_top_up",
+          "instruments-000097-syringe_read",
+          "instruments-000097-syringe_top_up",
+          "instruments-000104-syringe_read",
+          "instruments-000104-syringe_top_up",
+          "instruments-000112-syringe_read",
+          "instruments-000112-syringe_top_up",
+          "instruments-000121-syringe_read",
+          "instruments-000121-syringe_top_up",
+          "instruments-000124-syringe_read",
+          "instruments-000124-syringe_top_up",
+          "instruments-000132-syringe_top_up",
+          "instruments-000146-syringe_read",
+          "instruments-000146-syringe_top_up",
+          "instruments-000149-syringe_read",
+          "instruments-000149-syringe_top_up",
+          "instruments-000156-syringe_read",
+          "instruments-000156-syringe_top_up",
+          "instruments-000168-gauge_read",
+          "instruments-000168-gauge_headroom",
+          "instruments-000177-syringe_top_up",
+          "instruments-000181-gauge_read",
+          "instruments-000189-syringe_read",
+          "instruments-000190-gauge_read"
+        ]
+      },
+      "by_template": {
+        "clock_time": {
+          "tasks": 64,
+          "with_image": 0.969,
+          "blind": 0.0,
+          "photo_tasks": 64,
+          "clean_of_photographed": 0.969,
+          "photo": 1.0,
+          "always_guess": 0.031
+        },
+        "clock_until": {
+          "tasks": 64,
+          "with_image": 0.984,
+          "blind": 0.047,
+          "photo_tasks": 64,
+          "clean_of_photographed": 0.984,
+          "photo": 0.969,
+          "always_guess": 0.047
+        },
+        "gauge_headroom": {
+          "tasks": 6,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 6,
+          "clean_of_photographed": 1.0,
+          "photo": 0.833,
+          "always_guess": 0.167
+        },
+        "gauge_read": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 24,
+          "clean_of_photographed": 1.0,
+          "photo": 0.875,
+          "always_guess": 0.083
+        },
+        "gauge_read_inner": {
+          "tasks": 15,
+          "with_image": 0.867,
+          "blind": 0.0,
+          "photo_tasks": 15,
+          "clean_of_photographed": 0.867,
+          "photo": 0.933,
+          "always_guess": 0.133
+        },
+        "syringe_read": {
+          "tasks": 63,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 63,
+          "clean_of_photographed": 1.0,
+          "photo": 0.524,
+          "always_guess": 0.048
+        },
+        "syringe_top_up": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.094,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 0.562,
+          "always_guess": 0.062
+        }
+      },
+      "by_skill": {
+        "pick the right scale": {
+          "tasks": 15,
+          "with_image": 0.867,
+          "blind": 0.0,
+          "photo_tasks": 15,
+          "clean_of_photographed": 0.867,
+          "photo": 0.933
+        },
+        "read a clock": {
+          "tasks": 64,
+          "with_image": 0.969,
+          "blind": 0.0,
+          "photo_tasks": 64,
+          "clean_of_photographed": 0.969,
+          "photo": 1.0
+        },
+        "read a scale": {
+          "tasks": 87,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 87,
+          "clean_of_photographed": 1.0,
+          "photo": 0.621
+        },
+        "read and count on": {
+          "tasks": 64,
+          "with_image": 0.984,
+          "blind": 0.047,
+          "photo_tasks": 64,
+          "clean_of_photographed": 0.984,
+          "photo": 0.969
+        },
+        "read and subtract": {
+          "tasks": 70,
+          "with_image": 1.0,
+          "blind": 0.086,
+          "photo_tasks": 70,
+          "clean_of_photographed": 1.0,
+          "photo": 0.586
+        }
+      },
+      "by_facet": {
+        "difficulty": {
+          "clock L1": {
+            "tasks": 28,
+            "with_image": 0.964,
+            "blind": 0.036,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.964,
+            "photo": 0.964
+          },
+          "clock L2": {
+            "tasks": 34,
+            "with_image": 0.971,
+            "blind": 0.029,
+            "photo_tasks": 34,
+            "clean_of_photographed": 0.971,
+            "photo": 1.0
+          },
+          "clock L3": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.031,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 0.969
+          },
+          "clock L4": {
+            "tasks": 34,
+            "with_image": 0.971,
+            "blind": 0.0,
+            "photo_tasks": 34,
+            "clean_of_photographed": 0.971,
+            "photo": 1.0
+          },
+          "gauge L1": {
+            "tasks": 9,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 9,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L2": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 0.81
+          },
+          "gauge L3": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L4": {
+            "tasks": 8,
+            "with_image": 0.75,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.75,
+            "photo": 0.875
+          },
+          "syringe L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.095,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 0.81
+          },
+          "syringe L2": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.062,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 0.594
+          },
+          "syringe L3": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.071,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 0.429
+          },
+          "syringe L4": {
+            "tasks": 46,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 46,
+            "clean_of_photographed": 1.0,
+            "photo": 0.457
+          }
+        },
+        "instrument": {
+          "clock": {
+            "tasks": 128,
+            "with_image": 0.977,
+            "blind": 0.023,
+            "photo_tasks": 128,
+            "clean_of_photographed": 0.977,
+            "photo": 0.984
+          },
+          "gauge": {
+            "tasks": 45,
+            "with_image": 0.956,
+            "blind": 0.0,
+            "photo_tasks": 45,
+            "clean_of_photographed": 0.956,
+            "photo": 0.889
+          },
+          "syringe": {
+            "tasks": 127,
+            "with_image": 1.0,
+            "blind": 0.047,
+            "photo_tasks": 127,
+            "clean_of_photographed": 1.0,
+            "photo": 0.543
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 58,
+            "with_image": 0.983,
+            "blind": 0.052,
+            "photo_tasks": 58,
+            "clean_of_photographed": 0.983,
+            "photo": 0.914
+          },
+          "L2": {
+            "tasks": 87,
+            "with_image": 0.989,
+            "blind": 0.034,
+            "photo_tasks": 87,
+            "clean_of_photographed": 0.989,
+            "photo": 0.805
+          },
+          "L3": {
+            "tasks": 67,
+            "with_image": 1.0,
+            "blind": 0.045,
+            "photo_tasks": 67,
+            "clean_of_photographed": 1.0,
+            "photo": 0.746
+          },
+          "L4": {
+            "tasks": 88,
+            "with_image": 0.966,
+            "blind": 0.0,
+            "photo_tasks": 88,
+            "clean_of_photographed": 0.966,
+            "photo": 0.705
+          }
+        },
+        "scale": {
+          "0.5 mL": {
+            "tasks": 24,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 24,
+            "clean_of_photographed": 1.0,
+            "photo": 0.667
+          },
+          "1 mL": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.227
+          },
+          "10 mL": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.045,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.591
+          },
+          "20 mL": {
+            "tasks": 9,
+            "with_image": 1.0,
+            "blind": 0.111,
+            "photo_tasks": 9,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "3 mL": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 0.875
+          },
+          "5 mL": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.1,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 0.6
+          },
+          "50 units": {
+            "tasks": 20,
+            "with_image": 1.0,
+            "blind": 0.1,
+            "photo_tasks": 20,
+            "clean_of_photographed": 1.0,
+            "photo": 0.25
+          },
+          "60 mL": {
+            "tasks": 12,
+            "with_image": 1.0,
+            "blind": 0.083,
+            "photo_tasks": 12,
+            "clean_of_photographed": 1.0,
+            "photo": 0.667
+          },
+          "arabic numerals": {
+            "tasks": 28,
+            "with_image": 0.964,
+            "blind": 0.036,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.964,
+            "photo": 0.964
+          },
+          "one scale": {
+            "tasks": 30,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 30,
+            "clean_of_photographed": 1.0,
+            "photo": 0.867
+          },
+          "roman numerals": {
+            "tasks": 34,
+            "with_image": 0.971,
+            "blind": 0.029,
+            "photo_tasks": 34,
+            "clean_of_photographed": 0.971,
+            "photo": 1.0
+          },
+          "ticks only": {
+            "tasks": 66,
+            "with_image": 0.985,
+            "blind": 0.015,
+            "photo_tasks": 66,
+            "clean_of_photographed": 0.985,
+            "photo": 0.985
+          },
+          "two scales": {
+            "tasks": 15,
+            "with_image": 0.867,
+            "blind": 0.0,
+            "photo_tasks": 15,
+            "clean_of_photographed": 0.867,
+            "photo": 0.933
+          }
+        }
+      },
+      "guessable": [
+        "instruments-000005-syringe_top_up",
+        "instruments-000023-syringe_top_up",
+        "instruments-000060-syringe_top_up",
+        "instruments-000072-syringe_top_up",
+        "instruments-000092-syringe_top_up",
+        "instruments-000096-syringe_top_up",
+        "instruments-000122-clock_until",
+        "instruments-000123-clock_until",
+        "instruments-000158-clock_until"
+      ],
+      "unsolved": [
+        "instruments-000054-clock_time",
+        "instruments-000088-clock_until",
+        "instruments-000133-gauge_read_inner",
+        "instruments-000141-clock_time",
+        "instruments-000170-gauge_read_inner"
+      ],
+      "reading_precision": {
+        "readings": 172,
+        "median_error": 0.0,
+        "p90_error": 0.0,
+        "max_error": 0.0435
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.3199,
+      "spent_this_run_usd": 0.0569,
+      "sample": 300,
+      "seed": 0
+    },
+    "claude-sonnet-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 299,
+        "of": 300
+      },
+      "blind": {
+        "correct": 3,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 3,
+        "of": 300
+      },
+      "pairs": {
+        "both_correct": 298,
+        "of": 300
+      },
+      "photos": {
+        "of": 300,
+        "clean_correct": 299,
+        "photo_correct": 279,
+        "lost": [
+          "instruments-000000-syringe_read",
+          "instruments-000000-syringe_top_up",
+          "instruments-000001-syringe_top_up",
+          "instruments-000025-syringe_read",
+          "instruments-000025-syringe_top_up",
+          "instruments-000031-syringe_read",
+          "instruments-000050-syringe_read",
+          "instruments-000050-syringe_top_up",
+          "instruments-000053-clock_until",
+          "instruments-000056-syringe_read",
+          "instruments-000077-syringe_read",
+          "instruments-000077-syringe_top_up",
+          "instruments-000095-syringe_read",
+          "instruments-000095-syringe_top_up",
+          "instruments-000097-syringe_top_up",
+          "instruments-000112-syringe_top_up",
+          "instruments-000121-syringe_read",
+          "instruments-000146-syringe_read",
+          "instruments-000146-syringe_top_up",
+          "instruments-000156-syringe_top_up",
+          "instruments-000189-syringe_read"
+        ]
+      },
+      "by_template": {
+        "clock_time": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.031
+        },
+        "clock_until": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.047,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 0.984,
+          "always_guess": 0.047
+        },
+        "gauge_headroom": {
+          "tasks": 6,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 6,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.167
+        },
+        "gauge_read": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 24,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.083
+        },
+        "gauge_read_inner": {
+          "tasks": 15,
+          "with_image": 0.933,
+          "blind": 0.0,
+          "photo_tasks": 15,
+          "clean_of_photographed": 0.933,
+          "photo": 1.0,
+          "always_guess": 0.133
+        },
+        "syringe_read": {
+          "tasks": 63,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 63,
+          "clean_of_photographed": 1.0,
+          "photo": 0.841,
+          "always_guess": 0.048
+        },
+        "syringe_top_up": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 0.844,
+          "always_guess": 0.062
+        }
+      },
+      "by_skill": {
+        "pick the right scale": {
+          "tasks": 15,
+          "with_image": 0.933,
+          "blind": 0.0,
+          "photo_tasks": 15,
+          "clean_of_photographed": 0.933,
+          "photo": 1.0
+        },
+        "read a clock": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read a scale": {
+          "tasks": 87,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 87,
+          "clean_of_photographed": 1.0,
+          "photo": 0.885
+        },
+        "read and count on": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.047,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 0.984
+        },
+        "read and subtract": {
+          "tasks": 70,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 70,
+          "clean_of_photographed": 1.0,
+          "photo": 0.857
+        }
+      },
+      "by_facet": {
+        "difficulty": {
+          "clock L1": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L2": {
+            "tasks": 34,
+            "with_image": 1.0,
+            "blind": 0.029,
+            "photo_tasks": 34,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L3": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.031,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 0.969
+          },
+          "clock L4": {
+            "tasks": 34,
+            "with_image": 1.0,
+            "blind": 0.029,
+            "photo_tasks": 34,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L1": {
+            "tasks": 9,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 9,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L2": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L3": {
+            "tasks": 7,
+            "with_image": 0.857,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.857,
+            "photo": 1.0
+          },
+          "gauge L4": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L2": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 0.875
+          },
+          "syringe L3": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 0.821
+          },
+          "syringe L4": {
+            "tasks": 46,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 46,
+            "clean_of_photographed": 1.0,
+            "photo": 0.761
+          }
+        },
+        "instrument": {
+          "clock": {
+            "tasks": 128,
+            "with_image": 1.0,
+            "blind": 0.023,
+            "photo_tasks": 128,
+            "clean_of_photographed": 1.0,
+            "photo": 0.992
+          },
+          "gauge": {
+            "tasks": 45,
+            "with_image": 0.978,
+            "blind": 0.0,
+            "photo_tasks": 45,
+            "clean_of_photographed": 0.978,
+            "photo": 1.0
+          },
+          "syringe": {
+            "tasks": 127,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 127,
+            "clean_of_photographed": 1.0,
+            "photo": 0.843
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 58,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 58,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 87,
+            "with_image": 1.0,
+            "blind": 0.011,
+            "photo_tasks": 87,
+            "clean_of_photographed": 1.0,
+            "photo": 0.954
+          },
+          "L3": {
+            "tasks": 67,
+            "with_image": 0.985,
+            "blind": 0.015,
+            "photo_tasks": 67,
+            "clean_of_photographed": 0.985,
+            "photo": 0.91
+          },
+          "L4": {
+            "tasks": 88,
+            "with_image": 1.0,
+            "blind": 0.011,
+            "photo_tasks": 88,
+            "clean_of_photographed": 1.0,
+            "photo": 0.875
+          }
+        },
+        "scale": {
+          "0.5 mL": {
+            "tasks": 24,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 24,
+            "clean_of_photographed": 1.0,
+            "photo": 0.958
+          },
+          "1 mL": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.545
+          },
+          "10 mL": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.864
+          },
+          "20 mL": {
+            "tasks": 9,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 9,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "3 mL": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 0.75
+          },
+          "5 mL": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 0.9
+          },
+          "50 units": {
+            "tasks": 20,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 20,
+            "clean_of_photographed": 1.0,
+            "photo": 0.85
+          },
+          "60 mL": {
+            "tasks": 12,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 12,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "arabic numerals": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "one scale": {
+            "tasks": 30,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 30,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "roman numerals": {
+            "tasks": 34,
+            "with_image": 1.0,
+            "blind": 0.029,
+            "photo_tasks": 34,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "ticks only": {
+            "tasks": 66,
+            "with_image": 1.0,
+            "blind": 0.03,
+            "photo_tasks": 66,
+            "clean_of_photographed": 1.0,
+            "photo": 0.985
+          },
+          "two scales": {
+            "tasks": 15,
+            "with_image": 0.933,
+            "blind": 0.0,
+            "photo_tasks": 15,
+            "clean_of_photographed": 0.933,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "instruments-000051-clock_until",
+        "instruments-000122-clock_until",
+        "instruments-000158-clock_until"
+      ],
+      "unsolved": [
+        "instruments-000110-gauge_read_inner"
+      ],
+      "reading_precision": {
+        "readings": 172,
+        "median_error": 0.0,
+        "p90_error": 0.0,
+        "max_error": 0.1562
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 4.1547,
+      "spent_this_run_usd": 0.9357,
+      "sample": 300,
+      "seed": 0
+    },
+    "claude-opus-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 300,
+        "of": 300
+      },
+      "blind": {
+        "correct": 3,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 3,
+        "of": 300
+      },
+      "pairs": {
+        "both_correct": 300,
+        "of": 300
+      },
+      "photos": {
+        "of": 300,
+        "clean_correct": 300,
+        "photo_correct": 270,
+        "lost": [
+          "instruments-000000-syringe_top_up",
+          "instruments-000001-syringe_read",
+          "instruments-000001-syringe_top_up",
+          "instruments-000006-syringe_read",
+          "instruments-000006-syringe_top_up",
+          "instruments-000025-syringe_read",
+          "instruments-000025-syringe_top_up",
+          "instruments-000031-syringe_top_up",
+          "instruments-000050-syringe_read",
+          "instruments-000050-syringe_top_up",
+          "instruments-000056-syringe_read",
+          "instruments-000056-syringe_top_up",
+          "instruments-000077-syringe_top_up",
+          "instruments-000079-syringe_read",
+          "instruments-000079-syringe_top_up",
+          "instruments-000095-syringe_read",
+          "instruments-000095-syringe_top_up",
+          "instruments-000096-syringe_read",
+          "instruments-000097-syringe_read",
+          "instruments-000097-syringe_top_up",
+          "instruments-000121-syringe_read",
+          "instruments-000121-syringe_top_up",
+          "instruments-000124-syringe_read",
+          "instruments-000124-syringe_top_up",
+          "instruments-000146-syringe_read",
+          "instruments-000146-syringe_top_up",
+          "instruments-000161-syringe_read",
+          "instruments-000161-syringe_top_up",
+          "instruments-000184-syringe_read",
+          "instruments-000184-syringe_top_up"
+        ]
+      },
+      "by_template": {
+        "clock_time": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.031
+        },
+        "clock_until": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.016,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.047
+        },
+        "gauge_headroom": {
+          "tasks": 6,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 6,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.167
+        },
+        "gauge_read": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 24,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.083
+        },
+        "gauge_read_inner": {
+          "tasks": 15,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 15,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.133
+        },
+        "syringe_read": {
+          "tasks": 63,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 63,
+          "clean_of_photographed": 1.0,
+          "photo": 0.778,
+          "always_guess": 0.048
+        },
+        "syringe_top_up": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.031,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 0.75,
+          "always_guess": 0.062
+        }
+      },
+      "by_skill": {
+        "pick the right scale": {
+          "tasks": 15,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 15,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read a clock": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read a scale": {
+          "tasks": 87,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 87,
+          "clean_of_photographed": 1.0,
+          "photo": 0.839
+        },
+        "read and count on": {
+          "tasks": 64,
+          "with_image": 1.0,
+          "blind": 0.016,
+          "photo_tasks": 64,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read and subtract": {
+          "tasks": 70,
+          "with_image": 1.0,
+          "blind": 0.029,
+          "photo_tasks": 70,
+          "clean_of_photographed": 1.0,
+          "photo": 0.771
+        }
+      },
+      "by_facet": {
+        "difficulty": {
+          "clock L1": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L2": {
+            "tasks": 34,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 34,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L3": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.031,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L4": {
+            "tasks": 34,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 34,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L1": {
+            "tasks": 9,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 9,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L2": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L3": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L4": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.048,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 0.81
+          },
+          "syringe L2": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 0.875
+          },
+          "syringe L3": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 0.857
+          },
+          "syringe L4": {
+            "tasks": 46,
+            "with_image": 1.0,
+            "blind": 0.022,
+            "photo_tasks": 46,
+            "clean_of_photographed": 1.0,
+            "photo": 0.609
+          }
+        },
+        "instrument": {
+          "clock": {
+            "tasks": 128,
+            "with_image": 1.0,
+            "blind": 0.008,
+            "photo_tasks": 128,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge": {
+            "tasks": 45,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 45,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe": {
+            "tasks": 127,
+            "with_image": 1.0,
+            "blind": 0.016,
+            "photo_tasks": 127,
+            "clean_of_photographed": 1.0,
+            "photo": 0.764
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 58,
+            "with_image": 1.0,
+            "blind": 0.017,
+            "photo_tasks": 58,
+            "clean_of_photographed": 1.0,
+            "photo": 0.931
+          },
+          "L2": {
+            "tasks": 87,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 87,
+            "clean_of_photographed": 1.0,
+            "photo": 0.954
+          },
+          "L3": {
+            "tasks": 67,
+            "with_image": 1.0,
+            "blind": 0.015,
+            "photo_tasks": 67,
+            "clean_of_photographed": 1.0,
+            "photo": 0.94
+          },
+          "L4": {
+            "tasks": 88,
+            "with_image": 1.0,
+            "blind": 0.011,
+            "photo_tasks": 88,
+            "clean_of_photographed": 1.0,
+            "photo": 0.795
+          }
+        },
+        "scale": {
+          "0.5 mL": {
+            "tasks": 24,
+            "with_image": 1.0,
+            "blind": 0.042,
+            "photo_tasks": 24,
+            "clean_of_photographed": 1.0,
+            "photo": 0.917
+          },
+          "1 mL": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.273
+          },
+          "10 mL": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.818
+          },
+          "20 mL": {
+            "tasks": 9,
+            "with_image": 1.0,
+            "blind": 0.111,
+            "photo_tasks": 9,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "3 mL": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 0.875
+          },
+          "5 mL": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "50 units": {
+            "tasks": 20,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 20,
+            "clean_of_photographed": 1.0,
+            "photo": 0.85
+          },
+          "60 mL": {
+            "tasks": 12,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 12,
+            "clean_of_photographed": 1.0,
+            "photo": 0.667
+          },
+          "arabic numerals": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "one scale": {
+            "tasks": 30,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 30,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "roman numerals": {
+            "tasks": 34,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 34,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "ticks only": {
+            "tasks": 66,
+            "with_image": 1.0,
+            "blind": 0.015,
+            "photo_tasks": 66,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "two scales": {
+            "tasks": 15,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 15,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "instruments-000068-syringe_top_up",
+        "instruments-000090-syringe_top_up",
+        "instruments-000158-clock_until"
+      ],
+      "unsolved": [],
+      "reading_precision": {
+        "readings": 172,
+        "median_error": 0.0,
+        "p90_error": 0.0,
+        "max_error": 0.0042
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 7.2792,
+      "spent_this_run_usd": 1.5665,
+      "sample": 300,
+      "seed": 0
+    },
+    "gpt-6-luna (high effort)": {
+      "tasks": 75,
+      "with_image": {
+        "correct": 69,
+        "of": 75
+      },
+      "blind": {
+        "correct": 1,
+        "of": 75
+      },
+      "blind_open_ended": {
+        "correct": 1,
+        "of": 75
+      },
+      "pairs": {
+        "both_correct": 67,
+        "of": 75
+      },
+      "photos": {
+        "of": 75,
+        "clean_correct": 69,
+        "photo_correct": 61,
+        "lost": [
+          "instruments-000006-syringe_top_up",
+          "instruments-000033-gauge_read_inner",
+          "instruments-000039-syringe_read",
+          "instruments-000077-syringe_read",
+          "instruments-000077-syringe_top_up",
+          "instruments-000078-gauge_headroom",
+          "instruments-000121-syringe_read",
+          "instruments-000129-gauge_read_inner",
+          "instruments-000133-gauge_read_inner",
+          "instruments-000136-clock_until",
+          "instruments-000156-syringe_top_up",
+          "instruments-000168-gauge_read",
+          "instruments-000168-gauge_headroom"
+        ]
+      },
+      "by_template": {
+        "clock_time": {
+          "tasks": 12,
+          "with_image": 0.917,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.917,
+          "photo": 1.0,
+          "always_guess": 0.031
+        },
+        "clock_until": {
+          "tasks": 12,
+          "with_image": 0.917,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.917,
+          "photo": 0.917,
+          "always_guess": 0.047
+        },
+        "gauge_headroom": {
+          "tasks": 6,
+          "with_image": 0.833,
+          "blind": 0.0,
+          "photo_tasks": 6,
+          "clean_of_photographed": 0.833,
+          "photo": 0.667,
+          "always_guess": 0.167
+        },
+        "gauge_read": {
+          "tasks": 12,
+          "with_image": 0.917,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.917,
+          "photo": 0.917,
+          "always_guess": 0.083
+        },
+        "gauge_read_inner": {
+          "tasks": 11,
+          "with_image": 0.818,
+          "blind": 0.091,
+          "photo_tasks": 11,
+          "clean_of_photographed": 0.818,
+          "photo": 0.636,
+          "always_guess": 0.133
+        },
+        "syringe_read": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 1.0,
+          "photo": 0.727,
+          "always_guess": 0.048
+        },
+        "syringe_top_up": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 1.0,
+          "photo": 0.727,
+          "always_guess": 0.062
+        }
+      },
+      "by_skill": {
+        "pick the right scale": {
+          "tasks": 11,
+          "with_image": 0.818,
+          "blind": 0.091,
+          "photo_tasks": 11,
+          "clean_of_photographed": 0.818,
+          "photo": 0.636
+        },
+        "read a clock": {
+          "tasks": 12,
+          "with_image": 0.917,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.917,
+          "photo": 1.0
+        },
+        "read a scale": {
+          "tasks": 23,
+          "with_image": 0.957,
+          "blind": 0.0,
+          "photo_tasks": 23,
+          "clean_of_photographed": 0.957,
+          "photo": 0.826
+        },
+        "read and count on": {
+          "tasks": 12,
+          "with_image": 0.917,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.917,
+          "photo": 0.917
+        },
+        "read and subtract": {
+          "tasks": 17,
+          "with_image": 0.941,
+          "blind": 0.0,
+          "photo_tasks": 17,
+          "clean_of_photographed": 0.941,
+          "photo": 0.706
+        }
+      },
+      "by_facet": {
+        "difficulty": {
+          "clock L1": {
+            "tasks": 6,
+            "with_image": 0.833,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.833,
+            "photo": 1.0
+          },
+          "clock L2": {
+            "tasks": 7,
+            "with_image": 0.857,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.857,
+            "photo": 0.857
+          },
+          "clock L3": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L4": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L1": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L2": {
+            "tasks": 13,
+            "with_image": 0.846,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.846,
+            "photo": 0.769
+          },
+          "gauge L3": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.167,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 0.833
+          },
+          "gauge L4": {
+            "tasks": 5,
+            "with_image": 0.6,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.6,
+            "photo": 0.4
+          },
+          "syringe L1": {
+            "tasks": 3,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 1.0,
+            "photo": 0.667
+          },
+          "syringe L2": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L3": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 0.667
+          },
+          "syringe L4": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 0.625
+          }
+        },
+        "instrument": {
+          "clock": {
+            "tasks": 24,
+            "with_image": 0.917,
+            "blind": 0.0,
+            "photo_tasks": 24,
+            "clean_of_photographed": 0.917,
+            "photo": 0.958
+          },
+          "gauge": {
+            "tasks": 29,
+            "with_image": 0.862,
+            "blind": 0.034,
+            "photo_tasks": 29,
+            "clean_of_photographed": 0.862,
+            "photo": 0.759
+          },
+          "syringe": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.727
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 14,
+            "with_image": 0.929,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.929,
+            "photo": 0.929
+          },
+          "L2": {
+            "tasks": 25,
+            "with_image": 0.88,
+            "blind": 0.0,
+            "photo_tasks": 25,
+            "clean_of_photographed": 0.88,
+            "photo": 0.84
+          },
+          "L3": {
+            "tasks": 17,
+            "with_image": 1.0,
+            "blind": 0.059,
+            "photo_tasks": 17,
+            "clean_of_photographed": 1.0,
+            "photo": 0.824
+          },
+          "L4": {
+            "tasks": 19,
+            "with_image": 0.895,
+            "blind": 0.0,
+            "photo_tasks": 19,
+            "clean_of_photographed": 0.895,
+            "photo": 0.684
+          }
+        },
+        "scale": {
+          "0.5 mL": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 0.8
+          },
+          "1 mL": {
+            "tasks": 3,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 1.0,
+            "photo": 0.333
+          },
+          "10 mL": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "20 mL": {
+            "tasks": 1,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "3 mL": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 0.5
+          },
+          "5 mL": {
+            "tasks": 1,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "50 units": {
+            "tasks": 2,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "60 mL": {
+            "tasks": 2,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 1.0,
+            "photo": 0.5
+          },
+          "arabic numerals": {
+            "tasks": 6,
+            "with_image": 0.833,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.833,
+            "photo": 1.0
+          },
+          "one scale": {
+            "tasks": 18,
+            "with_image": 0.889,
+            "blind": 0.0,
+            "photo_tasks": 18,
+            "clean_of_photographed": 0.889,
+            "photo": 0.833
+          },
+          "roman numerals": {
+            "tasks": 7,
+            "with_image": 0.857,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.857,
+            "photo": 0.857
+          },
+          "ticks only": {
+            "tasks": 11,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "two scales": {
+            "tasks": 11,
+            "with_image": 0.818,
+            "blind": 0.091,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.818,
+            "photo": 0.636
+          }
+        }
+      },
+      "guessable": [
+        "instruments-000002-gauge_read_inner"
+      ],
+      "unsolved": [
+        "instruments-000009-gauge_read_inner",
+        "instruments-000029-gauge_headroom",
+        "instruments-000029-gauge_read",
+        "instruments-000045-clock_until",
+        "instruments-000130-clock_time",
+        "instruments-000166-gauge_read_inner"
+      ],
+      "reading_precision": {
+        "readings": 51,
+        "median_error": 0.0,
+        "p90_error": 0.0,
+        "max_error": 0.1111
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.0736,
+      "spent_this_run_usd": 0.0634,
+      "sample": 75,
+      "seed": 0
+    },
+    "gpt-6.2-sol (high effort)": {
+      "tasks": 75,
+      "with_image": {
+        "correct": 75,
+        "of": 75
+      },
+      "blind": {
+        "correct": 0,
+        "of": 75
+      },
+      "blind_open_ended": {
+        "correct": 0,
+        "of": 75
+      },
+      "pairs": {
+        "both_correct": 75,
+        "of": 75
+      },
+      "photos": {
+        "of": 75,
+        "clean_correct": 75,
+        "photo_correct": 75,
+        "lost": []
+      },
+      "by_template": {
+        "clock_time": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.031
+        },
+        "clock_until": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.047
+        },
+        "gauge_headroom": {
+          "tasks": 6,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 6,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.167
+        },
+        "gauge_read": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.083
+        },
+        "gauge_read_inner": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.133
+        },
+        "syringe_read": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.048
+        },
+        "syringe_top_up": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.062
+        }
+      },
+      "by_skill": {
+        "pick the right scale": {
+          "tasks": 11,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read a clock": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read a scale": {
+          "tasks": 23,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 23,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read and count on": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        },
+        "read and subtract": {
+          "tasks": 17,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 17,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        }
+      },
+      "by_facet": {
+        "difficulty": {
+          "clock L1": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L2": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L3": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "clock L4": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L1": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L2": {
+            "tasks": 13,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L3": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge L4": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L1": {
+            "tasks": 3,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L2": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L3": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe L4": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "instrument": {
+          "clock": {
+            "tasks": 24,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 24,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gauge": {
+            "tasks": 29,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 29,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "syringe": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 14,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 25,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 25,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L3": {
+            "tasks": 17,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 17,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L4": {
+            "tasks": 19,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 19,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "scale": {
+          "0.5 mL": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "1 mL": {
+            "tasks": 3,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "10 mL": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "20 mL": {
+            "tasks": 1,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "3 mL": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "5 mL": {
+            "tasks": 1,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "50 units": {
+            "tasks": 2,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "60 mL": {
+            "tasks": 2,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "arabic numerals": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "one scale": {
+            "tasks": 18,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 18,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "roman numerals": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "ticks only": {
+            "tasks": 11,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "two scales": {
+            "tasks": 11,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [],
+      "unsolved": [],
+      "reading_precision": {
+        "readings": 51,
+        "median_error": 0.0,
+        "p90_error": 0.0,
+        "max_error": 0.0
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.3997,
+      "spent_this_run_usd": 0.3149,
+      "sample": 75,
+      "seed": 0
+    },
+    "cerebras/qwen-3.8-27b": {
+      "tasks": 75,
+      "with_image": {
+        "correct": 23,
+        "of": 75
+      },
+      "blind": {
+        "correct": 1,
+        "of": 75
+      },
+      "blind_open_ended": {
+        "correct": 1,
+        "of": 75
+      },
+      "pairs": {
+        "both_correct": 15,
+        "of": 75
+      },
+      "photos": {
+        "of": 75,
+        "clean_correct": 23,
+        "photo_correct": 21,
+        "lost": [
+          "instruments-000003-syringe_read",
+          "instruments-000026-clock_time",
+          "instruments-000039-syringe_read",
+          "instruments-000045-clock_time",
+          "instruments-000045-clock_until",
+          "instruments-000055-gauge_read",
+          "instruments-000088-clock_until",
+          "instruments-000110-gauge_read_inner",
+          "instruments-000192-gauge_read"
+        ]
+      },
+      "by_template": {
+        "clock_time": {
+          "tasks": 12,
+          "with_image": 0.75,
+          "blind": 0.083,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.75,
+          "photo": 0.833,
+          "always_guess": 0.031
+        },
+        "clock_until": {
+          "tasks": 12,
+          "with_image": 0.583,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.583,
+          "photo": 0.5,
+          "always_guess": 0.047
+        },
+        "gauge_headroom": {
+          "tasks": 6,
+          "with_image": 0.0,
+          "blind": 0.0,
+          "photo_tasks": 6,
+          "clean_of_photographed": 0.0,
+          "photo": 0.167,
+          "always_guess": 0.167
+        },
+        "gauge_read": {
+          "tasks": 12,
+          "with_image": 0.333,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.333,
+          "photo": 0.167,
+          "always_guess": 0.083
+        },
+        "gauge_read_inner": {
+          "tasks": 11,
+          "with_image": 0.091,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 0.091,
+          "photo": 0.182,
+          "always_guess": 0.133
+        },
+        "syringe_read": {
+          "tasks": 11,
+          "with_image": 0.182,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 0.182,
+          "photo": 0.0,
+          "always_guess": 0.048
+        },
+        "syringe_top_up": {
+          "tasks": 11,
+          "with_image": 0.0,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 0.0,
+          "photo": 0.0,
+          "always_guess": 0.062
+        }
+      },
+      "by_skill": {
+        "pick the right scale": {
+          "tasks": 11,
+          "with_image": 0.091,
+          "blind": 0.0,
+          "photo_tasks": 11,
+          "clean_of_photographed": 0.091,
+          "photo": 0.182
+        },
+        "read a clock": {
+          "tasks": 12,
+          "with_image": 0.75,
+          "blind": 0.083,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.75,
+          "photo": 0.833
+        },
+        "read a scale": {
+          "tasks": 23,
+          "with_image": 0.261,
+          "blind": 0.0,
+          "photo_tasks": 23,
+          "clean_of_photographed": 0.261,
+          "photo": 0.087
+        },
+        "read and count on": {
+          "tasks": 12,
+          "with_image": 0.583,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.583,
+          "photo": 0.5
+        },
+        "read and subtract": {
+          "tasks": 17,
+          "with_image": 0.0,
+          "blind": 0.0,
+          "photo_tasks": 17,
+          "clean_of_photographed": 0.0,
+          "photo": 0.059
+        }
+      },
+      "by_facet": {
+        "difficulty": {
+          "clock L1": {
+            "tasks": 6,
+            "with_image": 0.833,
+            "blind": 0.167,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.833,
+            "photo": 0.5
+          },
+          "clock L2": {
+            "tasks": 7,
+            "with_image": 0.571,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.571,
+            "photo": 0.571
+          },
+          "clock L3": {
+            "tasks": 5,
+            "with_image": 0.4,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.4,
+            "photo": 0.8
+          },
+          "clock L4": {
+            "tasks": 6,
+            "with_image": 0.833,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.833,
+            "photo": 0.833
+          },
+          "gauge L1": {
+            "tasks": 5,
+            "with_image": 0.6,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.6,
+            "photo": 0.4
+          },
+          "gauge L2": {
+            "tasks": 13,
+            "with_image": 0.077,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.077,
+            "photo": 0.077
+          },
+          "gauge L3": {
+            "tasks": 6,
+            "with_image": 0.167,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.167,
+            "photo": 0.167
+          },
+          "gauge L4": {
+            "tasks": 5,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.0,
+            "photo": 0.2
+          },
+          "syringe L1": {
+            "tasks": 3,
+            "with_image": 0.333,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.333,
+            "photo": 0.0
+          },
+          "syringe L2": {
+            "tasks": 5,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "syringe L3": {
+            "tasks": 6,
+            "with_image": 0.167,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.167,
+            "photo": 0.0
+          },
+          "syringe L4": {
+            "tasks": 8,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        },
+        "instrument": {
+          "clock": {
+            "tasks": 24,
+            "with_image": 0.667,
+            "blind": 0.042,
+            "photo_tasks": 24,
+            "clean_of_photographed": 0.667,
+            "photo": 0.667
+          },
+          "gauge": {
+            "tasks": 29,
+            "with_image": 0.172,
+            "blind": 0.0,
+            "photo_tasks": 29,
+            "clean_of_photographed": 0.172,
+            "photo": 0.172
+          },
+          "syringe": {
+            "tasks": 22,
+            "with_image": 0.091,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 0.091,
+            "photo": 0.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 14,
+            "with_image": 0.643,
+            "blind": 0.071,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.643,
+            "photo": 0.357
+          },
+          "L2": {
+            "tasks": 25,
+            "with_image": 0.2,
+            "blind": 0.0,
+            "photo_tasks": 25,
+            "clean_of_photographed": 0.2,
+            "photo": 0.2
+          },
+          "L3": {
+            "tasks": 17,
+            "with_image": 0.235,
+            "blind": 0.0,
+            "photo_tasks": 17,
+            "clean_of_photographed": 0.235,
+            "photo": 0.294
+          },
+          "L4": {
+            "tasks": 19,
+            "with_image": 0.263,
+            "blind": 0.0,
+            "photo_tasks": 19,
+            "clean_of_photographed": 0.263,
+            "photo": 0.316
+          }
+        },
+        "scale": {
+          "0.5 mL": {
+            "tasks": 5,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "1 mL": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "10 mL": {
+            "tasks": 4,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "20 mL": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "3 mL": {
+            "tasks": 4,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "5 mL": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "50 units": {
+            "tasks": 2,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.5,
+            "photo": 0.0
+          },
+          "60 mL": {
+            "tasks": 2,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.5,
+            "photo": 0.0
+          },
+          "arabic numerals": {
+            "tasks": 6,
+            "with_image": 0.833,
+            "blind": 0.167,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.833,
+            "photo": 0.5
+          },
+          "one scale": {
+            "tasks": 18,
+            "with_image": 0.222,
+            "blind": 0.0,
+            "photo_tasks": 18,
+            "clean_of_photographed": 0.222,
+            "photo": 0.167
+          },
+          "roman numerals": {
+            "tasks": 7,
+            "with_image": 0.571,
+            "blind": 0.0,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.571,
+            "photo": 0.571
+          },
+          "ticks only": {
+            "tasks": 11,
+            "with_image": 0.636,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.636,
+            "photo": 0.818
+          },
+          "two scales": {
+            "tasks": 11,
+            "with_image": 0.091,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.091,
+            "photo": 0.182
+          }
+        }
+      },
+      "guessable": [
+        "instruments-000123-clock_time"
+      ],
+      "unsolved": [
+        "instruments-000002-gauge_read_inner",
+        "instruments-000006-syringe_top_up",
+        "instruments-000007-gauge_read",
+        "instruments-000008-gauge_read",
+        "instruments-000009-gauge_read_inner",
+        "instruments-000010-gauge_read",
+        "instruments-000017-clock_time",
+        "instruments-000020-syringe_top_up",
+        "instruments-000024-clock_until",
+        "instruments-000029-gauge_headroom",
+        "instruments-000029-gauge_read",
+        "instruments-000032-clock_until",
+        "instruments-000033-gauge_read_inner",
+        "instruments-000042-gauge_read_inner",
+        "instruments-000049-clock_until",
+        "instruments-000052-syringe_top_up",
+        "instruments-000063-syringe_read",
+        "instruments-000064-syringe_read",
+        "instruments-000067-syringe_read",
+        "instruments-000069-syringe_top_up",
+        "instruments-000071-gauge_read_inner",
+        "instruments-000073-syringe_top_up",
+        "instruments-000076-syringe_read",
+        "instruments-000077-syringe_read",
+        "instruments-000077-syringe_top_up",
+        "instruments-000078-gauge_headroom",
+        "instruments-000082-syringe_top_up",
+        "instruments-000085-gauge_read",
+        "instruments-000109-gauge_read_inner",
+        "instruments-000121-syringe_read",
+        "instruments-000126-gauge_read_inner",
+        "instruments-000129-gauge_read_inner",
+        "instruments-000130-clock_time",
+        "instruments-000132-syringe_read",
+        "instruments-000132-syringe_top_up",
+        "instruments-000133-gauge_read_inner",
+        "instruments-000135-clock_time",
+        "instruments-000136-clock_until",
+        "instruments-000139-clock_until",
+        "instruments-000149-syringe_read",
+        "instruments-000153-gauge_headroom",
+        "instruments-000156-syringe_top_up",
+        "instruments-000161-syringe_read",
+        "instruments-000165-gauge_read",
+        "instruments-000166-gauge_read_inner",
+        "instruments-000168-gauge_read",
+        "instruments-000168-gauge_headroom",
+        "instruments-000181-gauge_headroom",
+        "instruments-000184-syringe_top_up",
+        "instruments-000189-syringe_top_up",
+        "instruments-000190-gauge_read",
+        "instruments-000194-gauge_headroom"
+      ],
+      "reading_precision": {
+        "readings": 41,
+        "median_error": 0.1176,
+        "p90_error": 0.375,
+        "max_error": 1.0
+      },
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 2.6425,
+      "spent_this_run_usd": 2.1766,
+      "sample": 75,
+      "seed": 0
+    }
+  }
+}

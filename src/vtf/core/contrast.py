@@ -22,11 +22,16 @@ from ..validators import AmbiguityGate, GroundingGate
 from .family import Candidate, Question
 from .pipeline import json_hash, pixel_hash
 from .runs import read_tasks
-from .schema import Answer, GateResult, Pair, Task
+from .schema import Answer, GateResult, Pair, Task, clock_gap, clock_minutes, set_members
 
 
 def answers_differ(a: Answer, b: Answer) -> bool:
     """True when no single reading can be right for both answers."""
+    if a.type == b.type == "set":
+        return set_members(a) != set_members(b)
+    if a.type == b.type == "time":
+        gap = clock_gap(clock_minutes(str(a.value)) or 0, clock_minutes(str(b.value)) or 0)
+        return gap > a.tolerance + b.tolerance
     if a.type in ("integer", "number") and b.type in ("integer", "number"):
         return abs(float(a.value) - float(b.value)) > a.tolerance + b.tolerance
     return a.value != b.value
@@ -43,7 +48,7 @@ def make_pairs(
     v = cfg["validation"]
     gates = [
         GroundingGate(v["min_font_px"], v["min_mark_px"], v["overlap_tol_px"], v["clean_text"]),
-        AmbiguityGate(v["visual_gap"], v["max_relative_tolerance"]),
+        AmbiguityGate(v["visual_gap"], v["max_relative_tolerance"], v.get("min_feature_px", 4.0)),
     ]
     rng = random.Random(seed)
     tasks = [t for t in read_tasks(run_dir / "tasks.jsonl") if rng.random() < share]

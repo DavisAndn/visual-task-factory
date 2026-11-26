@@ -1,0 +1,97 @@
+{
+  "family": "counting",
+  "seed": 42,
+  "requested": 150,
+  "accepted": 150,
+  "candidates": 150,
+  "acceptance_rate": 1.0,
+  "scenes_rendered": 150,
+  "elapsed_seconds": 7.07,
+  "funnel": [
+    {
+      "gate": "determinism",
+      "rejected": 0,
+      "remaining": 150
+    },
+    {
+      "gate": "render",
+      "rejected": 0,
+      "remaining": 150
+    },
+    {
+      "gate": "grounding",
+      "rejected": 0,
+      "remaining": 150
+    },
+    {
+      "gate": "ambiguity",
+      "rejected": 0,
+      "remaining": 150
+    },
+    {
+      "gate": "dedup",
+      "rejected": 0,
+      "remaining": 150
+    }
+  ],
+  "rejection_reasons": {},
+  "coverage": {
+    "skill": {
+      "count many": 150
+    },
+    "template": {
+      "count_side": 150
+    },
+    "points": {
+      "750-850": 31,
+      "25-35": 31,
+      "60-80": 27,
+      "280-320": 24,
+      "480-550": 19,
+      "140-160": 18
+    },
+    "level": {
+      "L6": 31,
+      "L1": 31,
+      "L2": 27,
+      "L4": 24,
+      "L5": 19,
+      "L3": 18
+    },
+    "difficulty": {
+      "dots L6": 31,
+      "dots L1": 31,
+      "dots L2": 27,
+      "dots L4": 24,
+      "dots L5": 19,
+      "dots L3": 18
+    },
+    "line": {
+      "vertical": 79,
+      "horizontal": 71
+    },
+    "count": {
+      "under 100": 58,
+      "400+": 50,
+      "100-400": 42
+    }
+  },
+  "answer_prior": {
+    "count_side": {
+      "tasks": 150,
+      "most_common_answer": "17",
+      "share": 0.033
+    }
+  },
+  "determinism": {
+    "checked": 15,
+    "passed": 15
+  },
+  "versions": {
+    "vtf": "0.1.0",
+    "python": "3.13.2",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.5"
+  },
+  "balance_skips": {}
+}

@@ -22,6 +22,11 @@ def read_pairs(run_dir: Path) -> list[Pair]:
     return [Pair.model_validate_json(line) for line in path.read_text().splitlines() if line.strip()]
 
 
+def read_photos(run_dir: Path) -> dict[str, Task]:
+    """Photo twins from `vtf photos`, keyed by the id of the clean task each one copies."""
+    return {t.id.removesuffix("-photo"): t for t in read_tasks(run_dir / "photos.jsonl")}
+
+
 def read_json(path: Path) -> dict[str, Any] | None:
     return json.loads(path.read_text()) if path.is_file() else None
 
@@ -45,7 +50,7 @@ def task_content(path: Path) -> list[dict[str, Any]]:
 def compare_runs(a: Path, b: Path) -> list[str]:
     """Where two run folders hold different tasks or pairs (empty if they hold the same ones)."""
     differences = []
-    for name in ("tasks.jsonl", "pairs.jsonl"):
+    for name in ("tasks.jsonl", "pairs.jsonl", "photos.jsonl"):
         left, right = task_content(a / name), task_content(b / name)
         if left == right:
             continue

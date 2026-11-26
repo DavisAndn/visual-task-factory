@@ -27,7 +27,6 @@ from PIL import Image, ImageDraw, ImageOps
 
 from ..core.runs import read_tasks
 from ..core.schema import LayoutItem, Task
-from ..families import get_family
 
 # Characters OCR engines mistake for each other, folded the same way on both sides of a comparison
 # (after lowercasing, so "Harlow" and "HarLow" fold alike).
@@ -139,11 +138,16 @@ def _labels(task: Task, layout: Any) -> list[LayoutItem]:
     return list(found.values())
 
 
-def run_ocr(run_dir: Path, workers: int = 8, progress: Callable[[int], None] | None = None) -> dict[str, Any]:
-    """Read back every label the run's accepted tasks depend on; write ocr_checks.jsonl and ocr_summary.json."""
+def run_ocr(
+    run_dir: Path, workers: int = 8, progress: Callable[[int], None] | None = None, photos: bool = False
+) -> dict[str, Any]:
+    """Read back every label the run's accepted tasks depend on; write ocr_checks.jsonl and ocr_summary.json.
+    With photos=True, read them from the photo twins instead (photo_ocr_checks.jsonl, photo_ocr_summary.json)."""
+    from ..core.capture import task_view
+
     if tesseract_path() is None:
         raise FileNotFoundError("Tesseract is not installed (macOS: brew install tesseract; Ubuntu: apt install tesseract-ocr)")
-    tasks = read_tasks(run_dir / "tasks.jsonl")
+    tasks = read_tasks(run_dir / ("photos.jsonl" if photos else "tasks.jsonl"))
     by_image: dict[str, list[Task]] = defaultdict(list)
     for task in tasks:
         by_image[task.image].append(task)
@@ -151,8 +155,7 @@ def run_ocr(run_dir: Path, workers: int = 8, progress: Callable[[int], None] | N
     jobs: list[tuple[str, LayoutItem, Image.Image]] = []
     needed: dict[str, list[str]] = {}
     for image_key, group in by_image.items():
-        family = get_family(group[0].family)
-        _, layout = family.render(family.scene_from_dict(group[0].scene))
+        _, layout = task_view(group[0])
         image = Image.open(run_dir / image_key).convert("RGB")
         items: dict[str, LayoutItem] = {}
         for task in group:
@@ -172,7 +175,8 @@ def run_ocr(run_dir: Path, workers: int = 8, progress: Callable[[int], None] | N
     with ThreadPoolExecutor(max_workers=workers) as pool:
         results = list(pool.map(check, jobs))
 
-    crops = run_dir / "ocr"
+    prefix = "photo_" if photos else ""
+    crops = run_dir / ("ocr-photos" if photos else "ocr")
     crops.mkdir(exist_ok=True)
     for old in crops.glob("*.png"):
         old.unlink()
@@ -203,6 +207,6 @@ def run_ocr(run_dir: Path, workers: int = 8, progress: Callable[[int], None] | N
         "by_kind": dict(sorted(by_kind.items())),
         "misses": [{k: r.get(k) for k in ("image", "element", "expected", "got", "crop")} for r in misses],
     }
-    (run_dir / "ocr_checks.jsonl").write_text("".join(json.dumps(r) + "\n" for r in results))
-    (run_dir / "ocr_summary.json").write_text(json.dumps(summary, indent=2))
+    (run_dir / f"{prefix}ocr_checks.jsonl").write_text("".join(json.dumps(r) + "\n" for r in results))
+    (run_dir / f"{prefix}ocr_summary.json").write_text(json.dumps(summary, indent=2))
     return summary

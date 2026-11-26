@@ -1,104 +1,127 @@
 # Deck content
 
-Slide by slide, in the order of the Innodata template ("Innodata | IDEA SUBMISSION"). Copy the
-template in Google Slides (File → Make a copy), paste each section into its slide, and export as
-PDF (under 5 MB). Figures are in [figures/](figures/); rebuild them with
-`uv run python docs/figures/make_figures.py`.
+Slide by slide, in the order of the Innodata template ("Innodata | IDEA SUBMISSION"). Figures are in
+[figures/](figures/); rebuild them with `uv run python docs/figures/make_figures.py`.
 
 ## 1. Title
 
 - **Team name:** Plot Twist (a team of one)
 - **Team leader name:** Davis Andherson
-- **Problem statement:** Visual Task Factory: chart understanding for document AI
+- **Problem statement:** Visual Task Factory: finding where frontier vision models break, on the
+  images people photograph at work
 
 ## 2. Brief about the idea
 
-A pipeline that turns seeded data into chart images, questions and reference answers that no
-model ever sets, checks every task with model-independent evidence, and uses the tasks to map
-where frontier multimodal models misread charts.
+A factory of image questions whose answers are proven, not labelled. It draws charts, medical and
+industrial instruments, connection diagrams and dense plots from data, computes every answer from
+that data, checks each task without trusting any model, and then turns two dials real life turns:
+how much is in the picture, and whether it was taken with a phone.
 
-Figure: `figures/examples.png` (one task per chart type).
+Figure: `figures/families.png` (one task from each kind of image).
 
 ## 3. Opportunity
 
-**How it differs from existing chart benchmarks.** Benchmarks such as ChartQA are scraped once and
-annotated by people or models, so they leak into training data and their labels are only as good
-as the annotators. Here every image is generated, so fresh held-out sets cost nothing and can't
-have leaked, and every answer is computed from the data that drew the image.
+**The problem with fixed benchmarks.** A benchmark is used up once models ace it, and its labels are
+only as good as its annotators. Clean diagrams are largely solved: on 450 clean charts Claude Haiku,
+Sonnet and Opus 5.5 scored 100%, and on clean clocks, gauges and syringes 98-100%.
 
-**How it solves the problem.** Each task comes with proof: the data and the derivation of its
-answer, a record of every element drawn, gate results, an OCR read-back of the labels it depends
-on, a contrast twin, and a seed that rebuilds it.
+**How the factory differs.** It doesn't stop at one picture. Every task has a scene behind it, so
+the factory can make it harder (more cables, finer ticks, more points) or photograph it, and the
+answer stays exact. That finds the edge of each model, and keeps making fresh, verified tasks there.
 
 **USP.**
-- Answers validated independently of the model under test (data, gates, OCR, human audit).
-- Contrast pairs: the same question about a minimally edited image whose answer changes, which
-  separates reading the image from guessing.
-- Shortcut control: answer balancing keeps "always guess the commonest answer" near chance.
-- Reproducible: any task rebuilds from its seed, and CI regenerates the committed samples.
+- Photo mode: any task re-shot as a phone photo with the same, provable answer. It cost every model,
+  Opus included: photographed syringes fell from 100% to 54% (Haiku), 84% (Sonnet), 76% (Opus).
+- Difficulty dials with breaking points: one command reports the level where each model drops
+  below 80%.
+- Answers no model sets, checked independently: pixel probes, OCR on clean images and photos,
+  contrast pairs, independent solvers, a blind human audit.
+- Any model, any lab: six models from Anthropic, OpenAI and Alibaba compared on the same tasks.
+- One engine, four domains with stated costs of error: a dose misread by a tick, a tank thought
+  isolated that isn't, a cable unplugged by mistake.
 
 ## 4. Features
 
-- 6 chart types (bar, horizontal, grouped, stacked, line, pie), 5 topics, 17 templates, 11 skills.
-- Gates: determinism, grounding, ambiguity, dedup; answer balancing.
-- Evidence: contrast pairs, OCR read-back, blind baseline, model evaluation, human audit.
-- One self-contained HTML report per run; JSONL outputs; `vtf rebuild` for any single task.
-- A difficulty knob: `configs/charts-hard.yaml` removes printed values and crowds the charts.
+- Four families: charts (6 types, 17 templates), instruments (gauges, syringes, clocks), connections
+  (patch panels, valve networks, gear trains), counting (dense scatter plots).
+- Difficulty levels on every new family; a hard preset for charts.
+- `vtf photos`: photographed twins, gates re-run on the photo.
+- Gates: determinism, drawing-matches-data probes, grounding, ambiguity and resolution, dedup,
+  answer balancing.
+- Evidence: contrast pairs, OCR read-back (clean and photo), blind baseline, model evaluation with
+  breaking points, human audit.
+- One self-contained HTML report per run; `vtf rebuild` re-derives any task.
 
-**Results (Claude Opus 5.5, Sonnet 5.5 and Haiku 5.5, high effort):** every model answered all 450
-tasks (300 standard, 150 hard) correctly, read unprinted values with a median error of 0.2% or
-less, and got 2 to 11% of open-ended questions right without the image. Only contrast pairs
-separated them: 400, 399 and 398 of 400 pairs with both images right; Sonnet and Haiku each once
-repeated their first answer after the deciding printed value changed. Model disagreement also
-exposed an ambiguous question and two too-thin margins in our own templates, all fixed.
+**Results (990 tasks in four families, Claude Haiku, Sonnet and Opus 5.5, high effort):**
 
-Figures: `figures/contrast-pair.png`, `figures/model-accuracy.png`, `figures/twin-miss.png`.
+- Clean: 92%, 95% and 97% right; the same tasks photographed: 84%, 90% and 91%.
+- Photographed syringes: 54%, 84% and 76% (each 100% clean); 1 mL syringes: 46%, 76% and 61%.
+- Counting breaks Haiku and Sonnet at about 300 points and Opus at about 515 (73%); at about 800
+  points, Opus gets 13% right.
+- Tracing one of 24 identical cables breaks Haiku (43%) and Sonnet (79%); Opus holds until 32 (75%).
+- Charts, clocks, gauges, valve networks and gear trains stay at 89-100%, clean or photographed.
+- Without the image, 0 to 14% of open-ended questions are answered right; contrast pairs catch the rest.
+
+**Across three labs (GPT-6 Luna, GPT-6.2 Sol and Qwen 3.8 27B on a labelled 255-task sample; all six
+models compared on those same tasks):**
+
+- Clean 58% to 96%, photographed 56% to 95%: every model drops when photographed.
+- GPT-6.2 Sol ties Opus clean (96%) and holds best photographed (95%): the only model to read all 22
+  photographed syringes right. Claude falls to 55-82% on them, GPT-6 Luna to 73%.
+- Qwen 3.8 27B (open weights, served by Cerebras) reads instruments to the nearest printed number:
+  31% on instruments, 7% on counting.
+- A model found a bug in a prototype: Opus said no gear turned, and it was right; pixel probes now
+  check every drawing matches its data.
+
+Figures: `figures/photos.png`, `figures/breaking-points.png`, `figures/same-tasks.png`.
 
 ## 5. Process flow
 
-Seed → scene data → render image + layout record → question template → answer from the data →
-gates → accepted tasks → evidence (pairs, OCR, model evaluation, human audit) → report.
+Seed → scene → render image + layout record + probes → question → answer from the scene → gates →
+accepted tasks → twins (edited, photographed) → evidence (OCR, models, human audit) → report.
 
 Figure: `figures/pipeline.png`.
 
 ## 6. Wireframes
 
-Screenshots of `report.html` (funnel, coverage, model breakdown, OCR, pairs) and `audit.html`
-(blind answer, reveal, verdict). Take them from `samples/charts-seed42/report.html` and an audit
-page built with `vtf audit samples/charts-seed42`.
+Screenshots of `report.html` (breaking points, phone photos, model breakdown) and
+`audit-photos.html` (blind answer, reveal, verdict), from `samples/instruments-seed42`.
 
 ## 7. Architecture
 
-- `core/`: the family contract, pipeline, configuration, contrast pairs.
-- `families/charts/`: scene sampler, renderer with layout record, 17 templates.
-- `validators/`: grounding (polygon overlap on the layout record), ambiguity, dedup, answer scoring.
-- `evidence/`: model evaluation (Claude via the Anthropic SDK, cached), OCR read-back (Tesseract),
-  human audit.
-- `report.py`: one self-contained HTML report that picks up whatever evidence a run has.
+- `core/`: the family contract, pipeline, configuration, contrast pairs, photo mode.
+- `families/`: charts, instruments, connections, counting, and a shared drawing helper that records
+  the layout of any matplotlib drawing.
+- `validators/`: grounding, ambiguity and resolution, dedup, answer scoring (numbers, names, sets,
+  clock times).
+- `evidence/`: model evaluation (Claude via the Anthropic SDK; GPT and Cerebras-served models via the
+  openai SDK; cached), OCR read-back (Tesseract), human audit.
+- `report.py`: one HTML report per run, with breaking points and clean-vs-photo comparisons.
 
-A new image family implements five methods and gets every gate, check and report for free.
+A new family implements five methods and gets every gate, twin, check and report for free.
 
 ## 8. Technologies
 
 Python 3.13, uv, matplotlib, NumPy, Pillow, pydantic, Typer, PyYAML, Tesseract OCR, the Anthropic
-Python SDK (Claude Opus 5.5), pytest, GitHub Actions.
+Python SDK (Claude Haiku, Sonnet and Opus 5.5), the openai Python SDK (GPT-6 Luna and GPT-6.2 Sol;
+Qwen 3.8 27B on Cerebras), pytest, GitHub Actions.
 
 ## 9. Estimated cost
 
-- Generation, contrast pairs and OCR: free, on a laptop (300 tasks in about 6 seconds; OCR of
-  1,265 labels in about 17 seconds).
-- Model evaluation, every task with and without the image plus every contrast twin (1,300
-  requests per model across both sets): Opus 5.5 $4.15, Sonnet 5.5 $2.27, Haiku 5.5 $0.14.
-  Replies are cached, so rebuilding results is free.
-- Human audit: about 20 minutes per 100 tasks.
+- Generation, pairs, photos and OCR: free, on a laptop (300 tasks in 5 to 15 seconds; 300 photos in
+  about 10 seconds).
+- Model evaluation, every task with and without the image plus its contrast and photo twins (about
+  3,800 requests per model): Haiku 5.5 $1.23, Sonnet 5.5 $16.77, Opus 5.5 $30.02. The 255-task sample
+  for the other three: GPT-6 Luna $0.32, GPT-6.2 Sol $3.16, Qwen 3.8 27B $7.21. Replies are cached,
+  so rebuilding results is free.
+- Human audit: about 20 minutes per 40 tasks.
 
 ## 10. Deliverables
 
-- **Runnable source code:** the repository; `uv sync` then `uv run vtf generate`.
-- **Sample task packages:** `samples/charts-seed42` (300 tasks, 271 contrast pairs) and
-  `samples/charts-hard-seed7` (150 hard tasks, 129 pairs), each with OCR results, model results
-  and a report.
-- **Validation test logs:** the CI run's `validation-logs` artifact (pytest log, generation, pairs
-  and OCR logs, report) and the gate results stored on every task.
+- **Runnable source code:** the repository; `uv sync` then `uv run vtf generate --family instruments`.
+- **Sample task packages:** five committed runs in `samples/` (charts standard and hard, instruments,
+  connections, counting), each with pairs, photos, OCR, model results and a report.
+- **Validation test logs:** the CI run's `validation-logs` artifact and the gate results stored on
+  every task.
 - **Technical documentation:** the README.
 - **Live demonstration:** the demo video.
