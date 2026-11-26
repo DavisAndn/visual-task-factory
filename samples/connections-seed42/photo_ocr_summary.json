@@ -1,0 +1,1411 @@
+{
+  "engine": "tesseract 5.5.3",
+  "labels": 2848,
+  "read_back": 2651,
+  "read_on_second_attempt": 180,
+  "tasks": 300,
+  "tasks_fully_read_back": 179,
+  "by_kind": {
+    "gear": {
+      "labels": 631,
+      "read_back": 595
+    },
+    "left": {
+      "labels": 904,
+      "read_back": 893
+    },
+    "pump": {
+      "labels": 59,
+      "read_back": 59
+    },
+    "right": {
+      "labels": 904,
+      "read_back": 870
+    },
+    "tank": {
+      "labels": 350,
+      "read_back": 234
+    }
+  },
+  "misses": [
+    {
+      "image": "images/connections-000000-photo.jpg",
+      "element": "left:0",
+      "expected": "1",
+      "got": "]",
+      "crop": "ocr-photos/miss-0000.png"
+    },
+    {
+      "image": "images/connections-000003-photo.jpg",
+      "element": "gear:5",
+      "expected": "N",
+      "got": "",
+      "crop": "ocr-photos/miss-0001.png"
+    },
+    {
+      "image": "images/connections-000007-photo.jpg",
+      "element": "tank:0",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0002.png"
+    },
+    {
+      "image": "images/connections-000007-photo.jpg",
+      "element": "tank:4",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0003.png"
+    },
+    {
+      "image": "images/connections-000008-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0004.png"
+    },
+    {
+      "image": "images/connections-000010-photo.jpg",
+      "element": "tank:0",
+      "expected": "T1",
+      "got": "i |",
+      "crop": "ocr-photos/miss-0005.png"
+    },
+    {
+      "image": "images/connections-000014-photo.jpg",
+      "element": "left:0",
+      "expected": "1",
+      "got": "]",
+      "crop": "ocr-photos/miss-0006.png"
+    },
+    {
+      "image": "images/connections-000014-photo.jpg",
+      "element": "left:10",
+      "expected": "11",
+      "got": "|",
+      "crop": "ocr-photos/miss-0007.png"
+    },
+    {
+      "image": "images/connections-000015-photo.jpg",
+      "element": "tank:4",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0008.png"
+    },
+    {
+      "image": "images/connections-000015-photo.jpg",
+      "element": "tank:7",
+      "expected": "T7",
+      "got": "17",
+      "crop": "ocr-photos/miss-0009.png"
+    },
+    {
+      "image": "images/connections-000015-photo.jpg",
+      "element": "tank:8",
+      "expected": "T4",
+      "got": "v4",
+      "crop": "ocr-photos/miss-0010.png"
+    },
+    {
+      "image": "images/connections-000016-photo.jpg",
+      "element": "gear:7",
+      "expected": "U",
+      "got": "",
+      "crop": "ocr-photos/miss-0011.png"
+    },
+    {
+      "image": "images/connections-000016-photo.jpg",
+      "element": "gear:9",
+      "expected": "S",
+      "got": "Ss",
+      "crop": "ocr-photos/miss-0012.png"
+    },
+    {
+      "image": "images/connections-000016-photo.jpg",
+      "element": "gear:11",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0013.png"
+    },
+    {
+      "image": "images/connections-000016-photo.jpg",
+      "element": "gear:16",
+      "expected": "T",
+      "got": "",
+      "crop": "ocr-photos/miss-0014.png"
+    },
+    {
+      "image": "images/connections-000018-photo.jpg",
+      "element": "left:0",
+      "expected": "1",
+      "got": "]",
+      "crop": "ocr-photos/miss-0015.png"
+    },
+    {
+      "image": "images/connections-000020-photo.jpg",
+      "element": "right:6",
+      "expected": "A7",
+      "got": "A?",
+      "crop": "ocr-photos/miss-0016.png"
+    },
+    {
+      "image": "images/connections-000020-photo.jpg",
+      "element": "right:15",
+      "expected": "B8",
+      "got": "BS",
+      "crop": "ocr-photos/miss-0017.png"
+    },
+    {
+      "image": "images/connections-000020-photo.jpg",
+      "element": "right:23",
+      "expected": "C8",
+      "got": "Cg",
+      "crop": "ocr-photos/miss-0018.png"
+    },
+    {
+      "image": "images/connections-000021-photo.jpg",
+      "element": "gear:2",
+      "expected": "N",
+      "got": "",
+      "crop": "ocr-photos/miss-0019.png"
+    },
+    {
+      "image": "images/connections-000021-photo.jpg",
+      "element": "gear:5",
+      "expected": "S",
+      "got": "Ss",
+      "crop": "ocr-photos/miss-0020.png"
+    },
+    {
+      "image": "images/connections-000021-photo.jpg",
+      "element": "gear:13",
+      "expected": "M",
+      "got": "|",
+      "crop": "ocr-photos/miss-0021.png"
+    },
+    {
+      "image": "images/connections-000021-photo.jpg",
+      "element": "gear:14",
+      "expected": "G",
+      "got": "",
+      "crop": "ocr-photos/miss-0022.png"
+    },
+    {
+      "image": "images/connections-000023-photo.jpg",
+      "element": "tank:1",
+      "expected": "T5",
+      "got": "1",
+      "crop": "ocr-photos/miss-0023.png"
+    },
+    {
+      "image": "images/connections-000023-photo.jpg",
+      "element": "tank:2",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0024.png"
+    },
+    {
+      "image": "images/connections-000023-photo.jpg",
+      "element": "tank:3",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0025.png"
+    },
+    {
+      "image": "images/connections-000024-photo.jpg",
+      "element": "gear:5",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0026.png"
+    },
+    {
+      "image": "images/connections-000030-photo.jpg",
+      "element": "gear:13",
+      "expected": "N",
+      "got": "",
+      "crop": "ocr-photos/miss-0027.png"
+    },
+    {
+      "image": "images/connections-000030-photo.jpg",
+      "element": "gear:16",
+      "expected": "C",
+      "got": "",
+      "crop": "ocr-photos/miss-0028.png"
+    },
+    {
+      "image": "images/connections-000034-photo.jpg",
+      "element": "tank:0",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0029.png"
+    },
+    {
+      "image": "images/connections-000034-photo.jpg",
+      "element": "tank:3",
+      "expected": "T5",
+      "got": "\u21225",
+      "crop": "ocr-photos/miss-0030.png"
+    },
+    {
+      "image": "images/connections-000036-photo.jpg",
+      "element": "right:6",
+      "expected": "A7",
+      "got": "A?",
+      "crop": "ocr-photos/miss-0031.png"
+    },
+    {
+      "image": "images/connections-000038-photo.jpg",
+      "element": "gear:16",
+      "expected": "G",
+      "got": "",
+      "crop": "ocr-photos/miss-0032.png"
+    },
+    {
+      "image": "images/connections-000041-photo.jpg",
+      "element": "tank:5",
+      "expected": "T6",
+      "got": "16",
+      "crop": "ocr-photos/miss-0033.png"
+    },
+    {
+      "image": "images/connections-000042-photo.jpg",
+      "element": "tank:1",
+      "expected": "T3",
+      "got": "v3",
+      "crop": "ocr-photos/miss-0034.png"
+    },
+    {
+      "image": "images/connections-000044-photo.jpg",
+      "element": "tank:2",
+      "expected": "T7",
+      "got": "v7?",
+      "crop": "ocr-photos/miss-0035.png"
+    },
+    {
+      "image": "images/connections-000044-photo.jpg",
+      "element": "tank:3",
+      "expected": "T8",
+      "got": "18",
+      "crop": "ocr-photos/miss-0036.png"
+    },
+    {
+      "image": "images/connections-000044-photo.jpg",
+      "element": "tank:4",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0037.png"
+    },
+    {
+      "image": "images/connections-000044-photo.jpg",
+      "element": "tank:8",
+      "expected": "T9",
+      "got": "19",
+      "crop": "ocr-photos/miss-0038.png"
+    },
+    {
+      "image": "images/connections-000044-photo.jpg",
+      "element": "tank:9",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0039.png"
+    },
+    {
+      "image": "images/connections-000045-photo.jpg",
+      "element": "tank:2",
+      "expected": "T5",
+      "got": "15",
+      "crop": "ocr-photos/miss-0040.png"
+    },
+    {
+      "image": "images/connections-000046-photo.jpg",
+      "element": "right:6",
+      "expected": "A7",
+      "got": "A?",
+      "crop": "ocr-photos/miss-0041.png"
+    },
+    {
+      "image": "images/connections-000047-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0042.png"
+    },
+    {
+      "image": "images/connections-000048-photo.jpg",
+      "element": "right:15",
+      "expected": "S",
+      "got": "Ss",
+      "crop": "ocr-photos/miss-0043.png"
+    },
+    {
+      "image": "images/connections-000052-photo.jpg",
+      "element": "left:6",
+      "expected": "7",
+      "got": "q",
+      "crop": "ocr-photos/miss-0044.png"
+    },
+    {
+      "image": "images/connections-000052-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0045.png"
+    },
+    {
+      "image": "images/connections-000053-photo.jpg",
+      "element": "gear:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0046.png"
+    },
+    {
+      "image": "images/connections-000054-photo.jpg",
+      "element": "gear:4",
+      "expected": "H",
+      "got": "",
+      "crop": "ocr-photos/miss-0047.png"
+    },
+    {
+      "image": "images/connections-000054-photo.jpg",
+      "element": "gear:7",
+      "expected": "P",
+      "got": "8",
+      "crop": "ocr-photos/miss-0048.png"
+    },
+    {
+      "image": "images/connections-000054-photo.jpg",
+      "element": "gear:9",
+      "expected": "G",
+      "got": "SG",
+      "crop": "ocr-photos/miss-0049.png"
+    },
+    {
+      "image": "images/connections-000055-photo.jpg",
+      "element": "tank:2",
+      "expected": "T6",
+      "got": "To",
+      "crop": "ocr-photos/miss-0050.png"
+    },
+    {
+      "image": "images/connections-000055-photo.jpg",
+      "element": "tank:3",
+      "expected": "T5",
+      "got": "1%",
+      "crop": "ocr-photos/miss-0051.png"
+    },
+    {
+      "image": "images/connections-000055-photo.jpg",
+      "element": "tank:5",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0052.png"
+    },
+    {
+      "image": "images/connections-000056-photo.jpg",
+      "element": "tank:4",
+      "expected": "T7",
+      "got": "17",
+      "crop": "ocr-photos/miss-0053.png"
+    },
+    {
+      "image": "images/connections-000056-photo.jpg",
+      "element": "tank:7",
+      "expected": "T9",
+      "got": "19",
+      "crop": "ocr-photos/miss-0054.png"
+    },
+    {
+      "image": "images/connections-000056-photo.jpg",
+      "element": "tank:8",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0055.png"
+    },
+    {
+      "image": "images/connections-000058-photo.jpg",
+      "element": "right:13",
+      "expected": "B6",
+      "got": "Bo",
+      "crop": "ocr-photos/miss-0056.png"
+    },
+    {
+      "image": "images/connections-000058-photo.jpg",
+      "element": "right:23",
+      "expected": "C8",
+      "got": ":",
+      "crop": "ocr-photos/miss-0057.png"
+    },
+    {
+      "image": "images/connections-000059-photo.jpg",
+      "element": "right:1",
+      "expected": "A2",
+      "got": "",
+      "crop": "ocr-photos/miss-0058.png"
+    },
+    {
+      "image": "images/connections-000059-photo.jpg",
+      "element": "right:5",
+      "expected": "A6",
+      "got": "Ao",
+      "crop": "ocr-photos/miss-0059.png"
+    },
+    {
+      "image": "images/connections-000059-photo.jpg",
+      "element": "right:6",
+      "expected": "A7",
+      "got": "Al",
+      "crop": "ocr-photos/miss-0060.png"
+    },
+    {
+      "image": "images/connections-000059-photo.jpg",
+      "element": "right:14",
+      "expected": "B7",
+      "got": "B?",
+      "crop": "ocr-photos/miss-0061.png"
+    },
+    {
+      "image": "images/connections-000062-photo.jpg",
+      "element": "left:7",
+      "expected": "8",
+      "got": "",
+      "crop": "ocr-photos/miss-0062.png"
+    },
+    {
+      "image": "images/connections-000063-photo.jpg",
+      "element": "tank:0",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0063.png"
+    },
+    {
+      "image": "images/connections-000063-photo.jpg",
+      "element": "tank:6",
+      "expected": "T7",
+      "got": "17",
+      "crop": "ocr-photos/miss-0064.png"
+    },
+    {
+      "image": "images/connections-000064-photo.jpg",
+      "element": "tank:0",
+      "expected": "T6",
+      "got": "To",
+      "crop": "ocr-photos/miss-0065.png"
+    },
+    {
+      "image": "images/connections-000064-photo.jpg",
+      "element": "tank:3",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0066.png"
+    },
+    {
+      "image": "images/connections-000064-photo.jpg",
+      "element": "tank:4",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0067.png"
+    },
+    {
+      "image": "images/connections-000065-photo.jpg",
+      "element": "right:6",
+      "expected": "A7",
+      "got": "Al",
+      "crop": "ocr-photos/miss-0068.png"
+    },
+    {
+      "image": "images/connections-000068-photo.jpg",
+      "element": "gear:7",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0069.png"
+    },
+    {
+      "image": "images/connections-000069-photo.jpg",
+      "element": "tank:2",
+      "expected": "T1",
+      "got": "v1",
+      "crop": "ocr-photos/miss-0070.png"
+    },
+    {
+      "image": "images/connections-000069-photo.jpg",
+      "element": "tank:4",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0071.png"
+    },
+    {
+      "image": "images/connections-000071-photo.jpg",
+      "element": "tank:4",
+      "expected": "T7",
+      "got": "V7?",
+      "crop": "ocr-photos/miss-0072.png"
+    },
+    {
+      "image": "images/connections-000071-photo.jpg",
+      "element": "tank:7",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0073.png"
+    },
+    {
+      "image": "images/connections-000072-photo.jpg",
+      "element": "gear:14",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0074.png"
+    },
+    {
+      "image": "images/connections-000074-photo.jpg",
+      "element": "right:6",
+      "expected": "A7",
+      "got": "A?",
+      "crop": "ocr-photos/miss-0075.png"
+    },
+    {
+      "image": "images/connections-000075-photo.jpg",
+      "element": "tank:0",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0076.png"
+    },
+    {
+      "image": "images/connections-000075-photo.jpg",
+      "element": "tank:2",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0077.png"
+    },
+    {
+      "image": "images/connections-000075-photo.jpg",
+      "element": "tank:4",
+      "expected": "T7",
+      "got": "17",
+      "crop": "ocr-photos/miss-0078.png"
+    },
+    {
+      "image": "images/connections-000075-photo.jpg",
+      "element": "tank:5",
+      "expected": "T1",
+      "got": "V1",
+      "crop": "ocr-photos/miss-0079.png"
+    },
+    {
+      "image": "images/connections-000075-photo.jpg",
+      "element": "tank:6",
+      "expected": "T5",
+      "got": "15",
+      "crop": "ocr-photos/miss-0080.png"
+    },
+    {
+      "image": "images/connections-000075-photo.jpg",
+      "element": "tank:7",
+      "expected": "T9",
+      "got": "19",
+      "crop": "ocr-photos/miss-0081.png"
+    },
+    {
+      "image": "images/connections-000075-photo.jpg",
+      "element": "tank:8",
+      "expected": "T6",
+      "got": "16",
+      "crop": "ocr-photos/miss-0082.png"
+    },
+    {
+      "image": "images/connections-000076-photo.jpg",
+      "element": "tank:3",
+      "expected": "T7",
+      "got": "7",
+      "crop": "ocr-photos/miss-0083.png"
+    },
+    {
+      "image": "images/connections-000078-photo.jpg",
+      "element": "right:1",
+      "expected": "A2",
+      "got": "",
+      "crop": "ocr-photos/miss-0084.png"
+    },
+    {
+      "image": "images/connections-000078-photo.jpg",
+      "element": "left:3",
+      "expected": "4",
+      "got": "",
+      "crop": "ocr-photos/miss-0085.png"
+    },
+    {
+      "image": "images/connections-000079-photo.jpg",
+      "element": "tank:1",
+      "expected": "T5",
+      "got": "i",
+      "crop": "ocr-photos/miss-0086.png"
+    },
+    {
+      "image": "images/connections-000079-photo.jpg",
+      "element": "tank:2",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0087.png"
+    },
+    {
+      "image": "images/connections-000079-photo.jpg",
+      "element": "tank:3",
+      "expected": "T3",
+      "got": "",
+      "crop": "ocr-photos/miss-0088.png"
+    },
+    {
+      "image": "images/connections-000081-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0089.png"
+    },
+    {
+      "image": "images/connections-000081-photo.jpg",
+      "element": "left:0",
+      "expected": "1",
+      "got": "]",
+      "crop": "ocr-photos/miss-0090.png"
+    },
+    {
+      "image": "images/connections-000082-photo.jpg",
+      "element": "tank:0",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0091.png"
+    },
+    {
+      "image": "images/connections-000083-photo.jpg",
+      "element": "tank:2",
+      "expected": "T8",
+      "got": "\u21228",
+      "crop": "ocr-photos/miss-0092.png"
+    },
+    {
+      "image": "images/connections-000083-photo.jpg",
+      "element": "tank:1",
+      "expected": "T7",
+      "got": "w7",
+      "crop": "ocr-photos/miss-0093.png"
+    },
+    {
+      "image": "images/connections-000083-photo.jpg",
+      "element": "tank:8",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0094.png"
+    },
+    {
+      "image": "images/connections-000083-photo.jpg",
+      "element": "tank:9",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0095.png"
+    },
+    {
+      "image": "images/connections-000084-photo.jpg",
+      "element": "tank:8",
+      "expected": "T7",
+      "got": "17",
+      "crop": "ocr-photos/miss-0096.png"
+    },
+    {
+      "image": "images/connections-000085-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0097.png"
+    },
+    {
+      "image": "images/connections-000086-photo.jpg",
+      "element": "gear:7",
+      "expected": "L",
+      "got": "",
+      "crop": "ocr-photos/miss-0098.png"
+    },
+    {
+      "image": "images/connections-000086-photo.jpg",
+      "element": "gear:10",
+      "expected": "T",
+      "got": "I",
+      "crop": "ocr-photos/miss-0099.png"
+    },
+    {
+      "image": "images/connections-000086-photo.jpg",
+      "element": "gear:11",
+      "expected": "V",
+      "got": "",
+      "crop": "ocr-photos/miss-0100.png"
+    },
+    {
+      "image": "images/connections-000087-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0101.png"
+    },
+    {
+      "image": "images/connections-000089-photo.jpg",
+      "element": "tank:0",
+      "expected": "T7",
+      "got": "v7",
+      "crop": "ocr-photos/miss-0102.png"
+    },
+    {
+      "image": "images/connections-000090-photo.jpg",
+      "element": "gear:5",
+      "expected": "T",
+      "got": "",
+      "crop": "ocr-photos/miss-0103.png"
+    },
+    {
+      "image": "images/connections-000091-photo.jpg",
+      "element": "left:0",
+      "expected": "1",
+      "got": "]",
+      "crop": "ocr-photos/miss-0104.png"
+    },
+    {
+      "image": "images/connections-000094-photo.jpg",
+      "element": "tank:6",
+      "expected": "T5",
+      "got": "1S",
+      "crop": "ocr-photos/miss-0105.png"
+    },
+    {
+      "image": "images/connections-000094-photo.jpg",
+      "element": "tank:0",
+      "expected": "T8",
+      "got": "18",
+      "crop": "ocr-photos/miss-0106.png"
+    },
+    {
+      "image": "images/connections-000094-photo.jpg",
+      "element": "tank:1",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0107.png"
+    },
+    {
+      "image": "images/connections-000094-photo.jpg",
+      "element": "tank:3",
+      "expected": "T7",
+      "got": "TW?",
+      "crop": "ocr-photos/miss-0108.png"
+    },
+    {
+      "image": "images/connections-000094-photo.jpg",
+      "element": "tank:4",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0109.png"
+    },
+    {
+      "image": "images/connections-000094-photo.jpg",
+      "element": "tank:7",
+      "expected": "T9",
+      "got": "19",
+      "crop": "ocr-photos/miss-0110.png"
+    },
+    {
+      "image": "images/connections-000095-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0111.png"
+    },
+    {
+      "image": "images/connections-000096-photo.jpg",
+      "element": "tank:2",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0112.png"
+    },
+    {
+      "image": "images/connections-000097-photo.jpg",
+      "element": "right:13",
+      "expected": "P",
+      "got": "e",
+      "crop": "ocr-photos/miss-0113.png"
+    },
+    {
+      "image": "images/connections-000098-photo.jpg",
+      "element": "tank:2",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0114.png"
+    },
+    {
+      "image": "images/connections-000098-photo.jpg",
+      "element": "tank:4",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0115.png"
+    },
+    {
+      "image": "images/connections-000098-photo.jpg",
+      "element": "tank:5",
+      "expected": "T5",
+      "got": "|",
+      "crop": "ocr-photos/miss-0116.png"
+    },
+    {
+      "image": "images/connections-000099-photo.jpg",
+      "element": "tank:4",
+      "expected": "T1",
+      "got": "v1",
+      "crop": "ocr-photos/miss-0117.png"
+    },
+    {
+      "image": "images/connections-000099-photo.jpg",
+      "element": "tank:5",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0118.png"
+    },
+    {
+      "image": "images/connections-000100-photo.jpg",
+      "element": "tank:0",
+      "expected": "T2",
+      "got": "1?",
+      "crop": "ocr-photos/miss-0119.png"
+    },
+    {
+      "image": "images/connections-000100-photo.jpg",
+      "element": "tank:1",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0120.png"
+    },
+    {
+      "image": "images/connections-000100-photo.jpg",
+      "element": "tank:2",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0121.png"
+    },
+    {
+      "image": "images/connections-000100-photo.jpg",
+      "element": "tank:3",
+      "expected": "T5",
+      "got": "1S",
+      "crop": "ocr-photos/miss-0122.png"
+    },
+    {
+      "image": "images/connections-000100-photo.jpg",
+      "element": "tank:4",
+      "expected": "T6",
+      "got": "16",
+      "crop": "ocr-photos/miss-0123.png"
+    },
+    {
+      "image": "images/connections-000101-photo.jpg",
+      "element": "tank:0",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0124.png"
+    },
+    {
+      "image": "images/connections-000101-photo.jpg",
+      "element": "tank:2",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0125.png"
+    },
+    {
+      "image": "images/connections-000101-photo.jpg",
+      "element": "tank:3",
+      "expected": "T5",
+      "got": "Be",
+      "crop": "ocr-photos/miss-0126.png"
+    },
+    {
+      "image": "images/connections-000104-photo.jpg",
+      "element": "right:11",
+      "expected": "B4",
+      "got": "34",
+      "crop": "ocr-photos/miss-0127.png"
+    },
+    {
+      "image": "images/connections-000107-photo.jpg",
+      "element": "gear:2",
+      "expected": "E",
+      "got": "",
+      "crop": "ocr-photos/miss-0128.png"
+    },
+    {
+      "image": "images/connections-000107-photo.jpg",
+      "element": "gear:6",
+      "expected": "P",
+      "got": "Pp",
+      "crop": "ocr-photos/miss-0129.png"
+    },
+    {
+      "image": "images/connections-000109-photo.jpg",
+      "element": "gear:13",
+      "expected": "N",
+      "got": "",
+      "crop": "ocr-photos/miss-0130.png"
+    },
+    {
+      "image": "images/connections-000110-photo.jpg",
+      "element": "tank:0",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0131.png"
+    },
+    {
+      "image": "images/connections-000110-photo.jpg",
+      "element": "tank:2",
+      "expected": "T2",
+      "got": "2",
+      "crop": "ocr-photos/miss-0132.png"
+    },
+    {
+      "image": "images/connections-000110-photo.jpg",
+      "element": "tank:4",
+      "expected": "T1",
+      "got": "1 |",
+      "crop": "ocr-photos/miss-0133.png"
+    },
+    {
+      "image": "images/connections-000110-photo.jpg",
+      "element": "tank:5",
+      "expected": "T8",
+      "got": "18",
+      "crop": "ocr-photos/miss-0134.png"
+    },
+    {
+      "image": "images/connections-000110-photo.jpg",
+      "element": "tank:7",
+      "expected": "T3",
+      "got": "v3",
+      "crop": "ocr-photos/miss-0135.png"
+    },
+    {
+      "image": "images/connections-000110-photo.jpg",
+      "element": "tank:9",
+      "expected": "T7",
+      "got": "v7",
+      "crop": "ocr-photos/miss-0136.png"
+    },
+    {
+      "image": "images/connections-000111-photo.jpg",
+      "element": "tank:0",
+      "expected": "T6",
+      "got": "16",
+      "crop": "ocr-photos/miss-0137.png"
+    },
+    {
+      "image": "images/connections-000111-photo.jpg",
+      "element": "tank:1",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0138.png"
+    },
+    {
+      "image": "images/connections-000111-photo.jpg",
+      "element": "tank:3",
+      "expected": "T5",
+      "got": "1%",
+      "crop": "ocr-photos/miss-0139.png"
+    },
+    {
+      "image": "images/connections-000111-photo.jpg",
+      "element": "tank:4",
+      "expected": "T4",
+      "got": "\u00a54",
+      "crop": "ocr-photos/miss-0140.png"
+    },
+    {
+      "image": "images/connections-000112-photo.jpg",
+      "element": "right:23",
+      "expected": "C8",
+      "got": "@:",
+      "crop": "ocr-photos/miss-0141.png"
+    },
+    {
+      "image": "images/connections-000113-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0142.png"
+    },
+    {
+      "image": "images/connections-000114-photo.jpg",
+      "element": "tank:0",
+      "expected": "T1",
+      "got": "|",
+      "crop": "ocr-photos/miss-0143.png"
+    },
+    {
+      "image": "images/connections-000114-photo.jpg",
+      "element": "tank:1",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0144.png"
+    },
+    {
+      "image": "images/connections-000116-photo.jpg",
+      "element": "tank:2",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0145.png"
+    },
+    {
+      "image": "images/connections-000116-photo.jpg",
+      "element": "tank:3",
+      "expected": "T9",
+      "got": "19",
+      "crop": "ocr-photos/miss-0146.png"
+    },
+    {
+      "image": "images/connections-000116-photo.jpg",
+      "element": "tank:6",
+      "expected": "T1",
+      "got": "v1",
+      "crop": "ocr-photos/miss-0147.png"
+    },
+    {
+      "image": "images/connections-000116-photo.jpg",
+      "element": "tank:7",
+      "expected": "T7",
+      "got": "1?",
+      "crop": "ocr-photos/miss-0148.png"
+    },
+    {
+      "image": "images/connections-000116-photo.jpg",
+      "element": "tank:9",
+      "expected": "T8",
+      "got": "18",
+      "crop": "ocr-photos/miss-0149.png"
+    },
+    {
+      "image": "images/connections-000118-photo.jpg",
+      "element": "tank:0",
+      "expected": "T6",
+      "got": "",
+      "crop": "ocr-photos/miss-0150.png"
+    },
+    {
+      "image": "images/connections-000118-photo.jpg",
+      "element": "tank:2",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0151.png"
+    },
+    {
+      "image": "images/connections-000118-photo.jpg",
+      "element": "tank:4",
+      "expected": "T1",
+      "got": "i |",
+      "crop": "ocr-photos/miss-0152.png"
+    },
+    {
+      "image": "images/connections-000119-photo.jpg",
+      "element": "gear:3",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0153.png"
+    },
+    {
+      "image": "images/connections-000120-photo.jpg",
+      "element": "tank:0",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0154.png"
+    },
+    {
+      "image": "images/connections-000122-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0155.png"
+    },
+    {
+      "image": "images/connections-000124-photo.jpg",
+      "element": "gear:13",
+      "expected": "S",
+      "got": "",
+      "crop": "ocr-photos/miss-0156.png"
+    },
+    {
+      "image": "images/connections-000125-photo.jpg",
+      "element": "left:6",
+      "expected": "7",
+      "got": "?",
+      "crop": "ocr-photos/miss-0157.png"
+    },
+    {
+      "image": "images/connections-000126-photo.jpg",
+      "element": "tank:5",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0158.png"
+    },
+    {
+      "image": "images/connections-000126-photo.jpg",
+      "element": "tank:1",
+      "expected": "T5",
+      "got": "| Be)",
+      "crop": "ocr-photos/miss-0159.png"
+    },
+    {
+      "image": "images/connections-000126-photo.jpg",
+      "element": "tank:2",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0160.png"
+    },
+    {
+      "image": "images/connections-000126-photo.jpg",
+      "element": "tank:3",
+      "expected": "T2",
+      "got": "2",
+      "crop": "ocr-photos/miss-0161.png"
+    },
+    {
+      "image": "images/connections-000127-photo.jpg",
+      "element": "tank:5",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0162.png"
+    },
+    {
+      "image": "images/connections-000128-photo.jpg",
+      "element": "tank:0",
+      "expected": "T2",
+      "got": "1?",
+      "crop": "ocr-photos/miss-0163.png"
+    },
+    {
+      "image": "images/connections-000128-photo.jpg",
+      "element": "tank:2",
+      "expected": "T1",
+      "got": "V1",
+      "crop": "ocr-photos/miss-0164.png"
+    },
+    {
+      "image": "images/connections-000129-photo.jpg",
+      "element": "tank:2",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0165.png"
+    },
+    {
+      "image": "images/connections-000130-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0166.png"
+    },
+    {
+      "image": "images/connections-000131-photo.jpg",
+      "element": "right:1",
+      "expected": "A2",
+      "got": "",
+      "crop": "ocr-photos/miss-0167.png"
+    },
+    {
+      "image": "images/connections-000131-photo.jpg",
+      "element": "right:6",
+      "expected": "A7",
+      "got": "Al",
+      "crop": "ocr-photos/miss-0168.png"
+    },
+    {
+      "image": "images/connections-000132-photo.jpg",
+      "element": "gear:3",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0169.png"
+    },
+    {
+      "image": "images/connections-000133-photo.jpg",
+      "element": "right:13",
+      "expected": "P",
+      "got": "e",
+      "crop": "ocr-photos/miss-0170.png"
+    },
+    {
+      "image": "images/connections-000136-photo.jpg",
+      "element": "gear:9",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0171.png"
+    },
+    {
+      "image": "images/connections-000139-photo.jpg",
+      "element": "tank:6",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0172.png"
+    },
+    {
+      "image": "images/connections-000139-photo.jpg",
+      "element": "tank:0",
+      "expected": "T2",
+      "got": "J?",
+      "crop": "ocr-photos/miss-0173.png"
+    },
+    {
+      "image": "images/connections-000139-photo.jpg",
+      "element": "tank:1",
+      "expected": "T6",
+      "got": "16",
+      "crop": "ocr-photos/miss-0174.png"
+    },
+    {
+      "image": "images/connections-000139-photo.jpg",
+      "element": "tank:4",
+      "expected": "T8",
+      "got": "18",
+      "crop": "ocr-photos/miss-0175.png"
+    },
+    {
+      "image": "images/connections-000139-photo.jpg",
+      "element": "tank:5",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0176.png"
+    },
+    {
+      "image": "images/connections-000139-photo.jpg",
+      "element": "tank:7",
+      "expected": "T7",
+      "got": "7",
+      "crop": "ocr-photos/miss-0177.png"
+    },
+    {
+      "image": "images/connections-000139-photo.jpg",
+      "element": "tank:8",
+      "expected": "T1",
+      "got": "v1",
+      "crop": "ocr-photos/miss-0178.png"
+    },
+    {
+      "image": "images/connections-000140-photo.jpg",
+      "element": "gear:14",
+      "expected": "P",
+      "got": "Pp",
+      "crop": "ocr-photos/miss-0179.png"
+    },
+    {
+      "image": "images/connections-000141-photo.jpg",
+      "element": "right:3",
+      "expected": "A4",
+      "got": "AA",
+      "crop": "ocr-photos/miss-0180.png"
+    },
+    {
+      "image": "images/connections-000142-photo.jpg",
+      "element": "tank:0",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0181.png"
+    },
+    {
+      "image": "images/connections-000143-photo.jpg",
+      "element": "gear:16",
+      "expected": "J",
+      "got": "|",
+      "crop": "ocr-photos/miss-0182.png"
+    },
+    {
+      "image": "images/connections-000146-photo.jpg",
+      "element": "tank:6",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0183.png"
+    },
+    {
+      "image": "images/connections-000146-photo.jpg",
+      "element": "tank:8",
+      "expected": "T7",
+      "got": "V7",
+      "crop": "ocr-photos/miss-0184.png"
+    },
+    {
+      "image": "images/connections-000146-photo.jpg",
+      "element": "tank:9",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0185.png"
+    },
+    {
+      "image": "images/connections-000148-photo.jpg",
+      "element": "tank:5",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0186.png"
+    },
+    {
+      "image": "images/connections-000149-photo.jpg",
+      "element": "gear:14",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0187.png"
+    },
+    {
+      "image": "images/connections-000150-photo.jpg",
+      "element": "tank:1",
+      "expected": "T4",
+      "got": "14",
+      "crop": "ocr-photos/miss-0188.png"
+    },
+    {
+      "image": "images/connections-000150-photo.jpg",
+      "element": "tank:3",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0189.png"
+    },
+    {
+      "image": "images/connections-000151-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0190.png"
+    },
+    {
+      "image": "images/connections-000152-photo.jpg",
+      "element": "gear:11",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0191.png"
+    },
+    {
+      "image": "images/connections-000153-photo.jpg",
+      "element": "gear:10",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0192.png"
+    },
+    {
+      "image": "images/connections-000157-photo.jpg",
+      "element": "left:0",
+      "expected": "1",
+      "got": "]",
+      "crop": "ocr-photos/miss-0193.png"
+    },
+    {
+      "image": "images/connections-000157-photo.jpg",
+      "element": "right:2",
+      "expected": "C",
+      "got": "Cc",
+      "crop": "ocr-photos/miss-0194.png"
+    },
+    {
+      "image": "images/connections-000159-photo.jpg",
+      "element": "tank:2",
+      "expected": "T3",
+      "got": "13",
+      "crop": "ocr-photos/miss-0195.png"
+    },
+    {
+      "image": "images/connections-000160-photo.jpg",
+      "element": "gear:1",
+      "expected": "N",
+      "got": "",
+      "crop": "ocr-photos/miss-0196.png"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ from __future__ import annotations
 import math
 
 from ..core.family import Candidate
-from ..core.schema import BBox, GateResult, LayoutItem, LayoutManifest, Point
+from ..core.schema import BBox, GateResult, LayoutItem, LayoutManifest, Point, set_members
 
 
 def overlap_px(p: list[Point], q: list[Point]) -> float:
@@ -81,10 +81,11 @@ class GroundingGate:
                     return _fail(*problem)
 
         answer = c.solution.answer
-        if answer.type == "label":
-            shown = [item for item in layout.items if item.kind == "text" and item.text == str(answer.value)]
+        names = [str(answer.value)] if answer.type == "label" else sorted(set_members(answer)) if answer.type == "set" else []
+        for name in names:
+            shown = [item for item in layout.items if item.kind == "text" and item.text == name]
             if not any(self._problem(item, layout) is None for item in shown):
-                return _fail("answer_not_visible", f"the answer '{answer.value}' is not legible text in the image", [])
+                return _fail("answer_not_visible", f"the answer '{name}' is not legible text in the image", [])
         return GateResult(status="pass")
 
     def _problem(self, item: LayoutItem, layout: LayoutManifest) -> Problem | None:

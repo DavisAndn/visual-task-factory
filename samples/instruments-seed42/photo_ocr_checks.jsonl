@@ -1,0 +1,1282 @@
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:1", "expected": "5", "got": "S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:2", "expected": "10", "got": "\\Q", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0000.png"}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:3", "expected": "15", "got": "AS", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0001.png"}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:4", "expected": "20", "got": "29", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0002.png"}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:8", "expected": "40", "got": "AQ", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0003.png"}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 2}
+{"image": "images/instruments-000000-photo.jpg", "element": "slabel:10", "expected": "50", "got": "SO", "ok": true, "attempt": 1}
+{"image": "images/instruments-000000-photo.jpg", "element": "unit", "expected": "units", "got": "LUNAS", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0004.png"}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 2}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:4", "expected": "4", "got": "A", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0005.png"}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:5", "expected": "5", "got": "S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000001-photo.jpg", "element": "slabel:10", "expected": "10", "got": "190", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0006.png"}
+{"image": "images/instruments-000001-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 2}
+{"image": "images/instruments-000002-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000002-photo.jpg", "element": "ilabel:1", "expected": "1", "got": "i", "ok": true, "attempt": 1}
+{"image": "images/instruments-000002-photo.jpg", "element": "ilabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000002-photo.jpg", "element": "ilabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000002-photo.jpg", "element": "ilabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 2}
+{"image": "images/instruments-000002-photo.jpg", "element": "ilabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000002-photo.jpg", "element": "ilabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000002-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 2}
+{"image": "images/instruments-000003-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000003-photo.jpg", "element": "unit", "expected": "units", "got": "uryits", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0007.png"}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:1", "expected": "5", "got": "S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:3", "expected": "15", "got": "1S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:8", "expected": "40", "got": "AY", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0008.png"}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 2}
+{"image": "images/instruments-000004-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000004-photo.jpg", "element": "unit", "expected": "units", "got": "ur\\itts", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0009.png"}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 2}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000005-photo.jpg", "element": "unit", "expected": "units", "got": "units", "ok": true, "attempt": 2}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 2}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "05", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0010.png"}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 2}
+{"image": "images/instruments-000006-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000006-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 2}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:7", "expected": "70", "got": "70", "ok": true, "attempt": 2}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:8", "expected": "80", "got": "80", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:9", "expected": "90", "got": "90", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "glabel:10", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000007-photo.jpg", "element": "unit", "expected": "psi", "got": "psi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:1", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:2", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:3", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:4", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:5", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:6", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:7", "expected": "14", "got": "14", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "glabel:8", "expected": "16", "got": "16", "ok": true, "attempt": 1}
+{"image": "images/instruments-000008-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000009-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000009-photo.jpg", "element": "ilabel:1", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000009-photo.jpg", "element": "ilabel:2", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000009-photo.jpg", "element": "ilabel:3", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000009-photo.jpg", "element": "ilabel:4", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000009-photo.jpg", "element": "ilabel:5", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000009-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:1", "expected": "1", "got": "l", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "glabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000010-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0011.png"}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0012.png"}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0013.png"}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "VI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 2}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "Xl", "ok": true, "attempt": 1}
+{"image": "images/instruments-000011-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000013-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000013-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000013-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000013-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000013-photo.jpg", "element": "unit", "expected": "mL", "got": "ml", "ok": true, "attempt": 2}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:5", "expected": "5", "got": "S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:9", "expected": "9", "got": "Q", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0014.png"}
+{"image": "images/instruments-000016-photo.jpg", "element": "slabel:10", "expected": "10", "got": "19", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0015.png"}
+{"image": "images/instruments-000016-photo.jpg", "element": "unit", "expected": "mL", "got": "mL", "ok": true, "attempt": 2}
+{"image": "images/instruments-000019-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000019-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000019-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000019-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000019-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000019-photo.jpg", "element": "unit", "expected": "mL", "got": "mL", "ok": true, "attempt": 2}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000020-photo.jpg", "element": "slabel:10", "expected": "10", "got": "19", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0016.png"}
+{"image": "images/instruments-000020-photo.jpg", "element": "unit", "expected": "mL", "got": "m\\", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0017.png"}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 2}
+{"image": "images/instruments-000021-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000021-photo.jpg", "element": "unit", "expected": "units", "got": "urjitts", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0018.png"}
+{"image": "images/instruments-000022-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000022-photo.jpg", "element": "ilabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000022-photo.jpg", "element": "ilabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000022-photo.jpg", "element": "ilabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000022-photo.jpg", "element": "ilabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000022-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000023-photo.jpg", "element": "unit", "expected": "mL", "got": "ml", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0019.png"}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0020.png"}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0021.png"}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "XI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000024-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "OA", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0022.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "92", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0023.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "03", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0024.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "95", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0025.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "06", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0026.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.1", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0027.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "OB", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0028.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "ORS)", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0029.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "10", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0030.png"}
+{"image": "images/instruments-000025-photo.jpg", "element": "unit", "expected": "mL", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0031.png"}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0032.png"}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0033.png"}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:3", "expected": "III", "got": "til", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0034.png"}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 2}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "XI", "ok": true, "attempt": 2}
+{"image": "images/instruments-000026-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XiI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:7", "expected": "70", "got": "70", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:8", "expected": "80", "got": "80", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:9", "expected": "90", "got": "90", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "glabel:10", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000027-photo.jpg", "element": "unit", "expected": "psi", "got": "psi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000028-photo.jpg", "element": "slabel:1", "expected": "0.5", "got": "05", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0035.png"}
+{"image": "images/instruments-000028-photo.jpg", "element": "slabel:2", "expected": "1.0", "got": "10", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0036.png"}
+{"image": "images/instruments-000028-photo.jpg", "element": "slabel:3", "expected": "1.5", "got": "15", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0037.png"}
+{"image": "images/instruments-000028-photo.jpg", "element": "slabel:4", "expected": "2.0", "got": "24", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0038.png"}
+{"image": "images/instruments-000028-photo.jpg", "element": "slabel:5", "expected": "2.5", "got": "25", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0039.png"}
+{"image": "images/instruments-000028-photo.jpg", "element": "slabel:6", "expected": "3.0", "got": "39", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0040.png"}
+{"image": "images/instruments-000028-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 2}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "glabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000029-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000031-photo.jpg", "element": "unit", "expected": "units", "got": "units", "ok": true, "attempt": 1}
+{"image": "images/instruments-000033-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000033-photo.jpg", "element": "ilabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000033-photo.jpg", "element": "ilabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000033-photo.jpg", "element": "ilabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000033-photo.jpg", "element": "ilabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000033-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:1", "expected": "I", "got": "|", "ok": true, "attempt": 2}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0041.png"}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0042.png"}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "VI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "VIII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 2}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "Xl", "ok": true, "attempt": 1}
+{"image": "images/instruments-000034-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 2}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 2}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 2}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000035-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0043.png"}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000036-photo.jpg", "element": "numeral:12", "expected": "12", "got": "lp", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0044.png"}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000038-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000039-photo.jpg", "element": "slabel:1", "expected": "10", "got": "\\O", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0045.png"}
+{"image": "images/instruments-000039-photo.jpg", "element": "slabel:2", "expected": "20", "got": "PAN)", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0046.png"}
+{"image": "images/instruments-000039-photo.jpg", "element": "slabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000039-photo.jpg", "element": "slabel:4", "expected": "40", "got": "AQ", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0047.png"}
+{"image": "images/instruments-000039-photo.jpg", "element": "slabel:5", "expected": "50", "got": "NN)", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0048.png"}
+{"image": "images/instruments-000039-photo.jpg", "element": "slabel:6", "expected": "60", "got": "6&0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000039-photo.jpg", "element": "unit", "expected": "mL", "got": "mL", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:1", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:2", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:3", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:4", "expected": "80", "got": "80", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:5", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:6", "expected": "120", "got": "120", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:7", "expected": "140", "got": "140", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "glabel:8", "expected": "160", "got": "160", "ok": true, "attempt": 1}
+{"image": "images/instruments-000040-photo.jpg", "element": "unit", "expected": "psi", "got": "psi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:1", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:2", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:3", "expected": "150", "got": "150", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:4", "expected": "200", "got": "200", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:5", "expected": "250", "got": "250", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:6", "expected": "300", "got": "300", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:7", "expected": "350", "got": "350", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "glabel:8", "expected": "400", "got": "400", "ok": true, "attempt": 1}
+{"image": "images/instruments-000041-photo.jpg", "element": "unit", "expected": "kPa", "got": "kPa", "ok": true, "attempt": 1}
+{"image": "images/instruments-000042-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000042-photo.jpg", "element": "ilabel:1", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000042-photo.jpg", "element": "ilabel:2", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000042-photo.jpg", "element": "ilabel:3", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000042-photo.jpg", "element": "ilabel:4", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000042-photo.jpg", "element": "ilabel:5", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000042-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000045-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 2}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9g", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0049.png"}
+{"image": "images/instruments-000046-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 2}
+{"image": "images/instruments-000046-photo.jpg", "element": "unit", "expected": "mL", "got": "nit", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0050.png"}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000047-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000048-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000048-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000048-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000048-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000048-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000048-photo.jpg", "element": "unit", "expected": "mL", "got": "mf", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0051.png"}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:11", "expected": "11", "got": "ll", "ok": true, "attempt": 1}
+{"image": "images/instruments-000049-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:1", "expected": "1", "got": "]", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0052.png"}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 2}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000050-photo.jpg", "element": "unit", "expected": "mL", "got": "mb", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0053.png"}
+{"image": "images/instruments-000052-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 2}
+{"image": "images/instruments-000052-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000052-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000052-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000052-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 2}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000054-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:1", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:2", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:3", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:4", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:5", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:6", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:7", "expected": "14", "got": "14", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "glabel:8", "expected": "16", "got": "16", "ok": true, "attempt": 1}
+{"image": "images/instruments-000055-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000056-photo.jpg", "element": "unit", "expected": "mL", "got": "ny,", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0054.png"}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000057-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0055.png"}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0056.png"}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0057.png"}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "VI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "Xl", "ok": true, "attempt": 1}
+{"image": "images/instruments-000058-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 2}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 2}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000059-photo.jpg", "element": "unit", "expected": "mL", "got": "mye", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0058.png"}
+{"image": "images/instruments-000060-photo.jpg", "element": "slabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000060-photo.jpg", "element": "slabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000060-photo.jpg", "element": "slabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000060-photo.jpg", "element": "slabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000060-photo.jpg", "element": "slabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000060-photo.jpg", "element": "slabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000060-photo.jpg", "element": "unit", "expected": "mL", "got": "ml", "ok": true, "attempt": 1}
+{"image": "images/instruments-000063-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000063-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000063-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000063-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000063-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000063-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0059.png"}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 2}
+{"image": "images/instruments-000064-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000064-photo.jpg", "element": "unit", "expected": "units", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0060.png"}
+{"image": "images/instruments-000067-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000067-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000067-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000067-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000067-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000067-photo.jpg", "element": "unit", "expected": "mL", "got": "ml", "ok": true, "attempt": 2}
+{"image": "images/instruments-000068-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000068-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000068-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000068-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000068-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0061.png"}
+{"image": "images/instruments-000069-photo.jpg", "element": "slabel:1", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000069-photo.jpg", "element": "slabel:2", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000069-photo.jpg", "element": "slabel:3", "expected": "1.5", "got": "1.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000069-photo.jpg", "element": "slabel:4", "expected": "2.0", "got": "2.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000069-photo.jpg", "element": "slabel:5", "expected": "2.5", "got": "2.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000069-photo.jpg", "element": "slabel:6", "expected": "3.0", "got": "3.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000069-photo.jpg", "element": "unit", "expected": "mL", "got": "ml", "ok": true, "attempt": 2}
+{"image": "images/instruments-000071-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000071-photo.jpg", "element": "ilabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000071-photo.jpg", "element": "ilabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000071-photo.jpg", "element": "ilabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000071-photo.jpg", "element": "ilabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000071-photo.jpg", "element": "ilabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000071-photo.jpg", "element": "ilabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000071-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000072-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000072-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000072-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000072-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000072-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000073-photo.jpg", "element": "unit", "expected": "mL", "got": "mf", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0062.png"}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:4", "expected": "4", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0063.png"}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000074-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000075-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000075-photo.jpg", "element": "ilabel:1", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000075-photo.jpg", "element": "ilabel:2", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000075-photo.jpg", "element": "ilabel:3", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000075-photo.jpg", "element": "ilabel:4", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000075-photo.jpg", "element": "ilabel:5", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000075-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 2}
+{"image": "images/instruments-000076-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000076-photo.jpg", "element": "unit", "expected": "mL", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0064.png"}
+{"image": "images/instruments-000077-photo.jpg", "element": "slabel:1", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000077-photo.jpg", "element": "slabel:2", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000077-photo.jpg", "element": "slabel:3", "expected": "1.5", "got": "1.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000077-photo.jpg", "element": "slabel:4", "expected": "2.0", "got": "2.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000077-photo.jpg", "element": "slabel:5", "expected": "2.5", "got": "2.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000077-photo.jpg", "element": "slabel:6", "expected": "3.0", "got": "3.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000077-photo.jpg", "element": "unit", "expected": "mL", "got": "mL", "ok": true, "attempt": 2}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "glabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000078-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 2}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000079-photo.jpg", "element": "unit", "expected": "mL", "got": "mu", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0065.png"}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0066.png"}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0067.png"}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0068.png"}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "X|", "ok": true, "attempt": 1}
+{"image": "images/instruments-000080-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 2}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000081-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000082-photo.jpg", "element": "slabel:1", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000082-photo.jpg", "element": "slabel:2", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000082-photo.jpg", "element": "slabel:3", "expected": "1.5", "got": "1.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000082-photo.jpg", "element": "slabel:4", "expected": "2.0", "got": "2.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000082-photo.jpg", "element": "slabel:5", "expected": "2.5", "got": "2.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000082-photo.jpg", "element": "slabel:6", "expected": "3.0", "got": "3.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000082-photo.jpg", "element": "unit", "expected": "mL", "got": "mL", "ok": true, "attempt": 2}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 2}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:7", "expected": "70", "got": "70", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:8", "expected": "80", "got": "80", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:9", "expected": "90", "got": "90", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "glabel:10", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000083-photo.jpg", "element": "unit", "expected": "psi", "got": "psi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000084-photo.jpg", "element": "slabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000084-photo.jpg", "element": "slabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000084-photo.jpg", "element": "slabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000084-photo.jpg", "element": "slabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 2}
+{"image": "images/instruments-000084-photo.jpg", "element": "slabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000084-photo.jpg", "element": "slabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000084-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0069.png"}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:1", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:2", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:3", "expected": "150", "got": "150", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:4", "expected": "200", "got": "200", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:5", "expected": "250", "got": "250", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:6", "expected": "300", "got": "300", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:7", "expected": "350", "got": "350", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "glabel:8", "expected": "400", "got": "400", "ok": true, "attempt": 1}
+{"image": "images/instruments-000085-photo.jpg", "element": "unit", "expected": "kPa", "got": "kPa", "ok": true, "attempt": 1}
+{"image": "images/instruments-000086-photo.jpg", "element": "slabel:1", "expected": "5", "got": "S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000086-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000086-photo.jpg", "element": "slabel:3", "expected": "15", "got": "1S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000086-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000086-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 2}
+{"image": "images/instruments-000087-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000087-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000087-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000087-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000087-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000087-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0070.png"}
+{"image": "images/instruments-000090-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000090-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000090-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000090-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000090-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000090-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0071.png"}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000091-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000092-photo.jpg", "element": "slabel:1", "expected": "1", "got": "\\", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0072.png"}
+{"image": "images/instruments-000092-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000092-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000092-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 2}
+{"image": "images/instruments-000092-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 2}
+{"image": "images/instruments-000092-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000093-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000093-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000093-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000093-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000093-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000093-photo.jpg", "element": "unit", "expected": "mL", "got": "ml", "ok": true, "attempt": 1}
+{"image": "images/instruments-000094-photo.jpg", "element": "slabel:1", "expected": "1", "got": "l", "ok": true, "attempt": 1}
+{"image": "images/instruments-000094-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000094-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000094-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000094-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000094-photo.jpg", "element": "unit", "expected": "mL", "got": "mI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "OX", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0073.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "Nr 2", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0074.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "Q3", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0075.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "OA", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0076.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "Via)", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0077.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0S", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0078.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "01", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0079.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "OB", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0080.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "YS", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0081.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "19", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0082.png"}
+{"image": "images/instruments-000095-photo.jpg", "element": "unit", "expected": "mL", "got": "mi,", "ok": true, "attempt": 2}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 2}
+{"image": "images/instruments-000096-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000096-photo.jpg", "element": "unit", "expected": "units", "got": "units", "ok": true, "attempt": 2}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000097-photo.jpg", "element": "unit", "expected": "mL", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0083.png"}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 2}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "glabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000098-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:1", "expected": "I", "got": "|", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0084.png"}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0085.png"}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "VI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 2}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "xl", "ok": true, "attempt": 1}
+{"image": "images/instruments-000103-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xil", "ok": true, "attempt": 2}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 2}
+{"image": "images/instruments-000104-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000104-photo.jpg", "element": "unit", "expected": "units", "got": "urfitts", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0086.png"}
+{"image": "images/instruments-000107-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000107-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000107-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "Q.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000107-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000107-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "05", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0087.png"}
+{"image": "images/instruments-000107-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 2}
+{"image": "images/instruments-000109-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000109-photo.jpg", "element": "ilabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000109-photo.jpg", "element": "ilabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000109-photo.jpg", "element": "ilabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000109-photo.jpg", "element": "ilabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000109-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000110-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000110-photo.jpg", "element": "ilabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000110-photo.jpg", "element": "ilabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000110-photo.jpg", "element": "ilabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000110-photo.jpg", "element": "ilabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000110-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "Ol", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0088.png"}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.7", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0089.png"}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "O4", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0090.png"}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "O05", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0091.png"}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "06", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0092.png"}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 2}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "O08", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0093.png"}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "C9", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0094.png"}
+{"image": "images/instruments-000112-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000112-photo.jpg", "element": "unit", "expected": "mL", "got": "|", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0095.png"}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000113-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "glabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000114-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:1", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:2", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:3", "expected": "150", "got": "150", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:4", "expected": "200", "got": "200", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:5", "expected": "250", "got": "250", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:6", "expected": "300", "got": "300", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:7", "expected": "350", "got": "350", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "glabel:8", "expected": "400", "got": "400", "ok": true, "attempt": 1}
+{"image": "images/instruments-000115-photo.jpg", "element": "unit", "expected": "kPa", "got": "kPa", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000116-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0096.png"}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0097.png"}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:2", "expected": "II", "got": "il", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0098.png"}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "Xi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000117-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "glabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000119-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0. 3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 2}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000121-photo.jpg", "element": "unit", "expected": "mL", "got": "my", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0099.png"}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:1", "expected": "I", "got": "1", "ok": true, "attempt": 2}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0100.png"}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0101.png"}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 2}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "X|", "ok": true, "attempt": 1}
+{"image": "images/instruments-000122-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xil", "ok": true, "attempt": 2}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000123-photo.jpg", "element": "numeral:12", "expected": "12", "got": "2", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0102.png"}
+{"image": "images/instruments-000124-photo.jpg", "element": "slabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000124-photo.jpg", "element": "slabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000124-photo.jpg", "element": "slabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000124-photo.jpg", "element": "slabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000124-photo.jpg", "element": "slabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000124-photo.jpg", "element": "slabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000124-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0103.png"}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0104.png"}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0105.png"}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0106.png"}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "XI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000125-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000126-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000126-photo.jpg", "element": "ilabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000126-photo.jpg", "element": "ilabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000126-photo.jpg", "element": "ilabel:3", "expected": "3", "got": "j", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0107.png"}
+{"image": "images/instruments-000126-photo.jpg", "element": "ilabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000126-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0108.png"}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0109.png"}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0110.png"}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "vill", "ok": true, "attempt": 2}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "XI", "ok": true, "attempt": 2}
+{"image": "images/instruments-000128-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xil", "ok": true, "attempt": 2}
+{"image": "images/instruments-000129-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 2}
+{"image": "images/instruments-000129-photo.jpg", "element": "ilabel:1", "expected": "1", "got": "l", "ok": true, "attempt": 1}
+{"image": "images/instruments-000129-photo.jpg", "element": "ilabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000129-photo.jpg", "element": "ilabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000129-photo.jpg", "element": "ilabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000129-photo.jpg", "element": "ilabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000129-photo.jpg", "element": "ilabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000129-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 2}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0111.png"}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0112.png"}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0113.png"}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 2}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "Xl", "ok": true, "attempt": 1}
+{"image": "images/instruments-000130-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xll", "ok": true, "attempt": 2}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000131-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000132-photo.jpg", "element": "unit", "expected": "mL", "got": "mL", "ok": true, "attempt": 2}
+{"image": "images/instruments-000133-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000133-photo.jpg", "element": "ilabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 2}
+{"image": "images/instruments-000133-photo.jpg", "element": "ilabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000133-photo.jpg", "element": "ilabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000133-photo.jpg", "element": "ilabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000133-photo.jpg", "element": "ilabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000133-photo.jpg", "element": "ilabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000133-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0114.png"}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0115.png"}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0116.png"}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 2}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:10", "expected": "X", "got": "x", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "X|", "ok": true, "attempt": 1}
+{"image": "images/instruments-000134-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0117.png"}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0118.png"}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0119.png"}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "X|", "ok": true, "attempt": 1}
+{"image": "images/instruments-000136-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xi", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0120.png"}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0121.png"}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0122.png"}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0123.png"}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "X|", "ok": true, "attempt": 1}
+{"image": "images/instruments-000141-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "4", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0124.png"}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "slabel:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000145-photo.jpg", "element": "unit", "expected": "mL", "got": "mI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "Ol", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0125.png"}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:6", "expected": "0.6", "got": "0.6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:7", "expected": "0.7", "got": "0.7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:8", "expected": "0.8", "got": "0.8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:9", "expected": "0.9", "got": "0.9", "ok": true, "attempt": 2}
+{"image": "images/instruments-000146-photo.jpg", "element": "slabel:10", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000146-photo.jpg", "element": "unit", "expected": "mL", "got": "mL", "ok": true, "attempt": 1}
+{"image": "images/instruments-000148-photo.jpg", "element": "slabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000148-photo.jpg", "element": "slabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000148-photo.jpg", "element": "slabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000148-photo.jpg", "element": "slabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000148-photo.jpg", "element": "slabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000148-photo.jpg", "element": "slabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000148-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0126.png"}
+{"image": "images/instruments-000149-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "OA", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0127.png"}
+{"image": "images/instruments-000149-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "022", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0128.png"}
+{"image": "images/instruments-000149-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000149-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "QA", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0129.png"}
+{"image": "images/instruments-000149-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "05", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0130.png"}
+{"image": "images/instruments-000149-photo.jpg", "element": "unit", "expected": "mL", "got": "m\\", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0131.png"}
+{"image": "images/instruments-000150-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000150-photo.jpg", "element": "glabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000150-photo.jpg", "element": "glabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000150-photo.jpg", "element": "glabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000150-photo.jpg", "element": "glabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000150-photo.jpg", "element": "glabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000150-photo.jpg", "element": "glabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000150-photo.jpg", "element": "unit", "expected": "psi", "got": "psi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:1", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:2", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:3", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:4", "expected": "80", "got": "80", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:5", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:6", "expected": "120", "got": "120", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:7", "expected": "140", "got": "140", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "glabel:8", "expected": "160", "got": "160", "ok": true, "attempt": 1}
+{"image": "images/instruments-000153-photo.jpg", "element": "unit", "expected": "psi", "got": "psi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000156-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000156-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000156-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000156-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000156-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000156-photo.jpg", "element": "unit", "expected": "mL", "got": "mf", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0132.png"}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:6", "expected": "6", "got": "6", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:7", "expected": "7", "got": "7", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:8", "expected": "8", "got": "8", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:9", "expected": "9", "got": "9", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:10", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:11", "expected": "11", "got": "11", "ok": true, "attempt": 1}
+{"image": "images/instruments-000160-photo.jpg", "element": "numeral:12", "expected": "12", "got": "12", "ok": true, "attempt": 1}
+{"image": "images/instruments-000161-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "O01", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0133.png"}
+{"image": "images/instruments-000161-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000161-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000161-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000161-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000161-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 2}
+{"image": "images/instruments-000164-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000164-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000164-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000164-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000164-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000164-photo.jpg", "element": "unit", "expected": "mL", "got": "mt", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0134.png"}
+{"image": "images/instruments-000165-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000165-photo.jpg", "element": "glabel:1", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000165-photo.jpg", "element": "glabel:2", "expected": "200", "got": "200", "ok": true, "attempt": 1}
+{"image": "images/instruments-000165-photo.jpg", "element": "glabel:3", "expected": "300", "got": "300", "ok": true, "attempt": 1}
+{"image": "images/instruments-000165-photo.jpg", "element": "glabel:4", "expected": "400", "got": "400", "ok": true, "attempt": 1}
+{"image": "images/instruments-000165-photo.jpg", "element": "glabel:5", "expected": "500", "got": "500", "ok": true, "attempt": 1}
+{"image": "images/instruments-000165-photo.jpg", "element": "glabel:6", "expected": "600", "got": "600", "ok": true, "attempt": 1}
+{"image": "images/instruments-000165-photo.jpg", "element": "unit", "expected": "kPa", "got": "kPa", "ok": true, "attempt": 1}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:0", "expected": "0.0", "got": "0.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:1", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:2", "expected": "1.0", "got": "\u2014", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0135.png"}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:3", "expected": "1.5", "got": "|", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0136.png"}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:4", "expected": "2.0", "got": "2.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:5", "expected": "2.5", "got": "2.5", "ok": true, "attempt": 2}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:6", "expected": "3.0", "got": "3.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:7", "expected": "3.5", "got": "3.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000166-photo.jpg", "element": "ilabel:8", "expected": "4.0", "got": "40", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0137.png"}
+{"image": "images/instruments-000166-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000167-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000167-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000167-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000167-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000167-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000167-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 2}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:7", "expected": "70", "got": "70", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:8", "expected": "80", "got": "80", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:9", "expected": "90", "got": "90", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "glabel:10", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000168-photo.jpg", "element": "unit", "expected": "psi", "got": "psi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:1", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:2", "expected": "100", "got": "100", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:3", "expected": "150", "got": "150", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:4", "expected": "200", "got": "200", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:5", "expected": "250", "got": "250", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:6", "expected": "300", "got": "300", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:7", "expected": "350", "got": "350", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "glabel:8", "expected": "400", "got": "400", "ok": true, "attempt": 1}
+{"image": "images/instruments-000169-photo.jpg", "element": "unit", "expected": "kPa", "got": "kPa", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:0", "expected": "0.0", "got": "0.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:1", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:2", "expected": "1.0", "got": "1.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:3", "expected": "1.5", "got": "1.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:4", "expected": "2.0", "got": "2.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:5", "expected": "2.5", "got": "2.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:6", "expected": "3.0", "got": "3.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:7", "expected": "3.5", "got": "3.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "ilabel:8", "expected": "4.0", "got": "4.0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000170-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000171-photo.jpg", "element": "ilabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000171-photo.jpg", "element": "ilabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000171-photo.jpg", "element": "ilabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000171-photo.jpg", "element": "ilabel:3", "expected": "15", "got": "1S", "ok": true, "attempt": 1}
+{"image": "images/instruments-000171-photo.jpg", "element": "ilabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000171-photo.jpg", "element": "unit:inner", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0138.png"}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0139.png"}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0140.png"}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "XI", "ok": true, "attempt": 1}
+{"image": "images/instruments-000174-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "XII", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:1", "expected": "I", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0141.png"}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:2", "expected": "II", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0142.png"}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:3", "expected": "III", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0143.png"}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:4", "expected": "IV", "got": "IV", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:5", "expected": "V", "got": "V", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:6", "expected": "VI", "got": "Vi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:7", "expected": "VII", "got": "Vil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:8", "expected": "VIII", "got": "Vill", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:9", "expected": "IX", "got": "IX", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:10", "expected": "X", "got": "X", "ok": true, "attempt": 1}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:11", "expected": "XI", "got": "N", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0144.png"}
+{"image": "images/instruments-000175-photo.jpg", "element": "numeral:12", "expected": "XII", "got": "Xil", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:9", "expected": "45", "got": "45", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "slabel:10", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000177-photo.jpg", "element": "unit", "expected": "units", "got": "", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0145.png"}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "glabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000181-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000184-photo.jpg", "element": "slabel:1", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000184-photo.jpg", "element": "slabel:2", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000184-photo.jpg", "element": "slabel:3", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000184-photo.jpg", "element": "slabel:4", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000184-photo.jpg", "element": "slabel:5", "expected": "50", "got": "50", "ok": true, "attempt": 1}
+{"image": "images/instruments-000184-photo.jpg", "element": "slabel:6", "expected": "60", "got": "60", "ok": true, "attempt": 1}
+{"image": "images/instruments-000184-photo.jpg", "element": "unit", "expected": "mL", "got": "ml", "ok": true, "attempt": 2}
+{"image": "images/instruments-000189-photo.jpg", "element": "slabel:1", "expected": "1", "got": "1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000189-photo.jpg", "element": "slabel:2", "expected": "2", "got": "2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000189-photo.jpg", "element": "slabel:3", "expected": "3", "got": "3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000189-photo.jpg", "element": "slabel:4", "expected": "4", "got": "4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000189-photo.jpg", "element": "slabel:5", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000189-photo.jpg", "element": "unit", "expected": "mL", "got": "mit", "ok": false, "attempt": 0, "crop": "ocr-photos/miss-0146.png"}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "glabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000190-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "glabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000192-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}
+{"image": "images/instruments-000193-photo.jpg", "element": "slabel:1", "expected": "0.1", "got": "0.1", "ok": true, "attempt": 1}
+{"image": "images/instruments-000193-photo.jpg", "element": "slabel:2", "expected": "0.2", "got": "0.2", "ok": true, "attempt": 1}
+{"image": "images/instruments-000193-photo.jpg", "element": "slabel:3", "expected": "0.3", "got": "0.3", "ok": true, "attempt": 1}
+{"image": "images/instruments-000193-photo.jpg", "element": "slabel:4", "expected": "0.4", "got": "0.4", "ok": true, "attempt": 1}
+{"image": "images/instruments-000193-photo.jpg", "element": "slabel:5", "expected": "0.5", "got": "0.5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000193-photo.jpg", "element": "unit", "expected": "mL", "got": "mi", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:0", "expected": "0", "got": "0", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:1", "expected": "5", "got": "5", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:2", "expected": "10", "got": "10", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:3", "expected": "15", "got": "15", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:4", "expected": "20", "got": "20", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:5", "expected": "25", "got": "25", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:6", "expected": "30", "got": "30", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:7", "expected": "35", "got": "35", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "glabel:8", "expected": "40", "got": "40", "ok": true, "attempt": 1}
+{"image": "images/instruments-000194-photo.jpg", "element": "unit", "expected": "bar", "got": "bar", "ok": true, "attempt": 1}

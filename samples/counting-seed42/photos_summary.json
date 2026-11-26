@@ -1,0 +1,22 @@
+{
+  "share": 1.0,
+  "seed": 0,
+  "tasks": 150,
+  "photos": 150,
+  "skipped": {},
+  "capture": {
+    "tilt": 0.05,
+    "blur": [
+      0.7,
+      1.0
+    ],
+    "glare": [
+      35,
+      55
+    ],
+    "shade": 0.2,
+    "noise": 5.0,
+    "jpeg_quality": 55
+  },
+  "settings_hash": "3e8bdbb8b4cb90c2"
+}

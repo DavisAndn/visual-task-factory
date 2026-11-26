@@ -1,0 +1,13 @@
+{
+  "share": 1.0,
+  "seed": 0,
+  "tasks": 150,
+  "pairs": 150,
+  "median_edit": 0.006,
+  "by_template": {
+    "count_side": {
+      "tasks": 150,
+      "pairs": 150
+    }
+  }
+}

@@ -1,0 +1,1061 @@
+{
+  "engine": "tesseract 5.5.3",
+  "labels": 1282,
+  "read_back": 1135,
+  "read_on_second_attempt": 73,
+  "tasks": 300,
+  "tasks_fully_read_back": 172,
+  "by_kind": {
+    "glabel": {
+      "labels": 228,
+      "read_back": 228
+    },
+    "ilabel": {
+      "labels": 94,
+      "read_back": 90
+    },
+    "numeral": {
+      "labels": 372,
+      "read_back": 319
+    },
+    "slabel": {
+      "labels": 485,
+      "read_back": 428
+    },
+    "unit": {
+      "labels": 103,
+      "read_back": 70
+    }
+  },
+  "misses": [
+    {
+      "image": "images/instruments-000000-photo.jpg",
+      "element": "slabel:2",
+      "expected": "10",
+      "got": "\\Q",
+      "crop": "ocr-photos/miss-0000.png"
+    },
+    {
+      "image": "images/instruments-000000-photo.jpg",
+      "element": "slabel:3",
+      "expected": "15",
+      "got": "AS",
+      "crop": "ocr-photos/miss-0001.png"
+    },
+    {
+      "image": "images/instruments-000000-photo.jpg",
+      "element": "slabel:4",
+      "expected": "20",
+      "got": "29",
+      "crop": "ocr-photos/miss-0002.png"
+    },
+    {
+      "image": "images/instruments-000000-photo.jpg",
+      "element": "slabel:8",
+      "expected": "40",
+      "got": "AQ",
+      "crop": "ocr-photos/miss-0003.png"
+    },
+    {
+      "image": "images/instruments-000000-photo.jpg",
+      "element": "unit",
+      "expected": "units",
+      "got": "LUNAS",
+      "crop": "ocr-photos/miss-0004.png"
+    },
+    {
+      "image": "images/instruments-000001-photo.jpg",
+      "element": "slabel:4",
+      "expected": "4",
+      "got": "A",
+      "crop": "ocr-photos/miss-0005.png"
+    },
+    {
+      "image": "images/instruments-000001-photo.jpg",
+      "element": "slabel:10",
+      "expected": "10",
+      "got": "190",
+      "crop": "ocr-photos/miss-0006.png"
+    },
+    {
+      "image": "images/instruments-000003-photo.jpg",
+      "element": "unit",
+      "expected": "units",
+      "got": "uryits",
+      "crop": "ocr-photos/miss-0007.png"
+    },
+    {
+      "image": "images/instruments-000004-photo.jpg",
+      "element": "slabel:8",
+      "expected": "40",
+      "got": "AY",
+      "crop": "ocr-photos/miss-0008.png"
+    },
+    {
+      "image": "images/instruments-000004-photo.jpg",
+      "element": "unit",
+      "expected": "units",
+      "got": "ur\\itts",
+      "crop": "ocr-photos/miss-0009.png"
+    },
+    {
+      "image": "images/instruments-000006-photo.jpg",
+      "element": "slabel:5",
+      "expected": "0.5",
+      "got": "05",
+      "crop": "ocr-photos/miss-0010.png"
+    },
+    {
+      "image": "images/instruments-000011-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0011.png"
+    },
+    {
+      "image": "images/instruments-000011-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0012.png"
+    },
+    {
+      "image": "images/instruments-000011-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0013.png"
+    },
+    {
+      "image": "images/instruments-000016-photo.jpg",
+      "element": "slabel:9",
+      "expected": "9",
+      "got": "Q",
+      "crop": "ocr-photos/miss-0014.png"
+    },
+    {
+      "image": "images/instruments-000016-photo.jpg",
+      "element": "slabel:10",
+      "expected": "10",
+      "got": "19",
+      "crop": "ocr-photos/miss-0015.png"
+    },
+    {
+      "image": "images/instruments-000020-photo.jpg",
+      "element": "slabel:10",
+      "expected": "10",
+      "got": "19",
+      "crop": "ocr-photos/miss-0016.png"
+    },
+    {
+      "image": "images/instruments-000020-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "m\\",
+      "crop": "ocr-photos/miss-0017.png"
+    },
+    {
+      "image": "images/instruments-000021-photo.jpg",
+      "element": "unit",
+      "expected": "units",
+      "got": "urjitts",
+      "crop": "ocr-photos/miss-0018.png"
+    },
+    {
+      "image": "images/instruments-000024-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0019.png"
+    },
+    {
+      "image": "images/instruments-000024-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0020.png"
+    },
+    {
+      "image": "images/instruments-000024-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0021.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:1",
+      "expected": "0.1",
+      "got": "OA",
+      "crop": "ocr-photos/miss-0022.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:2",
+      "expected": "0.2",
+      "got": "92",
+      "crop": "ocr-photos/miss-0023.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:3",
+      "expected": "0.3",
+      "got": "03",
+      "crop": "ocr-photos/miss-0024.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:5",
+      "expected": "0.5",
+      "got": "95",
+      "crop": "ocr-photos/miss-0025.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:6",
+      "expected": "0.6",
+      "got": "06",
+      "crop": "ocr-photos/miss-0026.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:7",
+      "expected": "0.7",
+      "got": "0.1",
+      "crop": "ocr-photos/miss-0027.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:8",
+      "expected": "0.8",
+      "got": "OB",
+      "crop": "ocr-photos/miss-0028.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:9",
+      "expected": "0.9",
+      "got": "ORS)",
+      "crop": "ocr-photos/miss-0029.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "slabel:10",
+      "expected": "1.0",
+      "got": "10",
+      "crop": "ocr-photos/miss-0030.png"
+    },
+    {
+      "image": "images/instruments-000025-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "",
+      "crop": "ocr-photos/miss-0031.png"
+    },
+    {
+      "image": "images/instruments-000026-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0032.png"
+    },
+    {
+      "image": "images/instruments-000026-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0033.png"
+    },
+    {
+      "image": "images/instruments-000026-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "til",
+      "crop": "ocr-photos/miss-0034.png"
+    },
+    {
+      "image": "images/instruments-000028-photo.jpg",
+      "element": "slabel:1",
+      "expected": "0.5",
+      "got": "05",
+      "crop": "ocr-photos/miss-0035.png"
+    },
+    {
+      "image": "images/instruments-000028-photo.jpg",
+      "element": "slabel:2",
+      "expected": "1.0",
+      "got": "10",
+      "crop": "ocr-photos/miss-0036.png"
+    },
+    {
+      "image": "images/instruments-000028-photo.jpg",
+      "element": "slabel:3",
+      "expected": "1.5",
+      "got": "15",
+      "crop": "ocr-photos/miss-0037.png"
+    },
+    {
+      "image": "images/instruments-000028-photo.jpg",
+      "element": "slabel:4",
+      "expected": "2.0",
+      "got": "24",
+      "crop": "ocr-photos/miss-0038.png"
+    },
+    {
+      "image": "images/instruments-000028-photo.jpg",
+      "element": "slabel:5",
+      "expected": "2.5",
+      "got": "25",
+      "crop": "ocr-photos/miss-0039.png"
+    },
+    {
+      "image": "images/instruments-000028-photo.jpg",
+      "element": "slabel:6",
+      "expected": "3.0",
+      "got": "39",
+      "crop": "ocr-photos/miss-0040.png"
+    },
+    {
+      "image": "images/instruments-000034-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0041.png"
+    },
+    {
+      "image": "images/instruments-000034-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0042.png"
+    },
+    {
+      "image": "images/instruments-000035-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0043.png"
+    },
+    {
+      "image": "images/instruments-000036-photo.jpg",
+      "element": "numeral:12",
+      "expected": "12",
+      "got": "lp",
+      "crop": "ocr-photos/miss-0044.png"
+    },
+    {
+      "image": "images/instruments-000039-photo.jpg",
+      "element": "slabel:1",
+      "expected": "10",
+      "got": "\\O",
+      "crop": "ocr-photos/miss-0045.png"
+    },
+    {
+      "image": "images/instruments-000039-photo.jpg",
+      "element": "slabel:2",
+      "expected": "20",
+      "got": "PAN)",
+      "crop": "ocr-photos/miss-0046.png"
+    },
+    {
+      "image": "images/instruments-000039-photo.jpg",
+      "element": "slabel:4",
+      "expected": "40",
+      "got": "AQ",
+      "crop": "ocr-photos/miss-0047.png"
+    },
+    {
+      "image": "images/instruments-000039-photo.jpg",
+      "element": "slabel:5",
+      "expected": "50",
+      "got": "NN)",
+      "crop": "ocr-photos/miss-0048.png"
+    },
+    {
+      "image": "images/instruments-000046-photo.jpg",
+      "element": "slabel:9",
+      "expected": "9",
+      "got": "9g",
+      "crop": "ocr-photos/miss-0049.png"
+    },
+    {
+      "image": "images/instruments-000046-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "nit",
+      "crop": "ocr-photos/miss-0050.png"
+    },
+    {
+      "image": "images/instruments-000048-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mf",
+      "crop": "ocr-photos/miss-0051.png"
+    },
+    {
+      "image": "images/instruments-000050-photo.jpg",
+      "element": "slabel:1",
+      "expected": "1",
+      "got": "]",
+      "crop": "ocr-photos/miss-0052.png"
+    },
+    {
+      "image": "images/instruments-000050-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mb",
+      "crop": "ocr-photos/miss-0053.png"
+    },
+    {
+      "image": "images/instruments-000056-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "ny,",
+      "crop": "ocr-photos/miss-0054.png"
+    },
+    {
+      "image": "images/instruments-000058-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0055.png"
+    },
+    {
+      "image": "images/instruments-000058-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0056.png"
+    },
+    {
+      "image": "images/instruments-000058-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0057.png"
+    },
+    {
+      "image": "images/instruments-000059-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mye",
+      "crop": "ocr-photos/miss-0058.png"
+    },
+    {
+      "image": "images/instruments-000063-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0059.png"
+    },
+    {
+      "image": "images/instruments-000064-photo.jpg",
+      "element": "unit",
+      "expected": "units",
+      "got": "",
+      "crop": "ocr-photos/miss-0060.png"
+    },
+    {
+      "image": "images/instruments-000068-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0061.png"
+    },
+    {
+      "image": "images/instruments-000073-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mf",
+      "crop": "ocr-photos/miss-0062.png"
+    },
+    {
+      "image": "images/instruments-000074-photo.jpg",
+      "element": "numeral:4",
+      "expected": "4",
+      "got": "",
+      "crop": "ocr-photos/miss-0063.png"
+    },
+    {
+      "image": "images/instruments-000076-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "",
+      "crop": "ocr-photos/miss-0064.png"
+    },
+    {
+      "image": "images/instruments-000079-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mu",
+      "crop": "ocr-photos/miss-0065.png"
+    },
+    {
+      "image": "images/instruments-000080-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0066.png"
+    },
+    {
+      "image": "images/instruments-000080-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0067.png"
+    },
+    {
+      "image": "images/instruments-000080-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0068.png"
+    },
+    {
+      "image": "images/instruments-000084-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0069.png"
+    },
+    {
+      "image": "images/instruments-000087-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0070.png"
+    },
+    {
+      "image": "images/instruments-000090-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0071.png"
+    },
+    {
+      "image": "images/instruments-000092-photo.jpg",
+      "element": "slabel:1",
+      "expected": "1",
+      "got": "\\",
+      "crop": "ocr-photos/miss-0072.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:1",
+      "expected": "0.1",
+      "got": "OX",
+      "crop": "ocr-photos/miss-0073.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:2",
+      "expected": "0.2",
+      "got": "Nr 2",
+      "crop": "ocr-photos/miss-0074.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:3",
+      "expected": "0.3",
+      "got": "Q3",
+      "crop": "ocr-photos/miss-0075.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:4",
+      "expected": "0.4",
+      "got": "OA",
+      "crop": "ocr-photos/miss-0076.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:5",
+      "expected": "0.5",
+      "got": "Via)",
+      "crop": "ocr-photos/miss-0077.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:6",
+      "expected": "0.6",
+      "got": "0S",
+      "crop": "ocr-photos/miss-0078.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:7",
+      "expected": "0.7",
+      "got": "01",
+      "crop": "ocr-photos/miss-0079.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:8",
+      "expected": "0.8",
+      "got": "OB",
+      "crop": "ocr-photos/miss-0080.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:9",
+      "expected": "0.9",
+      "got": "YS",
+      "crop": "ocr-photos/miss-0081.png"
+    },
+    {
+      "image": "images/instruments-000095-photo.jpg",
+      "element": "slabel:10",
+      "expected": "1.0",
+      "got": "19",
+      "crop": "ocr-photos/miss-0082.png"
+    },
+    {
+      "image": "images/instruments-000097-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "",
+      "crop": "ocr-photos/miss-0083.png"
+    },
+    {
+      "image": "images/instruments-000103-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0084.png"
+    },
+    {
+      "image": "images/instruments-000103-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0085.png"
+    },
+    {
+      "image": "images/instruments-000104-photo.jpg",
+      "element": "unit",
+      "expected": "units",
+      "got": "urfitts",
+      "crop": "ocr-photos/miss-0086.png"
+    },
+    {
+      "image": "images/instruments-000107-photo.jpg",
+      "element": "slabel:5",
+      "expected": "0.5",
+      "got": "05",
+      "crop": "ocr-photos/miss-0087.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "slabel:1",
+      "expected": "0.1",
+      "got": "Ol",
+      "crop": "ocr-photos/miss-0088.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "slabel:3",
+      "expected": "0.3",
+      "got": "0.7",
+      "crop": "ocr-photos/miss-0089.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "slabel:4",
+      "expected": "0.4",
+      "got": "O4",
+      "crop": "ocr-photos/miss-0090.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "slabel:5",
+      "expected": "0.5",
+      "got": "O05",
+      "crop": "ocr-photos/miss-0091.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "slabel:6",
+      "expected": "0.6",
+      "got": "06",
+      "crop": "ocr-photos/miss-0092.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "slabel:8",
+      "expected": "0.8",
+      "got": "O08",
+      "crop": "ocr-photos/miss-0093.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "slabel:9",
+      "expected": "0.9",
+      "got": "C9",
+      "crop": "ocr-photos/miss-0094.png"
+    },
+    {
+      "image": "images/instruments-000112-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "|",
+      "crop": "ocr-photos/miss-0095.png"
+    },
+    {
+      "image": "images/instruments-000116-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0096.png"
+    },
+    {
+      "image": "images/instruments-000117-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0097.png"
+    },
+    {
+      "image": "images/instruments-000117-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0098.png"
+    },
+    {
+      "image": "images/instruments-000121-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "my",
+      "crop": "ocr-photos/miss-0099.png"
+    },
+    {
+      "image": "images/instruments-000122-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0100.png"
+    },
+    {
+      "image": "images/instruments-000122-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0101.png"
+    },
+    {
+      "image": "images/instruments-000123-photo.jpg",
+      "element": "numeral:12",
+      "expected": "12",
+      "got": "2",
+      "crop": "ocr-photos/miss-0102.png"
+    },
+    {
+      "image": "images/instruments-000124-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0103.png"
+    },
+    {
+      "image": "images/instruments-000125-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0104.png"
+    },
+    {
+      "image": "images/instruments-000125-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0105.png"
+    },
+    {
+      "image": "images/instruments-000125-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0106.png"
+    },
+    {
+      "image": "images/instruments-000126-photo.jpg",
+      "element": "ilabel:3",
+      "expected": "3",
+      "got": "j",
+      "crop": "ocr-photos/miss-0107.png"
+    },
+    {
+      "image": "images/instruments-000128-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0108.png"
+    },
+    {
+      "image": "images/instruments-000128-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0109.png"
+    },
+    {
+      "image": "images/instruments-000128-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0110.png"
+    },
+    {
+      "image": "images/instruments-000130-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0111.png"
+    },
+    {
+      "image": "images/instruments-000130-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0112.png"
+    },
+    {
+      "image": "images/instruments-000130-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0113.png"
+    },
+    {
+      "image": "images/instruments-000134-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0114.png"
+    },
+    {
+      "image": "images/instruments-000134-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0115.png"
+    },
+    {
+      "image": "images/instruments-000134-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0116.png"
+    },
+    {
+      "image": "images/instruments-000136-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0117.png"
+    },
+    {
+      "image": "images/instruments-000136-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0118.png"
+    },
+    {
+      "image": "images/instruments-000136-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0119.png"
+    },
+    {
+      "image": "images/instruments-000136-photo.jpg",
+      "element": "numeral:12",
+      "expected": "XII",
+      "got": "Xi",
+      "crop": "ocr-photos/miss-0120.png"
+    },
+    {
+      "image": "images/instruments-000141-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0121.png"
+    },
+    {
+      "image": "images/instruments-000141-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0122.png"
+    },
+    {
+      "image": "images/instruments-000141-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0123.png"
+    },
+    {
+      "image": "images/instruments-000141-photo.jpg",
+      "element": "numeral:12",
+      "expected": "XII",
+      "got": "4",
+      "crop": "ocr-photos/miss-0124.png"
+    },
+    {
+      "image": "images/instruments-000146-photo.jpg",
+      "element": "slabel:1",
+      "expected": "0.1",
+      "got": "Ol",
+      "crop": "ocr-photos/miss-0125.png"
+    },
+    {
+      "image": "images/instruments-000148-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0126.png"
+    },
+    {
+      "image": "images/instruments-000149-photo.jpg",
+      "element": "slabel:1",
+      "expected": "0.1",
+      "got": "OA",
+      "crop": "ocr-photos/miss-0127.png"
+    },
+    {
+      "image": "images/instruments-000149-photo.jpg",
+      "element": "slabel:2",
+      "expected": "0.2",
+      "got": "022",
+      "crop": "ocr-photos/miss-0128.png"
+    },
+    {
+      "image": "images/instruments-000149-photo.jpg",
+      "element": "slabel:4",
+      "expected": "0.4",
+      "got": "QA",
+      "crop": "ocr-photos/miss-0129.png"
+    },
+    {
+      "image": "images/instruments-000149-photo.jpg",
+      "element": "slabel:5",
+      "expected": "0.5",
+      "got": "05",
+      "crop": "ocr-photos/miss-0130.png"
+    },
+    {
+      "image": "images/instruments-000149-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "m\\",
+      "crop": "ocr-photos/miss-0131.png"
+    },
+    {
+      "image": "images/instruments-000156-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mf",
+      "crop": "ocr-photos/miss-0132.png"
+    },
+    {
+      "image": "images/instruments-000161-photo.jpg",
+      "element": "slabel:1",
+      "expected": "0.1",
+      "got": "O01",
+      "crop": "ocr-photos/miss-0133.png"
+    },
+    {
+      "image": "images/instruments-000164-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mt",
+      "crop": "ocr-photos/miss-0134.png"
+    },
+    {
+      "image": "images/instruments-000166-photo.jpg",
+      "element": "ilabel:2",
+      "expected": "1.0",
+      "got": "\u2014",
+      "crop": "ocr-photos/miss-0135.png"
+    },
+    {
+      "image": "images/instruments-000166-photo.jpg",
+      "element": "ilabel:3",
+      "expected": "1.5",
+      "got": "|",
+      "crop": "ocr-photos/miss-0136.png"
+    },
+    {
+      "image": "images/instruments-000166-photo.jpg",
+      "element": "ilabel:8",
+      "expected": "4.0",
+      "got": "40",
+      "crop": "ocr-photos/miss-0137.png"
+    },
+    {
+      "image": "images/instruments-000174-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0138.png"
+    },
+    {
+      "image": "images/instruments-000174-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0139.png"
+    },
+    {
+      "image": "images/instruments-000174-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0140.png"
+    },
+    {
+      "image": "images/instruments-000175-photo.jpg",
+      "element": "numeral:1",
+      "expected": "I",
+      "got": "",
+      "crop": "ocr-photos/miss-0141.png"
+    },
+    {
+      "image": "images/instruments-000175-photo.jpg",
+      "element": "numeral:2",
+      "expected": "II",
+      "got": "",
+      "crop": "ocr-photos/miss-0142.png"
+    },
+    {
+      "image": "images/instruments-000175-photo.jpg",
+      "element": "numeral:3",
+      "expected": "III",
+      "got": "",
+      "crop": "ocr-photos/miss-0143.png"
+    },
+    {
+      "image": "images/instruments-000175-photo.jpg",
+      "element": "numeral:11",
+      "expected": "XI",
+      "got": "N",
+      "crop": "ocr-photos/miss-0144.png"
+    },
+    {
+      "image": "images/instruments-000177-photo.jpg",
+      "element": "unit",
+      "expected": "units",
+      "got": "",
+      "crop": "ocr-photos/miss-0145.png"
+    },
+    {
+      "image": "images/instruments-000189-photo.jpg",
+      "element": "unit",
+      "expected": "mL",
+      "got": "mit",
+      "crop": "ocr-photos/miss-0146.png"
+    }
+  ]
+}

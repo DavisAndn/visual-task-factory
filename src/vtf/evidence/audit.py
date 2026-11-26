@@ -38,14 +38,16 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
     return (max(0.0, centre - half), min(1.0, centre + half))
 
 
-def build_audit(run_dir: Path, n: int = 100, seed: int = 0, targeted: int = 30) -> Path:
-    tasks = read_tasks(run_dir / "tasks.jsonl")
+def build_audit(run_dir: Path, n: int = 100, seed: int = 0, targeted: int = 30, photos: bool = False) -> Path:
+    """Write audit.html (or audit-photos.html, for the photo twins): a sample to judge blind."""
+    tasks = read_tasks(run_dir / ("photos.jsonl" if photos else "tasks.jsonl"))
     sample = sample_tasks(tasks, n, seed)
     chosen = {t.id for t in sample}
     extra: list[str] = []
     models = (read_json(run_dir / "model_summary.json") or {}).get("models", {})
     for summary in models.values():
-        extra += [task_id for task_id in summary.get("unsolved", []) if task_id not in chosen and task_id not in extra]
+        wrong = [f"{i}-photo" for i in summary.get("photos", {}).get("lost", [])] if photos else summary.get("unsolved", [])
+        extra += [task_id for task_id in wrong if task_id not in chosen and task_id not in extra]
     by_id = {t.id: t for t in tasks}
     items = [(t, "random") for t in sample] + [(by_id[i], "targeted") for i in extra[:targeted] if i in by_id]
     random.Random(seed).shuffle(items)  # the reviewer can't tell targeted items from random ones
@@ -56,7 +58,7 @@ def build_audit(run_dir: Path, n: int = 100, seed: int = 0, targeted: int = 30) 
         data.append({
             "id": task.id,
             "source": source,
-            "image": f"data:image/png;base64,{image}",
+            "image": f"data:image/{'jpeg' if task.image.endswith('.jpg') else 'png'};base64,{image}",
             "question": task.question,
             "answer": task.answer.model_dump(),
             "trace": task.trace,
@@ -65,18 +67,21 @@ def build_audit(run_dir: Path, n: int = 100, seed: int = 0, targeted: int = 30) 
     run_id = hashlib.sha256(json.dumps([d["id"] for d in data]).encode()).hexdigest()[:12]
     page = (
         _PAGE.replace("__RUN__", json.dumps(run_dir.name))
-        .replace("__KEY__", json.dumps(f"vtf-audit:{run_dir.name}:{run_id}"))
+        .replace("__KEY__", json.dumps(f"vtf-audit:{run_dir.name}:{'photos:' if photos else ''}{run_id}"))
         .replace("__DATA__", json.dumps(data).replace("</", "<\\/"))
     )
-    path = run_dir / "audit.html"
+    path = run_dir / ("audit-photos.html" if photos else "audit.html")
     path.write_text(page, encoding="utf-8")
     return path
 
 
 def import_audit(run_dir: Path, results_path: Path) -> dict[str, Any]:
-    """Check a downloaded results file against the run and write audit_results.json and audit_summary.json."""
+    """Check a downloaded results file against the run and write audit_results.json and audit_summary.json
+    (photo_audit_*.json when the file came from audit-photos.html)."""
     results = json.loads(Path(results_path).read_text())
-    by_id = {t.id: t for t in read_tasks(run_dir / "tasks.jsonl")}
+    photos = any(str(item.get("id", "")).endswith("-photo") for item in results.get("items", []))
+    prefix = "photo_" if photos else ""
+    by_id = {t.id: t for t in read_tasks(run_dir / ("photos.jsonl" if photos else "tasks.jsonl"))}
     rows = []
     for item in results["items"]:
         task = by_id.get(item["id"])
@@ -84,7 +89,7 @@ def import_audit(run_dir: Path, results_path: Path) -> dict[str, Any]:
             continue
         agrees = score_response(Answer.model_validate(task.answer.model_dump()), item.get("reviewer_answer", ""))
         rows.append({**item, "agrees": agrees, "reference": task.answer.model_dump(), "template": task.template})
-    (run_dir / "audit_results.json").write_text(json.dumps({"reviewer": results.get("reviewer"), "items": rows}, indent=2))
+    (run_dir / f"{prefix}audit_results.json").write_text(json.dumps({"reviewer": results.get("reviewer"), "items": rows}, indent=2))
 
     def stats(group: list[dict[str, Any]]) -> dict[str, Any]:
         count = {v: sum(r["verdict"] == v for r in group) for v in VERDICTS}
@@ -109,7 +114,7 @@ def import_audit(run_dir: Path, results_path: Path) -> dict[str, Any]:
             if r["verdict"] != "valid"
         ],
     }
-    (run_dir / "audit_summary.json").write_text(json.dumps(summary, indent=2))
+    (run_dir / f"{prefix}audit_summary.json").write_text(json.dumps(summary, indent=2))
     return summary
 
 

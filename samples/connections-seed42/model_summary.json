@@ -1,0 +1,2385 @@
+{
+  "sample": 300,
+  "of": 300,
+  "seed": 0,
+  "models": {
+    "claude-haiku-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 269,
+        "of": 300
+      },
+      "blind": {
+        "correct": 61,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 10,
+        "of": 213
+      },
+      "pairs": {
+        "both_correct": 150,
+        "of": 193
+      },
+      "photos": {
+        "of": 300,
+        "clean_correct": 269,
+        "photo_correct": 266,
+        "lost": [
+          "connections-000021-gears_ccw",
+          "connections-000026-cable_trace_back",
+          "connections-000036-cable_trace_back",
+          "connections-000049-cable_trace_back",
+          "connections-000058-cable_trace",
+          "connections-000079-valves_reach",
+          "connections-000091-cable_trace_back",
+          "connections-000108-cable_trace_back",
+          "connections-000114-valves_reach",
+          "connections-000131-cable_trace",
+          "connections-000148-valves_reach",
+          "connections-000157-cable_trace"
+        ]
+      },
+      "by_template": {
+        "cable_trace": {
+          "tasks": 51,
+          "with_image": 0.706,
+          "blind": 0.0,
+          "photo_tasks": 51,
+          "clean_of_photographed": 0.706,
+          "photo": 0.647,
+          "always_guess": 0.098
+        },
+        "cable_trace_back": {
+          "tasks": 51,
+          "with_image": 0.765,
+          "blind": 0.098,
+          "photo_tasks": 51,
+          "clean_of_photographed": 0.765,
+          "photo": 0.765,
+          "always_guess": 0.118
+        },
+        "gears_ccw": {
+          "tasks": 53,
+          "with_image": 1.0,
+          "blind": 0.038,
+          "photo_tasks": 53,
+          "clean_of_photographed": 1.0,
+          "photo": 0.981,
+          "always_guess": 0.038
+        },
+        "gears_same": {
+          "tasks": 43,
+          "with_image": 1.0,
+          "blind": 0.581,
+          "photo_tasks": 43,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.512
+        },
+        "valves_one": {
+          "tasks": 44,
+          "with_image": 1.0,
+          "blind": 0.591,
+          "photo_tasks": 44,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.545
+        },
+        "valves_reach": {
+          "tasks": 58,
+          "with_image": 0.931,
+          "blind": 0.052,
+          "photo_tasks": 58,
+          "clean_of_photographed": 0.931,
+          "photo": 0.948,
+          "always_guess": 0.207
+        }
+      },
+      "by_skill": {
+        "chain of reasoning": {
+          "tasks": 96,
+          "with_image": 1.0,
+          "blind": 0.281,
+          "photo_tasks": 96,
+          "clean_of_photographed": 1.0,
+          "photo": 0.99
+        },
+        "follow a line": {
+          "tasks": 102,
+          "with_image": 0.735,
+          "blind": 0.049,
+          "photo_tasks": 102,
+          "clean_of_photographed": 0.735,
+          "photo": 0.706
+        },
+        "trace a network": {
+          "tasks": 102,
+          "with_image": 0.961,
+          "blind": 0.284,
+          "photo_tasks": 102,
+          "clean_of_photographed": 0.961,
+          "photo": 0.971
+        }
+      },
+      "by_facet": {
+        "diagram": {
+          "cables": {
+            "tasks": 102,
+            "with_image": 0.735,
+            "blind": 0.049,
+            "photo_tasks": 102,
+            "clean_of_photographed": 0.735,
+            "photo": 0.706
+          },
+          "gears": {
+            "tasks": 96,
+            "with_image": 1.0,
+            "blind": 0.281,
+            "photo_tasks": 96,
+            "clean_of_photographed": 1.0,
+            "photo": 0.99
+          },
+          "valves": {
+            "tasks": 102,
+            "with_image": 0.961,
+            "blind": 0.284,
+            "photo_tasks": 102,
+            "clean_of_photographed": 0.961,
+            "photo": 0.971
+          }
+        },
+        "difficulty": {
+          "cables L1": {
+            "tasks": 16,
+            "with_image": 1.0,
+            "blind": 0.125,
+            "photo_tasks": 16,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L2": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.045,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.955
+          },
+          "cables L3": {
+            "tasks": 20,
+            "with_image": 0.85,
+            "blind": 0.0,
+            "photo_tasks": 20,
+            "clean_of_photographed": 0.85,
+            "photo": 0.8
+          },
+          "cables L4": {
+            "tasks": 28,
+            "with_image": 0.429,
+            "blind": 0.071,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.429,
+            "photo": 0.429
+          },
+          "cables L5": {
+            "tasks": 16,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.5,
+            "photo": 0.438
+          },
+          "gears L1": {
+            "tasks": 26,
+            "with_image": 1.0,
+            "blind": 0.308,
+            "photo_tasks": 26,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L2": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.281,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L3": {
+            "tasks": 38,
+            "with_image": 1.0,
+            "blind": 0.263,
+            "photo_tasks": 38,
+            "clean_of_photographed": 1.0,
+            "photo": 0.974
+          },
+          "valves L1": {
+            "tasks": 41,
+            "with_image": 0.976,
+            "blind": 0.268,
+            "photo_tasks": 41,
+            "clean_of_photographed": 0.976,
+            "photo": 0.976
+          },
+          "valves L2": {
+            "tasks": 33,
+            "with_image": 1.0,
+            "blind": 0.303,
+            "photo_tasks": 33,
+            "clean_of_photographed": 1.0,
+            "photo": 0.939
+          },
+          "valves L3": {
+            "tasks": 28,
+            "with_image": 0.893,
+            "blind": 0.286,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.893,
+            "photo": 1.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 83,
+            "with_image": 0.988,
+            "blind": 0.253,
+            "photo_tasks": 83,
+            "clean_of_photographed": 0.988,
+            "photo": 0.988
+          },
+          "L2": {
+            "tasks": 87,
+            "with_image": 1.0,
+            "blind": 0.23,
+            "photo_tasks": 87,
+            "clean_of_photographed": 1.0,
+            "photo": 0.966
+          },
+          "L3": {
+            "tasks": 86,
+            "with_image": 0.93,
+            "blind": 0.209,
+            "photo_tasks": 86,
+            "clean_of_photographed": 0.93,
+            "photo": 0.942
+          },
+          "L4": {
+            "tasks": 28,
+            "with_image": 0.429,
+            "blind": 0.071,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.429,
+            "photo": 0.429
+          },
+          "L5": {
+            "tasks": 16,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.5,
+            "photo": 0.438
+          }
+        },
+        "size": {
+          "11 gears": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.281,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "14 valves": {
+            "tasks": 33,
+            "with_image": 1.0,
+            "blind": 0.303,
+            "photo_tasks": 33,
+            "clean_of_photographed": 1.0,
+            "photo": 0.939
+          },
+          "16 cables": {
+            "tasks": 20,
+            "with_image": 0.85,
+            "blind": 0.0,
+            "photo_tasks": 20,
+            "clean_of_photographed": 0.85,
+            "photo": 0.8
+          },
+          "17 gears": {
+            "tasks": 38,
+            "with_image": 1.0,
+            "blind": 0.263,
+            "photo_tasks": 38,
+            "clean_of_photographed": 1.0,
+            "photo": 0.974
+          },
+          "24 cables": {
+            "tasks": 28,
+            "with_image": 0.429,
+            "blind": 0.071,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.429,
+            "photo": 0.429
+          },
+          "24 valves": {
+            "tasks": 28,
+            "with_image": 0.893,
+            "blind": 0.286,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.893,
+            "photo": 1.0
+          },
+          "32 cables": {
+            "tasks": 16,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.5,
+            "photo": 0.438
+          },
+          "5 gears": {
+            "tasks": 26,
+            "with_image": 1.0,
+            "blind": 0.308,
+            "photo_tasks": 26,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "6 valves": {
+            "tasks": 41,
+            "with_image": 0.976,
+            "blind": 0.268,
+            "photo_tasks": 41,
+            "clean_of_photographed": 0.976,
+            "photo": 0.976
+          },
+          "8 cables": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.045,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.955
+          },
+          "8 cables, colored": {
+            "tasks": 16,
+            "with_image": 1.0,
+            "blind": 0.125,
+            "photo_tasks": 16,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "connections-000001-valves_reach",
+        "connections-000006-gears_ccw",
+        "connections-000009-gears_ccw",
+        "connections-000023-valves_reach",
+        "connections-000046-cable_trace_back",
+        "connections-000060-cable_trace_back",
+        "connections-000062-cable_trace_back",
+        "connections-000087-cable_trace_back",
+        "connections-000093-valves_reach",
+        "connections-000151-cable_trace_back"
+      ],
+      "unsolved": [
+        "connections-000000-cable_trace",
+        "connections-000000-cable_trace_back",
+        "connections-000005-valves_reach",
+        "connections-000013-cable_trace",
+        "connections-000013-cable_trace_back",
+        "connections-000020-cable_trace",
+        "connections-000036-cable_trace",
+        "connections-000049-cable_trace",
+        "connections-000051-cable_trace_back",
+        "connections-000052-cable_trace_back",
+        "connections-000059-cable_trace_back",
+        "connections-000059-cable_trace",
+        "connections-000061-cable_trace_back",
+        "connections-000061-cable_trace",
+        "connections-000062-cable_trace",
+        "connections-000063-valves_reach",
+        "connections-000065-cable_trace",
+        "connections-000074-cable_trace",
+        "connections-000074-cable_trace_back",
+        "connections-000078-cable_trace_back",
+        "connections-000104-cable_trace_back",
+        "connections-000104-cable_trace",
+        "connections-000108-cable_trace",
+        "connections-000112-cable_trace_back",
+        "connections-000112-cable_trace",
+        "connections-000116-valves_reach",
+        "connections-000133-cable_trace",
+        "connections-000141-cable_trace_back",
+        "connections-000146-valves_reach",
+        "connections-000161-cable_trace_back",
+        "connections-000161-cable_trace"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.5283,
+      "spent_this_run_usd": 0.0,
+      "sample": 300,
+      "seed": 0
+    },
+    "claude-sonnet-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 286,
+        "of": 300
+      },
+      "blind": {
+        "correct": 53,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 4,
+        "of": 213
+      },
+      "pairs": {
+        "both_correct": 169,
+        "of": 193
+      },
+      "photos": {
+        "of": 300,
+        "clean_correct": 286,
+        "photo_correct": 276,
+        "lost": [
+          "connections-000020-cable_trace",
+          "connections-000049-cable_trace_back",
+          "connections-000049-cable_trace",
+          "connections-000059-cable_trace_back",
+          "connections-000059-cable_trace",
+          "connections-000065-cable_trace",
+          "connections-000108-cable_trace",
+          "connections-000131-cable_trace",
+          "connections-000133-cable_trace",
+          "connections-000143-gears_ccw",
+          "connections-000161-cable_trace_back"
+        ]
+      },
+      "by_template": {
+        "cable_trace": {
+          "tasks": 51,
+          "with_image": 0.824,
+          "blind": 0.0,
+          "photo_tasks": 51,
+          "clean_of_photographed": 0.824,
+          "photo": 0.706,
+          "always_guess": 0.098
+        },
+        "cable_trace_back": {
+          "tasks": 51,
+          "with_image": 0.902,
+          "blind": 0.039,
+          "photo_tasks": 51,
+          "clean_of_photographed": 0.902,
+          "photo": 0.843,
+          "always_guess": 0.118
+        },
+        "gears_ccw": {
+          "tasks": 53,
+          "with_image": 1.0,
+          "blind": 0.038,
+          "photo_tasks": 53,
+          "clean_of_photographed": 1.0,
+          "photo": 0.981,
+          "always_guess": 0.038
+        },
+        "gears_same": {
+          "tasks": 43,
+          "with_image": 1.0,
+          "blind": 0.581,
+          "photo_tasks": 43,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.512
+        },
+        "valves_one": {
+          "tasks": 44,
+          "with_image": 1.0,
+          "blind": 0.545,
+          "photo_tasks": 44,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.545
+        },
+        "valves_reach": {
+          "tasks": 58,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 58,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.207
+        }
+      },
+      "by_skill": {
+        "chain of reasoning": {
+          "tasks": 96,
+          "with_image": 1.0,
+          "blind": 0.281,
+          "photo_tasks": 96,
+          "clean_of_photographed": 1.0,
+          "photo": 0.99
+        },
+        "follow a line": {
+          "tasks": 102,
+          "with_image": 0.863,
+          "blind": 0.02,
+          "photo_tasks": 102,
+          "clean_of_photographed": 0.863,
+          "photo": 0.775
+        },
+        "trace a network": {
+          "tasks": 102,
+          "with_image": 1.0,
+          "blind": 0.235,
+          "photo_tasks": 102,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        }
+      },
+      "by_facet": {
+        "diagram": {
+          "cables": {
+            "tasks": 102,
+            "with_image": 0.863,
+            "blind": 0.02,
+            "photo_tasks": 102,
+            "clean_of_photographed": 0.863,
+            "photo": 0.775
+          },
+          "gears": {
+            "tasks": 96,
+            "with_image": 1.0,
+            "blind": 0.281,
+            "photo_tasks": 96,
+            "clean_of_photographed": 1.0,
+            "photo": 0.99
+          },
+          "valves": {
+            "tasks": 102,
+            "with_image": 1.0,
+            "blind": 0.235,
+            "photo_tasks": 102,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "difficulty": {
+          "cables L1": {
+            "tasks": 16,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L2": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L3": {
+            "tasks": 20,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 20,
+            "clean_of_photographed": 1.0,
+            "photo": 0.95
+          },
+          "cables L4": {
+            "tasks": 28,
+            "with_image": 0.786,
+            "blind": 0.036,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.786,
+            "photo": 0.607
+          },
+          "cables L5": {
+            "tasks": 16,
+            "with_image": 0.5,
+            "blind": 0.062,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.5,
+            "photo": 0.312
+          },
+          "gears L1": {
+            "tasks": 26,
+            "with_image": 1.0,
+            "blind": 0.308,
+            "photo_tasks": 26,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L2": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.281,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L3": {
+            "tasks": 38,
+            "with_image": 1.0,
+            "blind": 0.263,
+            "photo_tasks": 38,
+            "clean_of_photographed": 1.0,
+            "photo": 0.974
+          },
+          "valves L1": {
+            "tasks": 41,
+            "with_image": 1.0,
+            "blind": 0.268,
+            "photo_tasks": 41,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "valves L2": {
+            "tasks": 33,
+            "with_image": 1.0,
+            "blind": 0.273,
+            "photo_tasks": 33,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "valves L3": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.143,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 83,
+            "with_image": 1.0,
+            "blind": 0.229,
+            "photo_tasks": 83,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 87,
+            "with_image": 1.0,
+            "blind": 0.207,
+            "photo_tasks": 87,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L3": {
+            "tasks": 86,
+            "with_image": 1.0,
+            "blind": 0.163,
+            "photo_tasks": 86,
+            "clean_of_photographed": 1.0,
+            "photo": 0.977
+          },
+          "L4": {
+            "tasks": 28,
+            "with_image": 0.786,
+            "blind": 0.036,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.786,
+            "photo": 0.607
+          },
+          "L5": {
+            "tasks": 16,
+            "with_image": 0.5,
+            "blind": 0.062,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.5,
+            "photo": 0.312
+          }
+        },
+        "size": {
+          "11 gears": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.281,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "14 valves": {
+            "tasks": 33,
+            "with_image": 1.0,
+            "blind": 0.273,
+            "photo_tasks": 33,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "16 cables": {
+            "tasks": 20,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 20,
+            "clean_of_photographed": 1.0,
+            "photo": 0.95
+          },
+          "17 gears": {
+            "tasks": 38,
+            "with_image": 1.0,
+            "blind": 0.263,
+            "photo_tasks": 38,
+            "clean_of_photographed": 1.0,
+            "photo": 0.974
+          },
+          "24 cables": {
+            "tasks": 28,
+            "with_image": 0.786,
+            "blind": 0.036,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.786,
+            "photo": 0.607
+          },
+          "24 valves": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.143,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "32 cables": {
+            "tasks": 16,
+            "with_image": 0.5,
+            "blind": 0.062,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.5,
+            "photo": 0.312
+          },
+          "5 gears": {
+            "tasks": 26,
+            "with_image": 1.0,
+            "blind": 0.308,
+            "photo_tasks": 26,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "6 valves": {
+            "tasks": 41,
+            "with_image": 1.0,
+            "blind": 0.268,
+            "photo_tasks": 41,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "8 cables": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "8 cables, colored": {
+            "tasks": 16,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "connections-000006-gears_ccw",
+        "connections-000009-gears_ccw",
+        "connections-000138-cable_trace_back",
+        "connections-000161-cable_trace_back"
+      ],
+      "unsolved": [
+        "connections-000000-cable_trace",
+        "connections-000000-cable_trace_back",
+        "connections-000013-cable_trace",
+        "connections-000013-cable_trace_back",
+        "connections-000036-cable_trace",
+        "connections-000058-cable_trace",
+        "connections-000061-cable_trace",
+        "connections-000074-cable_trace",
+        "connections-000074-cable_trace_back",
+        "connections-000078-cable_trace",
+        "connections-000078-cable_trace_back",
+        "connections-000112-cable_trace_back",
+        "connections-000112-cable_trace",
+        "connections-000161-cable_trace"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 6.0591,
+      "spent_this_run_usd": 0.0,
+      "sample": 300,
+      "seed": 0
+    },
+    "claude-opus-5-5 (high effort)": {
+      "tasks": 300,
+      "with_image": {
+        "correct": 290,
+        "of": 300
+      },
+      "blind": {
+        "correct": 52,
+        "of": 300
+      },
+      "blind_open_ended": {
+        "correct": 7,
+        "of": 213
+      },
+      "pairs": {
+        "both_correct": 178,
+        "of": 193
+      },
+      "photos": {
+        "of": 300,
+        "clean_correct": 290,
+        "photo_correct": 280,
+        "lost": [
+          "connections-000013-cable_trace",
+          "connections-000013-cable_trace_back",
+          "connections-000026-cable_trace_back",
+          "connections-000036-cable_trace",
+          "connections-000049-cable_trace_back",
+          "connections-000059-cable_trace_back",
+          "connections-000059-cable_trace",
+          "connections-000065-cable_trace",
+          "connections-000078-cable_trace_back",
+          "connections-000112-cable_trace",
+          "connections-000131-cable_trace",
+          "connections-000141-cable_trace_back",
+          "connections-000160-gears_ccw",
+          "connections-000161-cable_trace"
+        ]
+      },
+      "by_template": {
+        "cable_trace": {
+          "tasks": 51,
+          "with_image": 0.902,
+          "blind": 0.0,
+          "photo_tasks": 51,
+          "clean_of_photographed": 0.902,
+          "photo": 0.784,
+          "always_guess": 0.098
+        },
+        "cable_trace_back": {
+          "tasks": 51,
+          "with_image": 0.922,
+          "blind": 0.039,
+          "photo_tasks": 51,
+          "clean_of_photographed": 0.922,
+          "photo": 0.843,
+          "always_guess": 0.118
+        },
+        "gears_ccw": {
+          "tasks": 53,
+          "with_image": 0.981,
+          "blind": 0.038,
+          "photo_tasks": 53,
+          "clean_of_photographed": 0.981,
+          "photo": 0.981,
+          "always_guess": 0.038
+        },
+        "gears_same": {
+          "tasks": 43,
+          "with_image": 1.0,
+          "blind": 0.558,
+          "photo_tasks": 43,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.512
+        },
+        "valves_one": {
+          "tasks": 44,
+          "with_image": 1.0,
+          "blind": 0.477,
+          "photo_tasks": 44,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.545
+        },
+        "valves_reach": {
+          "tasks": 58,
+          "with_image": 1.0,
+          "blind": 0.052,
+          "photo_tasks": 58,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.207
+        }
+      },
+      "by_skill": {
+        "chain of reasoning": {
+          "tasks": 96,
+          "with_image": 0.99,
+          "blind": 0.271,
+          "photo_tasks": 96,
+          "clean_of_photographed": 0.99,
+          "photo": 0.99
+        },
+        "follow a line": {
+          "tasks": 102,
+          "with_image": 0.912,
+          "blind": 0.02,
+          "photo_tasks": 102,
+          "clean_of_photographed": 0.912,
+          "photo": 0.814
+        },
+        "trace a network": {
+          "tasks": 102,
+          "with_image": 1.0,
+          "blind": 0.235,
+          "photo_tasks": 102,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        }
+      },
+      "by_facet": {
+        "diagram": {
+          "cables": {
+            "tasks": 102,
+            "with_image": 0.912,
+            "blind": 0.02,
+            "photo_tasks": 102,
+            "clean_of_photographed": 0.912,
+            "photo": 0.814
+          },
+          "gears": {
+            "tasks": 96,
+            "with_image": 0.99,
+            "blind": 0.271,
+            "photo_tasks": 96,
+            "clean_of_photographed": 0.99,
+            "photo": 0.99
+          },
+          "valves": {
+            "tasks": 102,
+            "with_image": 1.0,
+            "blind": 0.235,
+            "photo_tasks": 102,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "difficulty": {
+          "cables L1": {
+            "tasks": 16,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L2": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.955
+          },
+          "cables L3": {
+            "tasks": 20,
+            "with_image": 0.9,
+            "blind": 0.05,
+            "photo_tasks": 20,
+            "clean_of_photographed": 0.9,
+            "photo": 0.95
+          },
+          "cables L4": {
+            "tasks": 28,
+            "with_image": 0.893,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.893,
+            "photo": 0.714
+          },
+          "cables L5": {
+            "tasks": 16,
+            "with_image": 0.75,
+            "blind": 0.062,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.75,
+            "photo": 0.438
+          },
+          "gears L1": {
+            "tasks": 26,
+            "with_image": 1.0,
+            "blind": 0.308,
+            "photo_tasks": 26,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L2": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.312,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 0.969
+          },
+          "gears L3": {
+            "tasks": 38,
+            "with_image": 0.974,
+            "blind": 0.211,
+            "photo_tasks": 38,
+            "clean_of_photographed": 0.974,
+            "photo": 1.0
+          },
+          "valves L1": {
+            "tasks": 41,
+            "with_image": 1.0,
+            "blind": 0.317,
+            "photo_tasks": 41,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "valves L2": {
+            "tasks": 33,
+            "with_image": 1.0,
+            "blind": 0.242,
+            "photo_tasks": 33,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "valves L3": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.107,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 83,
+            "with_image": 1.0,
+            "blind": 0.253,
+            "photo_tasks": 83,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 87,
+            "with_image": 1.0,
+            "blind": 0.207,
+            "photo_tasks": 87,
+            "clean_of_photographed": 1.0,
+            "photo": 0.977
+          },
+          "L3": {
+            "tasks": 86,
+            "with_image": 0.965,
+            "blind": 0.14,
+            "photo_tasks": 86,
+            "clean_of_photographed": 0.965,
+            "photo": 0.988
+          },
+          "L4": {
+            "tasks": 28,
+            "with_image": 0.893,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.893,
+            "photo": 0.714
+          },
+          "L5": {
+            "tasks": 16,
+            "with_image": 0.75,
+            "blind": 0.062,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.75,
+            "photo": 0.438
+          }
+        },
+        "size": {
+          "11 gears": {
+            "tasks": 32,
+            "with_image": 1.0,
+            "blind": 0.312,
+            "photo_tasks": 32,
+            "clean_of_photographed": 1.0,
+            "photo": 0.969
+          },
+          "14 valves": {
+            "tasks": 33,
+            "with_image": 1.0,
+            "blind": 0.242,
+            "photo_tasks": 33,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "16 cables": {
+            "tasks": 20,
+            "with_image": 0.9,
+            "blind": 0.05,
+            "photo_tasks": 20,
+            "clean_of_photographed": 0.9,
+            "photo": 0.95
+          },
+          "17 gears": {
+            "tasks": 38,
+            "with_image": 0.974,
+            "blind": 0.211,
+            "photo_tasks": 38,
+            "clean_of_photographed": 0.974,
+            "photo": 1.0
+          },
+          "24 cables": {
+            "tasks": 28,
+            "with_image": 0.893,
+            "blind": 0.0,
+            "photo_tasks": 28,
+            "clean_of_photographed": 0.893,
+            "photo": 0.714
+          },
+          "24 valves": {
+            "tasks": 28,
+            "with_image": 1.0,
+            "blind": 0.107,
+            "photo_tasks": 28,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "32 cables": {
+            "tasks": 16,
+            "with_image": 0.75,
+            "blind": 0.062,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.75,
+            "photo": 0.438
+          },
+          "5 gears": {
+            "tasks": 26,
+            "with_image": 1.0,
+            "blind": 0.308,
+            "photo_tasks": 26,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "6 valves": {
+            "tasks": 41,
+            "with_image": 1.0,
+            "blind": 0.317,
+            "photo_tasks": 41,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "8 cables": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.955
+          },
+          "8 cables, colored": {
+            "tasks": 16,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "connections-000005-valves_reach",
+        "connections-000006-gears_ccw",
+        "connections-000009-gears_ccw",
+        "connections-000011-valves_reach",
+        "connections-000082-valves_reach",
+        "connections-000091-cable_trace_back",
+        "connections-000161-cable_trace_back"
+      ],
+      "unsolved": [
+        "connections-000051-cable_trace_back",
+        "connections-000058-cable_trace",
+        "connections-000061-cable_trace",
+        "connections-000074-cable_trace",
+        "connections-000074-cable_trace_back",
+        "connections-000108-cable_trace",
+        "connections-000112-cable_trace_back",
+        "connections-000124-gears_ccw",
+        "connections-000133-cable_trace",
+        "connections-000161-cable_trace_back"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 11.237,
+      "spent_this_run_usd": 0.0,
+      "sample": 300,
+      "seed": 0
+    },
+    "gpt-6-luna (high effort)": {
+      "tasks": 75,
+      "with_image": {
+        "correct": 65,
+        "of": 75
+      },
+      "blind": {
+        "correct": 15,
+        "of": 75
+      },
+      "blind_open_ended": {
+        "correct": 1,
+        "of": 51
+      },
+      "pairs": {
+        "both_correct": 38,
+        "of": 48
+      },
+      "photos": {
+        "of": 75,
+        "clean_correct": 65,
+        "photo_correct": 65,
+        "lost": [
+          "connections-000013-cable_trace",
+          "connections-000018-cable_trace_back",
+          "connections-000048-cable_trace",
+          "connections-000143-gears_ccw"
+        ]
+      },
+      "by_template": {
+        "cable_trace": {
+          "tasks": 13,
+          "with_image": 0.769,
+          "blind": 0.0,
+          "photo_tasks": 13,
+          "clean_of_photographed": 0.769,
+          "photo": 0.615,
+          "always_guess": 0.098
+        },
+        "cable_trace_back": {
+          "tasks": 13,
+          "with_image": 0.846,
+          "blind": 0.077,
+          "photo_tasks": 13,
+          "clean_of_photographed": 0.846,
+          "photo": 0.769,
+          "always_guess": 0.118
+        },
+        "gears_ccw": {
+          "tasks": 13,
+          "with_image": 0.846,
+          "blind": 0.0,
+          "photo_tasks": 13,
+          "clean_of_photographed": 0.846,
+          "photo": 0.923,
+          "always_guess": 0.038
+        },
+        "gears_same": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.667,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.512
+        },
+        "valves_one": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.5,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.545
+        },
+        "valves_reach": {
+          "tasks": 12,
+          "with_image": 0.75,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.75,
+          "photo": 0.917,
+          "always_guess": 0.207
+        }
+      },
+      "by_skill": {
+        "chain of reasoning": {
+          "tasks": 25,
+          "with_image": 0.92,
+          "blind": 0.32,
+          "photo_tasks": 25,
+          "clean_of_photographed": 0.92,
+          "photo": 0.96
+        },
+        "follow a line": {
+          "tasks": 26,
+          "with_image": 0.808,
+          "blind": 0.038,
+          "photo_tasks": 26,
+          "clean_of_photographed": 0.808,
+          "photo": 0.692
+        },
+        "trace a network": {
+          "tasks": 24,
+          "with_image": 0.875,
+          "blind": 0.25,
+          "photo_tasks": 24,
+          "clean_of_photographed": 0.875,
+          "photo": 0.958
+        }
+      },
+      "by_facet": {
+        "diagram": {
+          "cables": {
+            "tasks": 26,
+            "with_image": 0.808,
+            "blind": 0.038,
+            "photo_tasks": 26,
+            "clean_of_photographed": 0.808,
+            "photo": 0.692
+          },
+          "gears": {
+            "tasks": 25,
+            "with_image": 0.92,
+            "blind": 0.32,
+            "photo_tasks": 25,
+            "clean_of_photographed": 0.92,
+            "photo": 0.96
+          },
+          "valves": {
+            "tasks": 24,
+            "with_image": 0.875,
+            "blind": 0.25,
+            "photo_tasks": 24,
+            "clean_of_photographed": 0.875,
+            "photo": 0.958
+          }
+        },
+        "difficulty": {
+          "cables L1": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L2": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L3": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 0.8
+          },
+          "cables L4": {
+            "tasks": 7,
+            "with_image": 0.571,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.571,
+            "photo": 0.429
+          },
+          "cables L5": {
+            "tasks": 4,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.5,
+            "photo": 0.25
+          },
+          "gears L1": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.429,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L2": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.25,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 1.0
+          },
+          "gears L3": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 0.9
+          },
+          "valves L1": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 1.0
+          },
+          "valves L2": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.2,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 0.9
+          },
+          "valves L3": {
+            "tasks": 4,
+            "with_image": 0.75,
+            "blind": 0.25,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.75,
+            "photo": 1.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 22,
+            "with_image": 0.955,
+            "blind": 0.273,
+            "photo_tasks": 22,
+            "clean_of_photographed": 0.955,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 23,
+            "with_image": 0.913,
+            "blind": 0.174,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.913,
+            "photo": 0.957
+          },
+          "L3": {
+            "tasks": 19,
+            "with_image": 0.895,
+            "blind": 0.211,
+            "photo_tasks": 19,
+            "clean_of_photographed": 0.895,
+            "photo": 0.895
+          },
+          "L4": {
+            "tasks": 7,
+            "with_image": 0.571,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.571,
+            "photo": 0.429
+          },
+          "L5": {
+            "tasks": 4,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.5,
+            "photo": 0.25
+          }
+        },
+        "size": {
+          "11 gears": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.25,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 1.0
+          },
+          "14 valves": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.2,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 0.9
+          },
+          "16 cables": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 0.8
+          },
+          "17 gears": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 0.9
+          },
+          "24 cables": {
+            "tasks": 7,
+            "with_image": 0.571,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.571,
+            "photo": 0.429
+          },
+          "24 valves": {
+            "tasks": 4,
+            "with_image": 0.75,
+            "blind": 0.25,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.75,
+            "photo": 1.0
+          },
+          "32 cables": {
+            "tasks": 4,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.5,
+            "photo": 0.25
+          },
+          "5 gears": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.429,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "6 valves": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 1.0
+          },
+          "8 cables": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "8 cables, colored": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "connections-000018-cable_trace_back"
+      ],
+      "unsolved": [
+        "connections-000028-gears_ccw",
+        "connections-000038-gears_ccw",
+        "connections-000049-cable_trace_back",
+        "connections-000061-cable_trace_back",
+        "connections-000065-cable_trace",
+        "connections-000076-valves_reach",
+        "connections-000078-cable_trace",
+        "connections-000098-valves_reach",
+        "connections-000112-cable_trace",
+        "connections-000159-valves_reach"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.1229,
+      "spent_this_run_usd": 0.1071,
+      "sample": 75,
+      "seed": 0
+    },
+    "gpt-6.2-sol (high effort)": {
+      "tasks": 75,
+      "with_image": {
+        "correct": 74,
+        "of": 75
+      },
+      "blind": {
+        "correct": 16,
+        "of": 75
+      },
+      "blind_open_ended": {
+        "correct": 2,
+        "of": 51
+      },
+      "pairs": {
+        "both_correct": 48,
+        "of": 48
+      },
+      "photos": {
+        "of": 75,
+        "clean_correct": 74,
+        "photo_correct": 74,
+        "lost": [
+          "connections-000013-cable_trace"
+        ]
+      },
+      "by_template": {
+        "cable_trace": {
+          "tasks": 13,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 13,
+          "clean_of_photographed": 1.0,
+          "photo": 0.923,
+          "always_guess": 0.098
+        },
+        "cable_trace_back": {
+          "tasks": 13,
+          "with_image": 1.0,
+          "blind": 0.154,
+          "photo_tasks": 13,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.118
+        },
+        "gears_ccw": {
+          "tasks": 13,
+          "with_image": 0.923,
+          "blind": 0.0,
+          "photo_tasks": 13,
+          "clean_of_photographed": 0.923,
+          "photo": 1.0,
+          "always_guess": 0.038
+        },
+        "gears_same": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.667,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.512
+        },
+        "valves_one": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.5,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.545
+        },
+        "valves_reach": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.207
+        }
+      },
+      "by_skill": {
+        "chain of reasoning": {
+          "tasks": 25,
+          "with_image": 0.96,
+          "blind": 0.32,
+          "photo_tasks": 25,
+          "clean_of_photographed": 0.96,
+          "photo": 1.0
+        },
+        "follow a line": {
+          "tasks": 26,
+          "with_image": 1.0,
+          "blind": 0.077,
+          "photo_tasks": 26,
+          "clean_of_photographed": 1.0,
+          "photo": 0.962
+        },
+        "trace a network": {
+          "tasks": 24,
+          "with_image": 1.0,
+          "blind": 0.25,
+          "photo_tasks": 24,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0
+        }
+      },
+      "by_facet": {
+        "diagram": {
+          "cables": {
+            "tasks": 26,
+            "with_image": 1.0,
+            "blind": 0.077,
+            "photo_tasks": 26,
+            "clean_of_photographed": 1.0,
+            "photo": 0.962
+          },
+          "gears": {
+            "tasks": 25,
+            "with_image": 0.96,
+            "blind": 0.32,
+            "photo_tasks": 25,
+            "clean_of_photographed": 0.96,
+            "photo": 1.0
+          },
+          "valves": {
+            "tasks": 24,
+            "with_image": 1.0,
+            "blind": 0.25,
+            "photo_tasks": 24,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "difficulty": {
+          "cables L1": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L2": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L3": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L4": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L5": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 0.75
+          },
+          "gears L1": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.429,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L2": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.25,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L3": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 1.0
+          },
+          "valves L1": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "valves L2": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "valves L3": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.25,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.227,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 23,
+            "with_image": 1.0,
+            "blind": 0.261,
+            "photo_tasks": 23,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L3": {
+            "tasks": 19,
+            "with_image": 0.947,
+            "blind": 0.211,
+            "photo_tasks": 19,
+            "clean_of_photographed": 0.947,
+            "photo": 1.0
+          },
+          "L4": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L5": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 0.75
+          }
+        },
+        "size": {
+          "11 gears": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.25,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "14 valves": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "16 cables": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "17 gears": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 1.0
+          },
+          "24 cables": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "24 valves": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.25,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "32 cables": {
+            "tasks": 4,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 1.0,
+            "photo": 0.75
+          },
+          "5 gears": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.429,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "6 valves": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "8 cables": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "8 cables, colored": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "connections-000047-cable_trace_back",
+        "connections-000138-cable_trace_back"
+      ],
+      "unsolved": [
+        "connections-000038-gears_ccw"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.7599,
+      "spent_this_run_usd": 0.6167,
+      "sample": 75,
+      "seed": 0
+    },
+    "cerebras/qwen-3.8-27b": {
+      "tasks": 75,
+      "with_image": {
+        "correct": 50,
+        "of": 75
+      },
+      "blind": {
+        "correct": 16,
+        "of": 75
+      },
+      "blind_open_ended": {
+        "correct": 2,
+        "of": 51
+      },
+      "pairs": {
+        "both_correct": 23,
+        "of": 48
+      },
+      "photos": {
+        "of": 75,
+        "clean_correct": 50,
+        "photo_correct": 48,
+        "lost": [
+          "connections-000070-gears_ccw",
+          "connections-000072-gears_ccw",
+          "connections-000094-valves_one",
+          "connections-000117-gears_ccw",
+          "connections-000123-valves_reach"
+        ]
+      },
+      "by_template": {
+        "cable_trace": {
+          "tasks": 13,
+          "with_image": 0.462,
+          "blind": 0.0,
+          "photo_tasks": 13,
+          "clean_of_photographed": 0.462,
+          "photo": 0.538,
+          "always_guess": 0.098
+        },
+        "cable_trace_back": {
+          "tasks": 13,
+          "with_image": 0.308,
+          "blind": 0.154,
+          "photo_tasks": 13,
+          "clean_of_photographed": 0.308,
+          "photo": 0.385,
+          "always_guess": 0.118
+        },
+        "gears_ccw": {
+          "tasks": 13,
+          "with_image": 0.769,
+          "blind": 0.0,
+          "photo_tasks": 13,
+          "clean_of_photographed": 0.769,
+          "photo": 0.538,
+          "always_guess": 0.038
+        },
+        "gears_same": {
+          "tasks": 12,
+          "with_image": 1.0,
+          "blind": 0.667,
+          "photo_tasks": 12,
+          "clean_of_photographed": 1.0,
+          "photo": 1.0,
+          "always_guess": 0.512
+        },
+        "valves_one": {
+          "tasks": 12,
+          "with_image": 0.833,
+          "blind": 0.5,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.833,
+          "photo": 0.833,
+          "always_guess": 0.545
+        },
+        "valves_reach": {
+          "tasks": 12,
+          "with_image": 0.667,
+          "blind": 0.0,
+          "photo_tasks": 12,
+          "clean_of_photographed": 0.667,
+          "photo": 0.583,
+          "always_guess": 0.207
+        }
+      },
+      "by_skill": {
+        "chain of reasoning": {
+          "tasks": 25,
+          "with_image": 0.88,
+          "blind": 0.32,
+          "photo_tasks": 25,
+          "clean_of_photographed": 0.88,
+          "photo": 0.76
+        },
+        "follow a line": {
+          "tasks": 26,
+          "with_image": 0.385,
+          "blind": 0.077,
+          "photo_tasks": 26,
+          "clean_of_photographed": 0.385,
+          "photo": 0.462
+        },
+        "trace a network": {
+          "tasks": 24,
+          "with_image": 0.75,
+          "blind": 0.25,
+          "photo_tasks": 24,
+          "clean_of_photographed": 0.75,
+          "photo": 0.708
+        }
+      },
+      "by_facet": {
+        "diagram": {
+          "cables": {
+            "tasks": 26,
+            "with_image": 0.385,
+            "blind": 0.077,
+            "photo_tasks": 26,
+            "clean_of_photographed": 0.385,
+            "photo": 0.462
+          },
+          "gears": {
+            "tasks": 25,
+            "with_image": 0.88,
+            "blind": 0.32,
+            "photo_tasks": 25,
+            "clean_of_photographed": 0.88,
+            "photo": 0.76
+          },
+          "valves": {
+            "tasks": 24,
+            "with_image": 0.75,
+            "blind": 0.25,
+            "photo_tasks": 24,
+            "clean_of_photographed": 0.75,
+            "photo": 0.708
+          }
+        },
+        "difficulty": {
+          "cables L1": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L2": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "cables L3": {
+            "tasks": 5,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.0,
+            "photo": 0.2
+          },
+          "cables L4": {
+            "tasks": 7,
+            "with_image": 0.0,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "cables L5": {
+            "tasks": 4,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.0,
+            "photo": 0.25
+          },
+          "gears L1": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.429,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "gears L2": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.25,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 0.75
+          },
+          "gears L3": {
+            "tasks": 10,
+            "with_image": 0.7,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.7,
+            "photo": 0.6
+          },
+          "valves L1": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 0.9
+          },
+          "valves L2": {
+            "tasks": 10,
+            "with_image": 0.5,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.5,
+            "photo": 0.6
+          },
+          "valves L3": {
+            "tasks": 4,
+            "with_image": 0.75,
+            "blind": 0.25,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.75,
+            "photo": 0.5
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 22,
+            "with_image": 1.0,
+            "blind": 0.227,
+            "photo_tasks": 22,
+            "clean_of_photographed": 1.0,
+            "photo": 0.955
+          },
+          "L2": {
+            "tasks": 23,
+            "with_image": 0.783,
+            "blind": 0.261,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.783,
+            "photo": 0.739
+          },
+          "L3": {
+            "tasks": 19,
+            "with_image": 0.526,
+            "blind": 0.211,
+            "photo_tasks": 19,
+            "clean_of_photographed": 0.526,
+            "photo": 0.474
+          },
+          "L4": {
+            "tasks": 7,
+            "with_image": 0.0,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L5": {
+            "tasks": 4,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.0,
+            "photo": 0.25
+          }
+        },
+        "size": {
+          "11 gears": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.25,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 0.75
+          },
+          "14 valves": {
+            "tasks": 10,
+            "with_image": 0.5,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.5,
+            "photo": 0.6
+          },
+          "16 cables": {
+            "tasks": 5,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 0.0,
+            "photo": 0.2
+          },
+          "17 gears": {
+            "tasks": 10,
+            "with_image": 0.7,
+            "blind": 0.3,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.7,
+            "photo": 0.6
+          },
+          "24 cables": {
+            "tasks": 7,
+            "with_image": 0.0,
+            "blind": 0.143,
+            "photo_tasks": 7,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "24 valves": {
+            "tasks": 4,
+            "with_image": 0.75,
+            "blind": 0.25,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.75,
+            "photo": 0.5
+          },
+          "32 cables": {
+            "tasks": 4,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 4,
+            "clean_of_photographed": 0.0,
+            "photo": 0.25
+          },
+          "5 gears": {
+            "tasks": 7,
+            "with_image": 1.0,
+            "blind": 0.429,
+            "photo_tasks": 7,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "6 valves": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 0.9
+          },
+          "8 cables": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.2,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "8 cables, colored": {
+            "tasks": 5,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 5,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        }
+      },
+      "guessable": [
+        "connections-000047-cable_trace_back",
+        "connections-000138-cable_trace_back"
+      ],
+      "unsolved": [
+        "connections-000013-cable_trace",
+        "connections-000018-cable_trace_back",
+        "connections-000020-cable_trace_back",
+        "connections-000038-gears_ccw",
+        "connections-000041-valves_one",
+        "connections-000048-cable_trace",
+        "connections-000049-cable_trace_back",
+        "connections-000051-cable_trace_back",
+        "connections-000052-cable_trace",
+        "connections-000055-valves_reach",
+        "connections-000061-cable_trace_back",
+        "connections-000065-cable_trace",
+        "connections-000073-gears_ccw",
+        "connections-000076-valves_reach",
+        "connections-000078-cable_trace",
+        "connections-000091-cable_trace_back",
+        "connections-000097-cable_trace",
+        "connections-000098-valves_reach",
+        "connections-000105-cable_trace_back",
+        "connections-000108-cable_trace_back",
+        "connections-000112-cable_trace",
+        "connections-000120-valves_reach",
+        "connections-000127-valves_one",
+        "connections-000138-cable_trace_back",
+        "connections-000140-gears_ccw"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 2.6999,
+      "spent_this_run_usd": 2.2299,
+      "sample": 75,
+      "seed": 0
+    }
+  }
+}

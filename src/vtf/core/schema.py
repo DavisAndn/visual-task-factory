@@ -2,11 +2,13 @@
 
 from __future__ import annotations
 
+import re
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, SerializerFunctionWrapHandler, model_serializer
 
-AnswerType = Literal["integer", "number", "label", "yes_no"]
+# "set": several names, in any order ("T2, T5", or "none"). "time": a clock reading, h:mm.
+AnswerType = Literal["integer", "number", "label", "yes_no", "set", "time"]
 GateStatus = Literal["pass", "fail", "skip", "review"]
 ItemKind = Literal["text", "mark", "occluder"]
 Point = tuple[float, float]
@@ -69,8 +71,40 @@ class LayoutManifest(BaseModel):
 class Answer(BaseModel):
     value: int | float | str
     type: AnswerType
-    tolerance: float = 0.0  # absolute; numbers within it count as correct
+    tolerance: float = 0.0  # absolute; numbers within it count as correct (minutes, for times)
     unit: str | None = None
+    # For "set" answers: every name that could be in the set, so a reply can be searched for them.
+    options: list[str] | None = None
+
+    @model_serializer(mode="wrap")
+    def _without_unused(self, handler: SerializerFunctionWrapHandler) -> dict[str, Any]:
+        data = handler(self)
+        if self.options is None:  # older answer types stay byte-identical
+            data.pop("options", None)
+        return data
+
+
+def set_members(answer: Answer) -> set[str]:
+    """The names in a "set" answer."""
+    text = str(answer.value)
+    return set() if text == "none" else {name.strip() for name in text.split(",") if name.strip()}
+
+
+_CLOCK = re.compile(r"(\d{1,2})\s*[:.]\s*(\d{2})")
+
+
+def clock_minutes(text: str) -> int | None:
+    """Minutes past 12 o'clock (0-719) for the first h:mm in the text."""
+    match = _CLOCK.search(text)
+    if match is None or int(match.group(2)) > 59:
+        return None
+    return int(match.group(1)) % 12 * 60 + int(match.group(2))
+
+
+def clock_gap(a: int, b: int) -> int:
+    """Minutes between two clock readings, the short way round the dial."""
+    d = abs(a - b) % 720
+    return min(d, 720 - d)
 
 
 class GateResult(BaseModel):
@@ -98,6 +132,15 @@ class Task(BaseModel):
     trace: list[str]
     validation: dict[str, GateResult]
     scene: dict[str, Any]
+    # Set on photographed twins (vtf photos): the capture settings applied to the rendered image.
+    capture: dict[str, Any] | None = None
+
+    @model_serializer(mode="wrap")
+    def _without_unused(self, handler: SerializerFunctionWrapHandler) -> dict[str, Any]:
+        data = handler(self)
+        if self.capture is None:
+            data.pop("capture", None)
+        return data
 
 
 class Pair(BaseModel):

@@ -1,0 +1,488 @@
+{
+  "engine": "tesseract 5.5.3",
+  "labels": 1264,
+  "read_back": 1200,
+  "read_on_second_attempt": 67,
+  "tasks": 300,
+  "tasks_fully_read_back": 250,
+  "by_kind": {
+    "cat": {
+      "labels": 553,
+      "read_back": 539
+    },
+    "legend": {
+      "labels": 102,
+      "read_back": 99
+    },
+    "pct": {
+      "labels": 39,
+      "read_back": 30
+    },
+    "title": {
+      "labels": 57,
+      "read_back": 55
+    },
+    "tot": {
+      "labels": 11,
+      "read_back": 11
+    },
+    "val": {
+      "labels": 147,
+      "read_back": 144
+    },
+    "vtick": {
+      "labels": 355,
+      "read_back": 322
+    }
+  },
+  "misses": [
+    {
+      "image": "images/charts-000004-photo.jpg",
+      "element": "legend:0",
+      "expected": "June",
+      "got": "jure",
+      "crop": "ocr-photos/miss-0000.png"
+    },
+    {
+      "image": "images/charts-000006-photo.jpg",
+      "element": "title",
+      "expected": "Revenue by region, Q1 2024",
+      "got": "Revenue by region, Q1 20624",
+      "crop": "ocr-photos/miss-0001.png"
+    },
+    {
+      "image": "images/charts-000009-photo.jpg",
+      "element": "legend:0",
+      "expected": "2021",
+      "got": "2621",
+      "crop": "ocr-photos/miss-0002.png"
+    },
+    {
+      "image": "images/charts-000009-photo.jpg",
+      "element": "vtick:2",
+      "expected": "20",
+      "got": "26",
+      "crop": "ocr-photos/miss-0003.png"
+    },
+    {
+      "image": "images/charts-000019-photo.jpg",
+      "element": "vtick:3",
+      "expected": "50",
+      "got": "58",
+      "crop": "ocr-photos/miss-0004.png"
+    },
+    {
+      "image": "images/charts-000023-photo.jpg",
+      "element": "cat:1",
+      "expected": "1990",
+      "got": "1996",
+      "crop": "ocr-photos/miss-0005.png"
+    },
+    {
+      "image": "images/charts-000023-photo.jpg",
+      "element": "cat:2",
+      "expected": "2000",
+      "got": "2006",
+      "crop": "ocr-photos/miss-0006.png"
+    },
+    {
+      "image": "images/charts-000023-photo.jpg",
+      "element": "cat:3",
+      "expected": "2010",
+      "got": "2610",
+      "crop": "ocr-photos/miss-0007.png"
+    },
+    {
+      "image": "images/charts-000023-photo.jpg",
+      "element": "cat:4",
+      "expected": "2020",
+      "got": "2626",
+      "crop": "ocr-photos/miss-0008.png"
+    },
+    {
+      "image": "images/charts-000027-photo.jpg",
+      "element": "cat:1",
+      "expected": "Elmwood",
+      "got": "E lamvood",
+      "crop": "ocr-photos/miss-0009.png"
+    },
+    {
+      "image": "images/charts-000027-photo.jpg",
+      "element": "vtick:0",
+      "expected": "0",
+      "got": "e",
+      "crop": "ocr-photos/miss-0010.png"
+    },
+    {
+      "image": "images/charts-000041-photo.jpg",
+      "element": "cat:1",
+      "expected": "April",
+      "got": "Apni",
+      "crop": "ocr-photos/miss-0011.png"
+    },
+    {
+      "image": "images/charts-000051-photo.jpg",
+      "element": "cat:0",
+      "expected": "April",
+      "got": "Apni",
+      "crop": "ocr-photos/miss-0012.png"
+    },
+    {
+      "image": "images/charts-000051-photo.jpg",
+      "element": "vtick:3",
+      "expected": "500",
+      "got": "6500",
+      "crop": "ocr-photos/miss-0013.png"
+    },
+    {
+      "image": "images/charts-000055-photo.jpg",
+      "element": "vtick:5",
+      "expected": "1000",
+      "got": "1060",
+      "crop": "ocr-photos/miss-0014.png"
+    },
+    {
+      "image": "images/charts-000058-photo.jpg",
+      "element": "pct:0",
+      "expected": "28.2%",
+      "got": "28.28",
+      "crop": "ocr-photos/miss-0015.png"
+    },
+    {
+      "image": "images/charts-000068-photo.jpg",
+      "element": "vtick:0",
+      "expected": "0",
+      "got": "6",
+      "crop": "ocr-photos/miss-0016.png"
+    },
+    {
+      "image": "images/charts-000068-photo.jpg",
+      "element": "vtick:4",
+      "expected": "800",
+      "got": "806",
+      "crop": "ocr-photos/miss-0017.png"
+    },
+    {
+      "image": "images/charts-000068-photo.jpg",
+      "element": "vtick:7",
+      "expected": "1400",
+      "got": "1460",
+      "crop": "ocr-photos/miss-0018.png"
+    },
+    {
+      "image": "images/charts-000069-photo.jpg",
+      "element": "title",
+      "expected": "International visitors: Vietnam, 2015\u20132021",
+      "got": "International Visitors: Vietnam, 20] 5. 202]",
+      "crop": "ocr-photos/miss-0019.png"
+    },
+    {
+      "image": "images/charts-000075-photo.jpg",
+      "element": "cat:2",
+      "expected": "News",
+      "got": "Nows",
+      "crop": "ocr-photos/miss-0020.png"
+    },
+    {
+      "image": "images/charts-000081-photo.jpg",
+      "element": "cat:2",
+      "expected": "Q3 2023",
+      "got": "Q3 2623",
+      "crop": "ocr-photos/miss-0021.png"
+    },
+    {
+      "image": "images/charts-000081-photo.jpg",
+      "element": "cat:4",
+      "expected": "Q1 2024",
+      "got": "Q} 2024",
+      "crop": "ocr-photos/miss-0022.png"
+    },
+    {
+      "image": "images/charts-000082-photo.jpg",
+      "element": "cat:3",
+      "expected": "2019",
+      "got": "2619",
+      "crop": "ocr-photos/miss-0023.png"
+    },
+    {
+      "image": "images/charts-000091-photo.jpg",
+      "element": "vtick:0",
+      "expected": "0",
+      "got": "8",
+      "crop": "ocr-photos/miss-0024.png"
+    },
+    {
+      "image": "images/charts-000091-photo.jpg",
+      "element": "vtick:7",
+      "expected": "350",
+      "got": "358",
+      "crop": "ocr-photos/miss-0025.png"
+    },
+    {
+      "image": "images/charts-000093-photo.jpg",
+      "element": "cat:0",
+      "expected": "2015",
+      "got": "2615",
+      "crop": "ocr-photos/miss-0026.png"
+    },
+    {
+      "image": "images/charts-000097-photo.jpg",
+      "element": "cat:1",
+      "expected": "Ivybridge",
+      "got": "\\Iwybridge",
+      "crop": "ocr-photos/miss-0027.png"
+    },
+    {
+      "image": "images/charts-000105-photo.jpg",
+      "element": "pct:1",
+      "expected": "33%",
+      "got": "IN",
+      "crop": "ocr-photos/miss-0028.png"
+    },
+    {
+      "image": "images/charts-000105-photo.jpg",
+      "element": "pct:4",
+      "expected": "25%",
+      "got": "Pe)",
+      "crop": "ocr-photos/miss-0029.png"
+    },
+    {
+      "image": "images/charts-000105-photo.jpg",
+      "element": "pct:2",
+      "expected": "10%",
+      "got": "TA",
+      "crop": "ocr-photos/miss-0030.png"
+    },
+    {
+      "image": "images/charts-000105-photo.jpg",
+      "element": "pct:3",
+      "expected": "7%",
+      "got": "nw",
+      "crop": "ocr-photos/miss-0031.png"
+    },
+    {
+      "image": "images/charts-000108-photo.jpg",
+      "element": "cat:2",
+      "expected": "Coastal",
+      "got": "Coaata)",
+      "crop": "ocr-photos/miss-0032.png"
+    },
+    {
+      "image": "images/charts-000108-photo.jpg",
+      "element": "val:0:1",
+      "expected": "46",
+      "got": "16",
+      "crop": "ocr-photos/miss-0033.png"
+    },
+    {
+      "image": "images/charts-000124-photo.jpg",
+      "element": "val:0:0",
+      "expected": "598",
+      "got": "508",
+      "crop": "ocr-photos/miss-0034.png"
+    },
+    {
+      "image": "images/charts-000130-photo.jpg",
+      "element": "vtick:0",
+      "expected": "0",
+      "got": "|",
+      "crop": "ocr-photos/miss-0035.png"
+    },
+    {
+      "image": "images/charts-000130-photo.jpg",
+      "element": "vtick:1",
+      "expected": "50",
+      "got": "58",
+      "crop": "ocr-photos/miss-0036.png"
+    },
+    {
+      "image": "images/charts-000130-photo.jpg",
+      "element": "vtick:2",
+      "expected": "100",
+      "got": "168",
+      "crop": "ocr-photos/miss-0037.png"
+    },
+    {
+      "image": "images/charts-000130-photo.jpg",
+      "element": "vtick:3",
+      "expected": "150",
+      "got": "156",
+      "crop": "ocr-photos/miss-0038.png"
+    },
+    {
+      "image": "images/charts-000130-photo.jpg",
+      "element": "vtick:4",
+      "expected": "200",
+      "got": "208",
+      "crop": "ocr-photos/miss-0039.png"
+    },
+    {
+      "image": "images/charts-000130-photo.jpg",
+      "element": "vtick:6",
+      "expected": "300",
+      "got": "306",
+      "crop": "ocr-photos/miss-0040.png"
+    },
+    {
+      "image": "images/charts-000130-photo.jpg",
+      "element": "vtick:7",
+      "expected": "350",
+      "got": "356",
+      "crop": "ocr-photos/miss-0041.png"
+    },
+    {
+      "image": "images/charts-000131-photo.jpg",
+      "element": "vtick:1",
+      "expected": "50",
+      "got": "30",
+      "crop": "ocr-photos/miss-0042.png"
+    },
+    {
+      "image": "images/charts-000131-photo.jpg",
+      "element": "vtick:3",
+      "expected": "150",
+      "got": "1590",
+      "crop": "ocr-photos/miss-0043.png"
+    },
+    {
+      "image": "images/charts-000131-photo.jpg",
+      "element": "vtick:7",
+      "expected": "350",
+      "got": "358",
+      "crop": "ocr-photos/miss-0044.png"
+    },
+    {
+      "image": "images/charts-000132-photo.jpg",
+      "element": "vtick:5",
+      "expected": "500",
+      "got": "580",
+      "crop": "ocr-photos/miss-0045.png"
+    },
+    {
+      "image": "images/charts-000132-photo.jpg",
+      "element": "vtick:7",
+      "expected": "700",
+      "got": "7066",
+      "crop": "ocr-photos/miss-0046.png"
+    },
+    {
+      "image": "images/charts-000134-photo.jpg",
+      "element": "pct:0",
+      "expected": "35%",
+      "got": "358",
+      "crop": "ocr-photos/miss-0047.png"
+    },
+    {
+      "image": "images/charts-000134-photo.jpg",
+      "element": "pct:1",
+      "expected": "28%",
+      "got": "284",
+      "crop": "ocr-photos/miss-0048.png"
+    },
+    {
+      "image": "images/charts-000134-photo.jpg",
+      "element": "pct:3",
+      "expected": "14%",
+      "got": "14s",
+      "crop": "ocr-photos/miss-0049.png"
+    },
+    {
+      "image": "images/charts-000134-photo.jpg",
+      "element": "pct:4",
+      "expected": "13%",
+      "got": "Z>5",
+      "crop": "ocr-photos/miss-0050.png"
+    },
+    {
+      "image": "images/charts-000135-photo.jpg",
+      "element": "vtick:0",
+      "expected": "0",
+      "got": "s]",
+      "crop": "ocr-photos/miss-0051.png"
+    },
+    {
+      "image": "images/charts-000135-photo.jpg",
+      "element": "vtick:2",
+      "expected": "1000",
+      "got": "1666",
+      "crop": "ocr-photos/miss-0052.png"
+    },
+    {
+      "image": "images/charts-000135-photo.jpg",
+      "element": "vtick:3",
+      "expected": "1500",
+      "got": "1566",
+      "crop": "ocr-photos/miss-0053.png"
+    },
+    {
+      "image": "images/charts-000135-photo.jpg",
+      "element": "vtick:4",
+      "expected": "2000",
+      "got": "2068",
+      "crop": "ocr-photos/miss-0054.png"
+    },
+    {
+      "image": "images/charts-000135-photo.jpg",
+      "element": "vtick:5",
+      "expected": "2500",
+      "got": "2586",
+      "crop": "ocr-photos/miss-0055.png"
+    },
+    {
+      "image": "images/charts-000136-photo.jpg",
+      "element": "vtick:0",
+      "expected": "0",
+      "got": ";",
+      "crop": "ocr-photos/miss-0056.png"
+    },
+    {
+      "image": "images/charts-000136-photo.jpg",
+      "element": "vtick:1",
+      "expected": "200",
+      "got": "260",
+      "crop": "ocr-photos/miss-0057.png"
+    },
+    {
+      "image": "images/charts-000136-photo.jpg",
+      "element": "vtick:3",
+      "expected": "600",
+      "got": "666",
+      "crop": "ocr-photos/miss-0058.png"
+    },
+    {
+      "image": "images/charts-000136-photo.jpg",
+      "element": "vtick:5",
+      "expected": "1000",
+      "got": "1660",
+      "crop": "ocr-photos/miss-0059.png"
+    },
+    {
+      "image": "images/charts-000136-photo.jpg",
+      "element": "vtick:7",
+      "expected": "1400",
+      "got": "1460",
+      "crop": "ocr-photos/miss-0060.png"
+    },
+    {
+      "image": "images/charts-000147-photo.jpg",
+      "element": "legend:2",
+      "expected": "Wind",
+      "got": "\u00b0",
+      "crop": "ocr-photos/miss-0061.png"
+    },
+    {
+      "image": "images/charts-000148-photo.jpg",
+      "element": "vtick:4",
+      "expected": "44",
+      "got": "+4",
+      "crop": "ocr-photos/miss-0062.png"
+    },
+    {
+      "image": "images/charts-000150-photo.jpg",
+      "element": "val:0:1",
+      "expected": "111",
+      "got": "421",
+      "crop": "ocr-photos/miss-0063.png"
+    }
+  ]
+}

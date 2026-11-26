@@ -1,0 +1,138 @@
+{
+  "family": "connections",
+  "seed": 42,
+  "requested": 300,
+  "accepted": 300,
+  "candidates": 300,
+  "acceptance_rate": 1.0,
+  "scenes_rendered": 163,
+  "elapsed_seconds": 8.63,
+  "funnel": [
+    {
+      "gate": "determinism",
+      "rejected": 0,
+      "remaining": 300
+    },
+    {
+      "gate": "render",
+      "rejected": 0,
+      "remaining": 300
+    },
+    {
+      "gate": "grounding",
+      "rejected": 0,
+      "remaining": 300
+    },
+    {
+      "gate": "ambiguity",
+      "rejected": 0,
+      "remaining": 300
+    },
+    {
+      "gate": "dedup",
+      "rejected": 0,
+      "remaining": 300
+    }
+  ],
+  "rejection_reasons": {},
+  "coverage": {
+    "skill": {
+      "follow a line": 102,
+      "trace a network": 102,
+      "chain of reasoning": 96
+    },
+    "template": {
+      "valves_reach": 58,
+      "gears_ccw": 53,
+      "cable_trace": 51,
+      "cable_trace_back": 51,
+      "valves_one": 44,
+      "gears_same": 43
+    },
+    "diagram": {
+      "cables": 102,
+      "valves": 102,
+      "gears": 96
+    },
+    "level": {
+      "L2": 87,
+      "L3": 86,
+      "L1": 83,
+      "L4": 28,
+      "L5": 16
+    },
+    "difficulty": {
+      "valves L1": 41,
+      "gears L3": 38,
+      "valves L2": 33,
+      "gears L2": 32,
+      "cables L4": 28,
+      "valves L3": 28,
+      "gears L1": 26,
+      "cables L2": 22,
+      "cables L3": 20,
+      "cables L5": 16,
+      "cables L1": 16
+    },
+    "size": {
+      "6 valves": 41,
+      "17 gears": 38,
+      "14 valves": 33,
+      "11 gears": 32,
+      "24 cables": 28,
+      "24 valves": 28,
+      "5 gears": 26,
+      "8 cables": 22,
+      "16 cables": 20,
+      "32 cables": 16,
+      "8 cables, colored": 16
+    }
+  },
+  "answer_prior": {
+    "cable_trace": {
+      "tasks": 51,
+      "most_common_answer": "F",
+      "share": 0.098,
+      "named_in_question": 0.0
+    },
+    "cable_trace_back": {
+      "tasks": 51,
+      "most_common_answer": "5",
+      "share": 0.118
+    },
+    "gears_ccw": {
+      "tasks": 53,
+      "most_common_answer": "B, F",
+      "share": 0.038
+    },
+    "gears_same": {
+      "tasks": 43,
+      "most_common_answer": "yes",
+      "share": 0.512
+    },
+    "valves_one": {
+      "tasks": 44,
+      "most_common_answer": "no",
+      "share": 0.545
+    },
+    "valves_reach": {
+      "tasks": 58,
+      "most_common_answer": "T1",
+      "share": 0.207
+    }
+  },
+  "determinism": {
+    "checked": 17,
+    "passed": 17
+  },
+  "versions": {
+    "vtf": "0.1.0",
+    "python": "3.13.2",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.5"
+  },
+  "balance_skips": {
+    "valves_one": 15,
+    "gears_same": 10
+  }
+}

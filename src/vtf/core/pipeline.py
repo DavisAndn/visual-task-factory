@@ -24,7 +24,8 @@ from ..validators import AmbiguityGate, DedupGate, GroundingGate, dhash
 from .family import Candidate, Family, Template
 from .schema import Answer, GateResult, LayoutManifest, Task
 
-GATE_ORDER = ("determinism", "grounding", "ambiguity", "dedup")
+# "render" runs only for families that can check their own pixels against the scene (check_render).
+GATE_ORDER = ("determinism", "render", "grounding", "ambiguity", "dedup")
 
 
 def scene_seed(run_seed: int, family: str, index: int) -> int:
@@ -91,7 +92,7 @@ def run(
     vcfg = cfg["validation"]
     gates = [
         GroundingGate(vcfg["min_font_px"], vcfg["min_mark_px"], vcfg["overlap_tol_px"], vcfg["clean_text"]),
-        AmbiguityGate(vcfg["visual_gap"], vcfg["max_relative_tolerance"]),
+        AmbiguityGate(vcfg["visual_gap"], vcfg["max_relative_tolerance"], vcfg.get("min_feature_px", 4.0)),
     ]
     dedup = DedupGate(vcfg["dedup_max_hamming"])
     sample = vcfg["determinism_sample"]
@@ -136,6 +137,8 @@ def run(
                     )
                 )
 
+            render_check = getattr(family, "check_render", None)
+            drawn = render_check(scene, image, layout) if render_check else None
             image_dhash = dhash(image)
             q_rng = random.Random(f"{sseed}:questions")
             chosen = pick_templates(
@@ -148,6 +151,8 @@ def run(
                 solution = template.solve(scene, question.params, layout)
                 cand = Candidate(scene, layout, question, solution, image_key, image_dhash)
                 results: dict[str, GateResult] = {"determinism": det}
+                if drawn is not None:
+                    results["render"] = drawn
                 results.update({gate.name: gate.check(cand) for gate in gates})
                 results["dedup"] = dedup.check(cand)
                 task = Task(
@@ -223,13 +228,14 @@ def _summarize(
     reasons: Counter[str] = Counter()
     for task in rejected:
         for gate in GATE_ORDER:
-            result = task.validation[gate]
-            if result.status == "fail":
+            result = task.validation.get(gate)
+            if result is not None and result.status == "fail":
                 first_failure[gate] += 1
                 reasons[f"{gate}: {result.code}"] += 1
                 break
     funnel, remaining = [], candidates
-    for gate in GATE_ORDER:
+    ran = [g for g in GATE_ORDER if any(g in t.validation for t in accepted + rejected)]
+    for gate in ran:
         remaining -= first_failure[gate]
         funnel.append({"gate": gate, "rejected": first_failure[gate], "remaining": remaining})
 

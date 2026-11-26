@@ -1,0 +1,33 @@
+{
+  "share": 1.0,
+  "seed": 0,
+  "tasks": 300,
+  "pairs": 193,
+  "median_edit": 0.071,
+  "by_template": {
+    "cable_trace": {
+      "tasks": 51,
+      "pairs": 51
+    },
+    "cable_trace_back": {
+      "tasks": 51,
+      "pairs": 51
+    },
+    "gears_ccw": {
+      "tasks": 53,
+      "pairs": 0
+    },
+    "gears_same": {
+      "tasks": 43,
+      "pairs": 0
+    },
+    "valves_one": {
+      "tasks": 44,
+      "pairs": 34
+    },
+    "valves_reach": {
+      "tasks": 58,
+      "pairs": 57
+    }
+  }
+}

@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import base64
 import html
+import io
 import re
 import json
 from collections import Counter
@@ -14,7 +15,7 @@ from typing import Any
 
 from PIL import Image
 
-from .core.runs import read_json, read_pairs, read_tasks
+from .core.runs import read_json, read_pairs, read_photos, read_tasks
 from .core.schema import GateResult, Task
 
 CSS = """
@@ -78,6 +79,8 @@ def write_report(out_dir: Path, summary: dict[str, Any], accepted: list[Task], r
         _coverage(summary),
         _prior(summary),
         _models(out_dir, by_id),
+        _breaking(out_dir),
+        _photos(out_dir, by_id),
         _pairs(out_dir, by_id),
         _ocr(out_dir),
         _audit(out_dir, by_id),
@@ -95,7 +98,10 @@ def _e(value: Any) -> str:
 
 
 def _short_model(name: str) -> str:
-    """'claude-opus-5-5 (high effort)' -> 'Opus 5.5 (high effort)'; other names stay as they are."""
+    """'claude-opus-5-5 (high effort)' -> 'Opus 5.5 (high effort)', 'cerebras/gemma-4-31b' ->
+    'gemma-4-31b (Cerebras)'; other names stay as they are."""
+    if name.startswith("cerebras/"):
+        return f"{name.removeprefix('cerebras/')} (Cerebras)"
     match = re.match(r"claude-([a-z]+)-(\d+)(?:-(\d+))?(.*)", name)
     if not match:
         return name
@@ -274,6 +280,122 @@ def _models(out_dir: Path, by_id: dict[str, Task]) -> str:
     return "".join(html_parts)
 
 
+EMBED_MAX_PX = 800  # longest side of an example image embedded in the report
+BREAKS_BELOW = 0.8  # a model "breaks" at the first level where it answers fewer than this share right
+
+
+def _level_key(value: str) -> tuple[str, int]:
+    kind, _, level = value.rpartition(" L")
+    return (kind, int(level)) if level.isdigit() else (value, 0)
+
+
+def _breaking(out_dir: Path) -> str:
+    """Accuracy at each difficulty level, per model, and the level where each model breaks."""
+    summary = read_json(out_dir / "model_summary.json")
+    models = (summary or {}).get("models", {})
+    tables = {name: m.get("by_facet", {}).get("difficulty", {}) for name, m in models.items()}
+    if not any(tables.values()):
+        return ""
+    values = sorted({v for table in tables.values() for v in table}, key=_level_key)
+    names = [_short_model(name).split(" (")[0] for name in tables]
+    photo = any("photo" in row for table in tables.values() for row in table.values())
+    headers = ["Kind and level", "Tasks"] + names + ([f"{n}, photo" for n in names] if photo else [])
+    body = []
+    for value in values:
+        first = next((t[value] for t in tables.values() if value in t), {})
+        row = [value, first.get("tasks", "")] + [_pct(t.get(value, {}).get("with_image")) for t in tables.values()]
+        if photo:
+            row += [_pct(t.get(value, {}).get("photo")) for t in tables.values()]
+        body.append(row)
+    lines = []
+    for kind in sorted({_level_key(v)[0] for v in values}):
+        levels = [v for v in values if _level_key(v)[0] == kind]
+        for key, label in (("with_image", "clean"), ("photo", "photographed")):
+            if not any(key in table.get(v, {}) for table in tables.values() for v in levels):
+                continue
+            verdicts = []
+            for name, table in tables.items():
+                broken = next((v for v in levels if (table.get(v, {}).get(key) if table.get(v, {}).get(key) is not None else 1.0) < BREAKS_BELOW), None)
+                short = _short_model(name).split(" (")[0]
+                verdicts.append(f"{short} breaks at {broken.rpartition(' ')[2]}" if broken else f"{short} holds to {levels[-1].rpartition(' ')[2]}")
+            lines.append(f"<li><b>{_e(kind)}, {label}</b>: {_e('; '.join(verdicts))}</li>")
+    return (
+        "<h2 id='breaking'>Where each model breaks</h2>"
+        f"<p class='note'>Accuracy with the image at each difficulty level. A model breaks at the first level where it "
+        f"answers fewer than {BREAKS_BELOW:.0%} right. Every level passes the same gates, so a careful person can "
+        "answer each task.</p>"
+        f"<ul>{''.join(lines)}</ul>" + _table(headers, body, set(range(1, len(headers))))
+    )
+
+
+def _photos(out_dir: Path, by_id: dict[str, Task], limit: int = 6) -> str:
+    summary = read_json(out_dir / "photos_summary.json")
+    if not summary:
+        return ""
+    photos = read_photos(out_dir)
+    models = (read_json(out_dir / "model_summary.json") or {}).get("models", {})
+    rows = [
+        [_short_model(n), m["photos"]["of"], f"{m['photos']['clean_correct']}/{m['photos']['of']}",
+         f"{m['photos']['photo_correct']}/{m['photos']['of']}"]
+        for n, m in models.items() if m.get("photos", {}).get("of")
+    ]
+    parts = [
+        "<h2 id='photos'>Phone photos</h2>",
+        f"<p class='note'>{summary['photos']} tasks have a photo twin: the same image seen at a slight angle on a desk, "
+        "with uneven light, a soft glare, a little blur, sensor noise and JPEG compression. The question and the answer "
+        "are unchanged; a perspective view keeps which tick a needle points at and what connects to what. The gates "
+        "were run again on each photo, with the label positions mapped through the same perspective.</p>",
+    ]
+    ocr = read_json(out_dir / "photo_ocr_summary.json")
+    clean_ocr = read_json(out_dir / "ocr_summary.json")
+    if ocr:
+        clean_text = f" (from the clean images: {clean_ocr['read_back']} of {clean_ocr['labels']})" if clean_ocr else ""
+        parts.append(f"<p class='note'>Tesseract read back {ocr['read_back']} of {ocr['labels']} labels from the photos"
+                     f"{_e(clean_text)}.</p>")
+    if rows:
+        parts.append(_table(["Model", "Photographed tasks", "Clean image right", "Photo right"], rows, {1, 2, 3}))
+        main = next((f for f in ("chart type", "instrument", "diagram") if any(
+            f in m.get("by_facet", {}) for m in models.values())), None)
+        if main:
+            values = sorted({v for m in models.values() for v, row in m["by_facet"].get(main, {}).items() if "photo" in row})
+            body = []
+            for value in values:
+                row = [value]
+                for m in models.values():
+                    cell = m["by_facet"].get(main, {}).get(value, {})
+                    row.append(f"{_pct(cell.get('clean_of_photographed'))} → {_pct(cell.get('photo'))}" if "photo" in cell else "–")
+                body.append(row)
+            names = [_short_model(n).split(" (")[0] for n in models]
+            parts.append(f"<h3>Clean → photo, by {_e(main)}</h3>" + _table([main.capitalize()] + names, body))
+        replies: dict[tuple[str, str], dict[str, Any]] = {}
+        checks = out_dir / "model_checks.jsonl"
+        if checks.is_file():
+            for line in checks.read_text().splitlines():
+                record = json.loads(line)
+                replies[(record["model"], record["task"])] = record
+        cards, shown = [], set()
+        # Alternate between models, so each one's photo mistakes are represented.
+        queue = [(name, task_id) for depth in range(limit) for name, m in models.items()
+                 for task_id in m.get("photos", {}).get("lost", [])[depth:depth + 1]]
+        for name, task_id in queue:
+            if len(cards) >= limit or task_id in shown or task_id not in by_id or task_id not in photos:
+                continue
+            shown.add(task_id)
+            got = replies.get((name, task_id), {}).get("photo", {}).get("reply", "")
+            cards.append(
+                "<div class='card'>"
+                f"<div class='twins'>{_image(out_dir, by_id[task_id])}{_image(out_dir, photos[task_id])}</div>"
+                f"<p class='q'>{_e(by_id[task_id].question)}</p>"
+                f"<p class='a'>Answer: {_e(_answer(by_id[task_id]))}</p>"
+                f"<p class='got no'>{_e(_short_model(name))} got the clean image right; on the photo it answered: "
+                f"{_e(got.strip().splitlines()[-1] if got.strip() else '(no answer)')}</p>"
+                "</div>"
+            )
+        if cards:
+            parts.append(f"<h3>Right on the clean image, wrong on the photo</h3><div class='grid'>{''.join(cards)}</div>")
+    return "".join(parts)
+
+
 def _pairs(out_dir: Path, by_id: dict[str, Task], limit: int = 6) -> str:
     summary = read_json(out_dir / "pairs_summary.json")
     if not summary:
@@ -297,11 +419,11 @@ def _pairs(out_dir: Path, by_id: dict[str, Task], limit: int = 6) -> str:
             f"<p class='tag'>Edit: {_e(pair.change)} ({pair.size:.0%} of the axis)</p>"
             "</div>"
         )
-    edit = f" The median edit moves one value by {summary['median_edit']:.0%} of the value axis." if summary["median_edit"] else ""
+    edit = f" The median edit is {summary['median_edit']:.0%} of the scale (the value axis, a dial, a set of ports)." if summary["median_edit"] else ""
     return (
         "<h2 id='pairs'>Contrast pairs</h2>"
         f"<p class='note'>{summary['pairs']} of {summary['tasks']} tasks have a twin: the same question about an image "
-        f"where one value was edited so the answer changes, with the axis pinned so nothing else moves.{edit} Both "
+        f"where one thing was edited so the answer changes (a bar, a needle, a cable's end, a valve), and nothing else moves.{edit} Both "
         "images pass the same gates. A model that answers from the question text alone can't get both right.</p>"
         f"<div class='cols'><div>{table}</div></div><div class='grid'>{''.join(cards)}</div>"
     )
@@ -433,9 +555,19 @@ def _rejected_examples(out_dir: Path, tasks: list[Task], per_reason: int = 2, li
 
 def _image(out_dir: Path, task: Task, failure: tuple[str, GateResult] | None = None) -> str:
     image_path = out_dir / task.image
+    photo = image_path.suffix.lower() in (".jpg", ".jpeg")
     with Image.open(image_path) as im:
         width, height = im.size
-    data = base64.b64encode(image_path.read_bytes()).decode()
+        if max(width, height) > EMBED_MAX_PX or image_path.stat().st_size > 120_000:
+            # A smaller JPEG copy keeps the report light (the task images themselves are untouched);
+            # problem boxes are drawn in relative units, so they still line up.
+            scale = min(1.0, EMBED_MAX_PX / max(width, height))
+            small = im.convert("RGB").resize((round(width * scale), round(height * scale)), Image.Resampling.LANCZOS)
+            buffer = io.BytesIO()
+            small.save(buffer, "JPEG", quality=82)
+            data, photo = base64.b64encode(buffer.getvalue()).decode(), True
+        else:
+            data = base64.b64encode(image_path.read_bytes()).decode()
     boxes = ""
     if failure:
         for b in failure[1].boxes:
@@ -444,7 +576,8 @@ def _image(out_dir: Path, task: Task, failure: tuple[str, GateResult] | None = N
                 f"width:{(b.x1 - b.x0) / width:.2%};height:{(b.y1 - b.y0) / height:.2%}"
             )
             boxes += f"<div class='box' style='{style}'></div>"
-    return f"<div class='shot'><img src='data:image/png;base64,{data}' alt='{_e(task.question)}'>{boxes}</div>"
+    kind = 'jpeg' if photo else 'png'
+    return f"<div class='shot'><img src='data:image/{kind};base64,{data}' alt='{_e(task.question)}'>{boxes}</div>"
 
 
 def _answer(task: Task) -> str:

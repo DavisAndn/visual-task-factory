@@ -1,0 +1,1721 @@
+{
+  "sample": 90,
+  "of": 150,
+  "seed": 0,
+  "models": {
+    "claude-haiku-5-5 (high effort)": {
+      "tasks": 90,
+      "with_image": {
+        "correct": 43,
+        "of": 90
+      },
+      "blind": {
+        "correct": 0,
+        "of": 90
+      },
+      "blind_open_ended": {
+        "correct": 0,
+        "of": 90
+      },
+      "pairs": {
+        "both_correct": 39,
+        "of": 90
+      },
+      "photos": {
+        "of": 90,
+        "clean_correct": 43,
+        "photo_correct": 40,
+        "lost": [
+          "counting-000008-count_side",
+          "counting-000015-count_side",
+          "counting-000086-count_side",
+          "counting-000122-count_side",
+          "counting-000124-count_side",
+          "counting-000132-count_side"
+        ]
+      },
+      "by_template": {
+        "count_side": {
+          "tasks": 90,
+          "with_image": 0.478,
+          "blind": 0.0,
+          "photo_tasks": 90,
+          "clean_of_photographed": 0.478,
+          "photo": 0.444,
+          "always_guess": 0.033
+        }
+      },
+      "by_skill": {
+        "count many": {
+          "tasks": 90,
+          "with_image": 0.478,
+          "blind": 0.0,
+          "photo_tasks": 90,
+          "clean_of_photographed": 0.478,
+          "photo": 0.444
+        }
+      },
+      "by_facet": {
+        "count": {
+          "100-400": {
+            "tasks": 21,
+            "with_image": 0.476,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 0.476,
+            "photo": 0.238
+          },
+          "400+": {
+            "tasks": 34,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 34,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "under 100": {
+            "tasks": 35,
+            "with_image": 0.943,
+            "blind": 0.0,
+            "photo_tasks": 35,
+            "clean_of_photographed": 0.943,
+            "photo": 1.0
+          }
+        },
+        "difficulty": {
+          "dots L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L2": {
+            "tasks": 14,
+            "with_image": 0.857,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.857,
+            "photo": 1.0
+          },
+          "dots L3": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 0.625
+          },
+          "dots L4": {
+            "tasks": 13,
+            "with_image": 0.231,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.231,
+            "photo": 0.0
+          },
+          "dots L5": {
+            "tasks": 11,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L6": {
+            "tasks": 23,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 14,
+            "with_image": 0.857,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.857,
+            "photo": 1.0
+          },
+          "L3": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 0.625
+          },
+          "L4": {
+            "tasks": 13,
+            "with_image": 0.231,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.231,
+            "photo": 0.0
+          },
+          "L5": {
+            "tasks": 11,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L6": {
+            "tasks": 23,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        },
+        "line": {
+          "horizontal": {
+            "tasks": 42,
+            "with_image": 0.452,
+            "blind": 0.0,
+            "photo_tasks": 42,
+            "clean_of_photographed": 0.452,
+            "photo": 0.452
+          },
+          "vertical": {
+            "tasks": 48,
+            "with_image": 0.5,
+            "blind": 0.0,
+            "photo_tasks": 48,
+            "clean_of_photographed": 0.5,
+            "photo": 0.438
+          }
+        },
+        "points": {
+          "140-160": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 0.625
+          },
+          "25-35": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "280-320": {
+            "tasks": 13,
+            "with_image": 0.231,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.231,
+            "photo": 0.0
+          },
+          "480-550": {
+            "tasks": 11,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "60-80": {
+            "tasks": 14,
+            "with_image": 0.857,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.857,
+            "photo": 1.0
+          },
+          "750-850": {
+            "tasks": 23,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        }
+      },
+      "guessable": [],
+      "unsolved": [
+        "counting-000001-count_side",
+        "counting-000011-count_side",
+        "counting-000013-count_side",
+        "counting-000025-count_side",
+        "counting-000026-count_side",
+        "counting-000028-count_side",
+        "counting-000030-count_side",
+        "counting-000031-count_side",
+        "counting-000035-count_side",
+        "counting-000038-count_side",
+        "counting-000040-count_side",
+        "counting-000041-count_side",
+        "counting-000042-count_side",
+        "counting-000045-count_side",
+        "counting-000049-count_side",
+        "counting-000052-count_side",
+        "counting-000057-count_side",
+        "counting-000062-count_side",
+        "counting-000063-count_side",
+        "counting-000064-count_side",
+        "counting-000065-count_side",
+        "counting-000066-count_side",
+        "counting-000067-count_side",
+        "counting-000069-count_side",
+        "counting-000071-count_side",
+        "counting-000072-count_side",
+        "counting-000076-count_side",
+        "counting-000078-count_side",
+        "counting-000079-count_side",
+        "counting-000081-count_side",
+        "counting-000082-count_side",
+        "counting-000084-count_side",
+        "counting-000085-count_side",
+        "counting-000088-count_side",
+        "counting-000090-count_side",
+        "counting-000091-count_side",
+        "counting-000093-count_side",
+        "counting-000117-count_side",
+        "counting-000118-count_side",
+        "counting-000125-count_side",
+        "counting-000128-count_side",
+        "counting-000134-count_side",
+        "counting-000136-count_side",
+        "counting-000138-count_side",
+        "counting-000139-count_side",
+        "counting-000141-count_side",
+        "counting-000142-count_side"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.2533,
+      "spent_this_run_usd": 0.0,
+      "sample": 90,
+      "seed": 0
+    },
+    "claude-sonnet-5-5 (high effort)": {
+      "tasks": 90,
+      "with_image": {
+        "correct": 57,
+        "of": 90
+      },
+      "blind": {
+        "correct": 0,
+        "of": 90
+      },
+      "blind_open_ended": {
+        "correct": 0,
+        "of": 90
+      },
+      "pairs": {
+        "both_correct": 52,
+        "of": 90
+      },
+      "photos": {
+        "of": 90,
+        "clean_correct": 57,
+        "photo_correct": 42,
+        "lost": [
+          "counting-000008-count_side",
+          "counting-000026-count_side",
+          "counting-000031-count_side",
+          "counting-000036-count_side",
+          "counting-000037-count_side",
+          "counting-000038-count_side",
+          "counting-000042-count_side",
+          "counting-000063-count_side",
+          "counting-000076-count_side",
+          "counting-000084-count_side",
+          "counting-000085-count_side",
+          "counting-000086-count_side",
+          "counting-000088-count_side",
+          "counting-000132-count_side",
+          "counting-000136-count_side"
+        ]
+      },
+      "by_template": {
+        "count_side": {
+          "tasks": 90,
+          "with_image": 0.633,
+          "blind": 0.0,
+          "photo_tasks": 90,
+          "clean_of_photographed": 0.633,
+          "photo": 0.467,
+          "always_guess": 0.033
+        }
+      },
+      "by_skill": {
+        "count many": {
+          "tasks": 90,
+          "with_image": 0.633,
+          "blind": 0.0,
+          "photo_tasks": 90,
+          "clean_of_photographed": 0.633,
+          "photo": 0.467
+        }
+      },
+      "by_facet": {
+        "count": {
+          "100-400": {
+            "tasks": 21,
+            "with_image": 0.81,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 0.81,
+            "photo": 0.381
+          },
+          "400+": {
+            "tasks": 34,
+            "with_image": 0.147,
+            "blind": 0.0,
+            "photo_tasks": 34,
+            "clean_of_photographed": 0.147,
+            "photo": 0.0
+          },
+          "under 100": {
+            "tasks": 35,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 35,
+            "clean_of_photographed": 1.0,
+            "photo": 0.971
+          }
+        },
+        "difficulty": {
+          "dots L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L2": {
+            "tasks": 14,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 1.0,
+            "photo": 0.929
+          },
+          "dots L3": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 0.75
+          },
+          "dots L4": {
+            "tasks": 13,
+            "with_image": 0.769,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.769,
+            "photo": 0.154
+          },
+          "dots L5": {
+            "tasks": 11,
+            "with_image": 0.273,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.273,
+            "photo": 0.0
+          },
+          "dots L6": {
+            "tasks": 23,
+            "with_image": 0.087,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.087,
+            "photo": 0.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 14,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 1.0,
+            "photo": 0.929
+          },
+          "L3": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 0.75
+          },
+          "L4": {
+            "tasks": 13,
+            "with_image": 0.769,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.769,
+            "photo": 0.154
+          },
+          "L5": {
+            "tasks": 11,
+            "with_image": 0.273,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.273,
+            "photo": 0.0
+          },
+          "L6": {
+            "tasks": 23,
+            "with_image": 0.087,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.087,
+            "photo": 0.0
+          }
+        },
+        "line": {
+          "horizontal": {
+            "tasks": 42,
+            "with_image": 0.619,
+            "blind": 0.0,
+            "photo_tasks": 42,
+            "clean_of_photographed": 0.619,
+            "photo": 0.476
+          },
+          "vertical": {
+            "tasks": 48,
+            "with_image": 0.646,
+            "blind": 0.0,
+            "photo_tasks": 48,
+            "clean_of_photographed": 0.646,
+            "photo": 0.458
+          }
+        },
+        "points": {
+          "140-160": {
+            "tasks": 8,
+            "with_image": 0.875,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.875,
+            "photo": 0.75
+          },
+          "25-35": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "280-320": {
+            "tasks": 13,
+            "with_image": 0.769,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 0.769,
+            "photo": 0.154
+          },
+          "480-550": {
+            "tasks": 11,
+            "with_image": 0.273,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.273,
+            "photo": 0.0
+          },
+          "60-80": {
+            "tasks": 14,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 1.0,
+            "photo": 0.929
+          },
+          "750-850": {
+            "tasks": 23,
+            "with_image": 0.087,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.087,
+            "photo": 0.0
+          }
+        }
+      },
+      "guessable": [],
+      "unsolved": [
+        "counting-000001-count_side",
+        "counting-000011-count_side",
+        "counting-000013-count_side",
+        "counting-000025-count_side",
+        "counting-000028-count_side",
+        "counting-000030-count_side",
+        "counting-000035-count_side",
+        "counting-000040-count_side",
+        "counting-000041-count_side",
+        "counting-000045-count_side",
+        "counting-000049-count_side",
+        "counting-000052-count_side",
+        "counting-000057-count_side",
+        "counting-000064-count_side",
+        "counting-000065-count_side",
+        "counting-000066-count_side",
+        "counting-000067-count_side",
+        "counting-000069-count_side",
+        "counting-000071-count_side",
+        "counting-000078-count_side",
+        "counting-000079-count_side",
+        "counting-000081-count_side",
+        "counting-000082-count_side",
+        "counting-000090-count_side",
+        "counting-000093-count_side",
+        "counting-000117-count_side",
+        "counting-000118-count_side",
+        "counting-000125-count_side",
+        "counting-000128-count_side",
+        "counting-000134-count_side",
+        "counting-000138-count_side",
+        "counting-000141-count_side",
+        "counting-000142-count_side"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 4.2894,
+      "spent_this_run_usd": 0.0,
+      "sample": 90,
+      "seed": 0
+    },
+    "claude-opus-5-5 (high effort)": {
+      "tasks": 90,
+      "with_image": {
+        "correct": 67,
+        "of": 90
+      },
+      "blind": {
+        "correct": 0,
+        "of": 90
+      },
+      "blind_open_ended": {
+        "correct": 0,
+        "of": 90
+      },
+      "pairs": {
+        "both_correct": 60,
+        "of": 90
+      },
+      "photos": {
+        "of": 90,
+        "clean_correct": 67,
+        "photo_correct": 52,
+        "lost": [
+          "counting-000008-count_side",
+          "counting-000011-count_side",
+          "counting-000025-count_side",
+          "counting-000038-count_side",
+          "counting-000042-count_side",
+          "counting-000049-count_side",
+          "counting-000063-count_side",
+          "counting-000067-count_side",
+          "counting-000082-count_side",
+          "counting-000090-count_side",
+          "counting-000117-count_side",
+          "counting-000128-count_side",
+          "counting-000134-count_side",
+          "counting-000136-count_side",
+          "counting-000138-count_side"
+        ]
+      },
+      "by_template": {
+        "count_side": {
+          "tasks": 90,
+          "with_image": 0.744,
+          "blind": 0.0,
+          "photo_tasks": 90,
+          "clean_of_photographed": 0.744,
+          "photo": 0.578,
+          "always_guess": 0.033
+        }
+      },
+      "by_skill": {
+        "count many": {
+          "tasks": 90,
+          "with_image": 0.744,
+          "blind": 0.0,
+          "photo_tasks": 90,
+          "clean_of_photographed": 0.744,
+          "photo": 0.578
+        }
+      },
+      "by_facet": {
+        "count": {
+          "100-400": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 0.762
+          },
+          "400+": {
+            "tasks": 34,
+            "with_image": 0.324,
+            "blind": 0.0,
+            "photo_tasks": 34,
+            "clean_of_photographed": 0.324,
+            "photo": 0.029
+          },
+          "under 100": {
+            "tasks": 35,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 35,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "difficulty": {
+          "dots L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L2": {
+            "tasks": 14,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L3": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L4": {
+            "tasks": 13,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 1.0,
+            "photo": 0.615
+          },
+          "dots L5": {
+            "tasks": 11,
+            "with_image": 0.727,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.727,
+            "photo": 0.091
+          },
+          "dots L6": {
+            "tasks": 23,
+            "with_image": 0.13,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.13,
+            "photo": 0.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 14,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L3": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L4": {
+            "tasks": 13,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 1.0,
+            "photo": 0.615
+          },
+          "L5": {
+            "tasks": 11,
+            "with_image": 0.727,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.727,
+            "photo": 0.091
+          },
+          "L6": {
+            "tasks": 23,
+            "with_image": 0.13,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.13,
+            "photo": 0.0
+          }
+        },
+        "line": {
+          "horizontal": {
+            "tasks": 42,
+            "with_image": 0.738,
+            "blind": 0.0,
+            "photo_tasks": 42,
+            "clean_of_photographed": 0.738,
+            "photo": 0.619
+          },
+          "vertical": {
+            "tasks": 48,
+            "with_image": 0.75,
+            "blind": 0.0,
+            "photo_tasks": 48,
+            "clean_of_photographed": 0.75,
+            "photo": 0.542
+          }
+        },
+        "points": {
+          "140-160": {
+            "tasks": 8,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "25-35": {
+            "tasks": 21,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 21,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "280-320": {
+            "tasks": 13,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 13,
+            "clean_of_photographed": 1.0,
+            "photo": 0.615
+          },
+          "480-550": {
+            "tasks": 11,
+            "with_image": 0.727,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.727,
+            "photo": 0.091
+          },
+          "60-80": {
+            "tasks": 14,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "750-850": {
+            "tasks": 23,
+            "with_image": 0.13,
+            "blind": 0.0,
+            "photo_tasks": 23,
+            "clean_of_photographed": 0.13,
+            "photo": 0.0
+          }
+        }
+      },
+      "guessable": [],
+      "unsolved": [
+        "counting-000001-count_side",
+        "counting-000013-count_side",
+        "counting-000028-count_side",
+        "counting-000030-count_side",
+        "counting-000031-count_side",
+        "counting-000035-count_side",
+        "counting-000040-count_side",
+        "counting-000041-count_side",
+        "counting-000045-count_side",
+        "counting-000052-count_side",
+        "counting-000057-count_side",
+        "counting-000064-count_side",
+        "counting-000066-count_side",
+        "counting-000069-count_side",
+        "counting-000071-count_side",
+        "counting-000078-count_side",
+        "counting-000079-count_side",
+        "counting-000081-count_side",
+        "counting-000088-count_side",
+        "counting-000093-count_side",
+        "counting-000118-count_side",
+        "counting-000125-count_side",
+        "counting-000142-count_side"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 7.2912,
+      "spent_this_run_usd": 0.0,
+      "sample": 90,
+      "seed": 0
+    },
+    "gpt-6-luna (high effort)": {
+      "tasks": 30,
+      "with_image": {
+        "correct": 13,
+        "of": 30
+      },
+      "blind": {
+        "correct": 0,
+        "of": 30
+      },
+      "blind_open_ended": {
+        "correct": 0,
+        "of": 30
+      },
+      "pairs": {
+        "both_correct": 12,
+        "of": 30
+      },
+      "photos": {
+        "of": 30,
+        "clean_correct": 13,
+        "photo_correct": 13,
+        "lost": []
+      },
+      "by_template": {
+        "count_side": {
+          "tasks": 30,
+          "with_image": 0.433,
+          "blind": 0.0,
+          "photo_tasks": 30,
+          "clean_of_photographed": 0.433,
+          "photo": 0.433,
+          "always_guess": 0.033
+        }
+      },
+      "by_skill": {
+        "count many": {
+          "tasks": 30,
+          "with_image": 0.433,
+          "blind": 0.0,
+          "photo_tasks": 30,
+          "clean_of_photographed": 0.433,
+          "photo": 0.433
+        }
+      },
+      "by_facet": {
+        "count": {
+          "100-400": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "400+": {
+            "tasks": 11,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "under 100": {
+            "tasks": 16,
+            "with_image": 0.812,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.812,
+            "photo": 0.812
+          }
+        },
+        "difficulty": {
+          "dots L1": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 0.9
+          },
+          "dots L2": {
+            "tasks": 6,
+            "with_image": 0.667,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.667,
+            "photo": 0.667
+          },
+          "dots L3": {
+            "tasks": 2,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L4": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L5": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L6": {
+            "tasks": 8,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 0.9
+          },
+          "L2": {
+            "tasks": 6,
+            "with_image": 0.667,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.667,
+            "photo": 0.667
+          },
+          "L3": {
+            "tasks": 2,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L4": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L5": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L6": {
+            "tasks": 8,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        },
+        "line": {
+          "horizontal": {
+            "tasks": 16,
+            "with_image": 0.438,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.438,
+            "photo": 0.438
+          },
+          "vertical": {
+            "tasks": 14,
+            "with_image": 0.429,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.429,
+            "photo": 0.429
+          }
+        },
+        "points": {
+          "140-160": {
+            "tasks": 2,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "25-35": {
+            "tasks": 10,
+            "with_image": 0.9,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.9,
+            "photo": 0.9
+          },
+          "280-320": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "480-550": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "60-80": {
+            "tasks": 6,
+            "with_image": 0.667,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.667,
+            "photo": 0.667
+          },
+          "750-850": {
+            "tasks": 8,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        }
+      },
+      "guessable": [],
+      "unsolved": [
+        "counting-000010-count_side",
+        "counting-000025-count_side",
+        "counting-000035-count_side",
+        "counting-000037-count_side",
+        "counting-000040-count_side",
+        "counting-000045-count_side",
+        "counting-000064-count_side",
+        "counting-000066-count_side",
+        "counting-000071-count_side",
+        "counting-000078-count_side",
+        "counting-000079-count_side",
+        "counting-000081-count_side",
+        "counting-000084-count_side",
+        "counting-000107-count_side",
+        "counting-000122-count_side",
+        "counting-000124-count_side",
+        "counting-000139-count_side"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 0.1072,
+      "spent_this_run_usd": 0.0898,
+      "sample": 30,
+      "seed": 0
+    },
+    "gpt-6.2-sol (high effort)": {
+      "tasks": 30,
+      "with_image": {
+        "correct": 21,
+        "of": 30
+      },
+      "blind": {
+        "correct": 0,
+        "of": 30
+      },
+      "blind_open_ended": {
+        "correct": 0,
+        "of": 30
+      },
+      "pairs": {
+        "both_correct": 19,
+        "of": 30
+      },
+      "photos": {
+        "of": 30,
+        "clean_correct": 21,
+        "photo_correct": 19,
+        "lost": [
+          "counting-000035-count_side",
+          "counting-000071-count_side"
+        ]
+      },
+      "by_template": {
+        "count_side": {
+          "tasks": 30,
+          "with_image": 0.7,
+          "blind": 0.0,
+          "photo_tasks": 30,
+          "clean_of_photographed": 0.7,
+          "photo": 0.633,
+          "always_guess": 0.033
+        }
+      },
+      "by_skill": {
+        "count many": {
+          "tasks": 30,
+          "with_image": 0.7,
+          "blind": 0.0,
+          "photo_tasks": 30,
+          "clean_of_photographed": 0.7,
+          "photo": 0.633
+        }
+      },
+      "by_facet": {
+        "count": {
+          "100-400": {
+            "tasks": 3,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "400+": {
+            "tasks": 11,
+            "with_image": 0.182,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.182,
+            "photo": 0.0
+          },
+          "under 100": {
+            "tasks": 16,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          }
+        },
+        "difficulty": {
+          "dots L1": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L2": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L3": {
+            "tasks": 2,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L4": {
+            "tasks": 1,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "dots L5": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L6": {
+            "tasks": 8,
+            "with_image": 0.25,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.25,
+            "photo": 0.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L2": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L3": {
+            "tasks": 2,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L4": {
+            "tasks": 1,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "L5": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L6": {
+            "tasks": 8,
+            "with_image": 0.25,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.25,
+            "photo": 0.0
+          }
+        },
+        "line": {
+          "horizontal": {
+            "tasks": 16,
+            "with_image": 0.75,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.75,
+            "photo": 0.625
+          },
+          "vertical": {
+            "tasks": 14,
+            "with_image": 0.643,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.643,
+            "photo": 0.643
+          }
+        },
+        "points": {
+          "140-160": {
+            "tasks": 2,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "25-35": {
+            "tasks": 10,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "280-320": {
+            "tasks": 1,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "480-550": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "60-80": {
+            "tasks": 6,
+            "with_image": 1.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 1.0,
+            "photo": 1.0
+          },
+          "750-850": {
+            "tasks": 8,
+            "with_image": 0.25,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.25,
+            "photo": 0.0
+          }
+        }
+      },
+      "guessable": [],
+      "unsolved": [
+        "counting-000025-count_side",
+        "counting-000040-count_side",
+        "counting-000045-count_side",
+        "counting-000064-count_side",
+        "counting-000066-count_side",
+        "counting-000078-count_side",
+        "counting-000079-count_side",
+        "counting-000081-count_side",
+        "counting-000084-count_side"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 1.7118,
+      "spent_this_run_usd": 1.5614,
+      "sample": 30,
+      "seed": 0
+    },
+    "cerebras/qwen-3.8-27b": {
+      "tasks": 30,
+      "with_image": {
+        "correct": 2,
+        "of": 30
+      },
+      "blind": {
+        "correct": 0,
+        "of": 30
+      },
+      "blind_open_ended": {
+        "correct": 0,
+        "of": 30
+      },
+      "pairs": {
+        "both_correct": 1,
+        "of": 30
+      },
+      "photos": {
+        "of": 30,
+        "clean_correct": 2,
+        "photo_correct": 1,
+        "lost": [
+          "counting-000077-count_side",
+          "counting-000137-count_side"
+        ]
+      },
+      "by_template": {
+        "count_side": {
+          "tasks": 30,
+          "with_image": 0.067,
+          "blind": 0.0,
+          "photo_tasks": 30,
+          "clean_of_photographed": 0.067,
+          "photo": 0.033,
+          "always_guess": 0.033
+        }
+      },
+      "by_skill": {
+        "count many": {
+          "tasks": 30,
+          "with_image": 0.067,
+          "blind": 0.0,
+          "photo_tasks": 30,
+          "clean_of_photographed": 0.067,
+          "photo": 0.033
+        }
+      },
+      "by_facet": {
+        "count": {
+          "100-400": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "400+": {
+            "tasks": 11,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 11,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "under 100": {
+            "tasks": 16,
+            "with_image": 0.125,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.125,
+            "photo": 0.062
+          }
+        },
+        "difficulty": {
+          "dots L1": {
+            "tasks": 10,
+            "with_image": 0.2,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.2,
+            "photo": 0.1
+          },
+          "dots L2": {
+            "tasks": 6,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L3": {
+            "tasks": 2,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L4": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L5": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "dots L6": {
+            "tasks": 8,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        },
+        "level": {
+          "L1": {
+            "tasks": 10,
+            "with_image": 0.2,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.2,
+            "photo": 0.1
+          },
+          "L2": {
+            "tasks": 6,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L3": {
+            "tasks": 2,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L4": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L5": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "L6": {
+            "tasks": 8,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        },
+        "line": {
+          "horizontal": {
+            "tasks": 16,
+            "with_image": 0.062,
+            "blind": 0.0,
+            "photo_tasks": 16,
+            "clean_of_photographed": 0.062,
+            "photo": 0.0
+          },
+          "vertical": {
+            "tasks": 14,
+            "with_image": 0.071,
+            "blind": 0.0,
+            "photo_tasks": 14,
+            "clean_of_photographed": 0.071,
+            "photo": 0.071
+          }
+        },
+        "points": {
+          "140-160": {
+            "tasks": 2,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 2,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "25-35": {
+            "tasks": 10,
+            "with_image": 0.2,
+            "blind": 0.0,
+            "photo_tasks": 10,
+            "clean_of_photographed": 0.2,
+            "photo": 0.1
+          },
+          "280-320": {
+            "tasks": 1,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 1,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "480-550": {
+            "tasks": 3,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 3,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "60-80": {
+            "tasks": 6,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 6,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          },
+          "750-850": {
+            "tasks": 8,
+            "with_image": 0.0,
+            "blind": 0.0,
+            "photo_tasks": 8,
+            "clean_of_photographed": 0.0,
+            "photo": 0.0
+          }
+        }
+      },
+      "guessable": [],
+      "unsolved": [
+        "counting-000010-count_side",
+        "counting-000012-count_side",
+        "counting-000018-count_side",
+        "counting-000024-count_side",
+        "counting-000025-count_side",
+        "counting-000035-count_side",
+        "counting-000037-count_side",
+        "counting-000040-count_side",
+        "counting-000045-count_side",
+        "counting-000055-count_side",
+        "counting-000064-count_side",
+        "counting-000066-count_side",
+        "counting-000071-count_side",
+        "counting-000072-count_side",
+        "counting-000078-count_side",
+        "counting-000079-count_side",
+        "counting-000081-count_side",
+        "counting-000084-count_side",
+        "counting-000091-count_side",
+        "counting-000098-count_side",
+        "counting-000103-count_side",
+        "counting-000107-count_side",
+        "counting-000120-count_side",
+        "counting-000122-count_side",
+        "counting-000124-count_side",
+        "counting-000129-count_side",
+        "counting-000130-count_side",
+        "counting-000139-count_side"
+      ],
+      "reading_precision": null,
+      "errors": 0,
+      "answered_by_fallback": 0,
+      "cost_usd": 1.6049,
+      "spent_this_run_usd": 1.2959,
+      "sample": 30,
+      "seed": 0
+    }
+  }
+}

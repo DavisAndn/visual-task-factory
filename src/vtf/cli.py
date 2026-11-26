@@ -1,6 +1,10 @@
 """Command line.
 
   vtf generate   make a batch of validated tasks
+  vtf pairs      contrast pairs: the same question on a minimally edited image
+  vtf photos     photo twins: the same task re-shot as a phone photo
+  vtf ocr        read every label back with Tesseract
+  vtf audit      a page for a person to check a sample by hand
   vtf models     evaluate Claude on a run, with and without the images
   vtf report     rebuild a run's report.html with any evidence gathered since
   vtf rebuild    re-derive one task from its seed and check it comes out identical
@@ -86,30 +90,40 @@ RunDir = Annotated[Path, typer.Argument(exists=True, file_okay=False, help="A ru
 def models(
     run_dir: RunDir,
     model: Annotated[
-        Optional[list[str]], typer.Option("--model", "-m", help="Claude model id. Repeat the option to compare models.")
+        Optional[list[str]],
+        typer.Option(
+            "--model",
+            "-m",
+            help="Model id: a Claude model, gpt-... for OpenAI, or cerebras/<id> for a model served by Cerebras. "
+            "Repeat the option to compare models.",
+        ),
     ] = None,
     effort: Annotated[str, typer.Option(help="How hard the model thinks: low, medium, high, xhigh or max.")] = "high",
     sample: Annotated[int, typer.Option(min=0, help="Tasks to ask, spread across templates. 0 asks every task.")] = 0,
     seed: Annotated[int, typer.Option(help="Seed for picking the sample.")] = 0,
     workers: Annotated[int, typer.Option(min=1, max=32, help="Requests in flight at once.")] = 8,
 ) -> None:
-    """Evaluate Claude on a run: each sampled task with its image and without it.
+    """Evaluate models on a run: each sampled task with its image and without it.
 
-    Needs ANTHROPIC_API_KEY, from the environment or a .env file in the current folder. Answers are
-    cached in the run folder, so running again (or adding --sample) only pays for new questions.
+    Needs the key for each model's provider (ANTHROPIC_API_KEY, OPENAI_API_KEY or CEREBRAS_API_KEY),
+    from the environment or a .env file in the current folder. Answers are cached in the run folder,
+    so running again (or adding --sample) only pays for new questions.
     """
-    from .clients import DEFAULT_MODEL, CachedClient, ClaudeClient
+    from .clients import DEFAULT_MODEL, CachedClient, key_present, make_client, provider_of
     from .evidence.models import count_jobs, run_model_checks
     from .validators.models import ClientConfigError
 
     _load_dotenv()
-    if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
-        typer.secho("No API key: set ANTHROPIC_API_KEY, or add ANTHROPIC_API_KEY=... to a .env file here.", fg="red", err=True)
+    names = model or [DEFAULT_MODEL]
+    missing = sorted({k for k in map(key_present, names) if k})
+    if missing:
+        listed = ", ".join(missing)
+        typer.secho(f"No API key: set {listed}, or add {missing[0]}=... to a .env file here.", fg="red", err=True)
         raise typer.Exit(2)
-    if os.environ.get("ANTHROPIC_BASE_URL"):
+    if os.environ.get("ANTHROPIC_BASE_URL") and any(provider_of(n) == "anthropic" for n in names):
         typer.secho(f"Note: requests go to {os.environ['ANTHROPIC_BASE_URL']} (ANTHROPIC_BASE_URL is set).", fg="yellow")
     try:
-        clients = [CachedClient(ClaudeClient(name, effort), run_dir / "model_cache.jsonl") for name in model or [DEFAULT_MODEL]]
+        clients = [CachedClient(make_client(name, effort), run_dir / "model_cache.jsonl") for name in names]
     except ValueError as err:
         typer.secho(str(err), fg="red", err=True)
         raise typer.Exit(2) from None
@@ -127,6 +141,9 @@ def models(
         typer.echo(f"  without it         {_share(m['blind'])}  (open-ended only: {_share(m['blind_open_ended'])})")
         if m["pairs"]["of"]:
             typer.echo(f"  contrast pairs     {m['pairs']['both_correct']}/{m['pairs']['of']} with both answers right")
+        if m.get("photos", {}).get("of"):
+            p = m["photos"]
+            typer.echo(f"  phone photos       {p['photo_correct']}/{p['of']} (the same tasks clean: {p['clean_correct']}/{p['of']})")
         if m.get("reading_precision"):
             p = m["reading_precision"]
             typer.echo(f"  reading error      median {p['median_error']:.1%}, 90% within {p['p90_error']:.1%} (unprinted values)")
@@ -149,7 +166,7 @@ def pairs(
     total = sum(1 for _ in read_tasks(run_dir / "tasks.jsonl"))
     with typer.progressbar(length=total, label="Pairing") as bar:
         summary = make_pairs(run_dir, share, seed, progress=bar.update)
-    edit = f"; median edit {summary['median_edit']:.0%} of the value axis" if summary["median_edit"] else ""
+    edit = f"; median edit {summary['median_edit']:.0%} of the scale" if summary["median_edit"] else ""
     typer.echo(f"Paired {summary['pairs']} of {summary['tasks']} tasks{edit}.")
     for template, row in summary["by_template"].items():
         typer.echo(f"  {row['pairs']:>4}/{row['tasks']:<4} {template}")
@@ -158,9 +175,30 @@ def pairs(
 
 
 @app.command()
+def photos(
+    run_dir: RunDir,
+    share: Annotated[float, typer.Option(min=0.0, max=1.0, help="Share of the run's images to photograph.")] = 1.0,
+    seed: Annotated[int, typer.Option(help="Seed for picking images and the camera settings.")] = 0,
+) -> None:
+    """Make photo twins: each task re-shot as a phone photo (angle, glare, blur, JPEG), same answer."""
+    from .core.capture import make_photos
+    from .core.runs import read_tasks
+
+    total = sum(1 for _ in read_tasks(run_dir / "tasks.jsonl"))
+    with typer.progressbar(length=total, label="Photographing") as bar:
+        summary = make_photos(run_dir, share, seed, progress=bar.update)
+    typer.echo(f"Made {summary['photos']} photo twins of {summary['tasks']} tasks.")
+    for reason, count in summary["skipped"].items():
+        typer.echo(f"  skipped {count:>4}  {reason}")
+    typer.echo(f"Photos: {run_dir / 'photos.jsonl'}")
+    typer.echo(f"Report: {rebuild_report(run_dir)}")
+
+
+@app.command()
 def ocr(
     run_dir: RunDir,
     workers: Annotated[int, typer.Option(min=1, max=32, help="OCR processes at once.")] = 8,
+    photo: Annotated[bool, typer.Option("--photos", help="Read the labels from the photo twins (vtf photos).")] = False,
 ) -> None:
     """Read back every label the run's tasks depend on with Tesseract, independently of the renderer."""
     from .core.runs import read_tasks
@@ -169,17 +207,16 @@ def ocr(
     if tesseract_path() is None:
         typer.secho("Tesseract is not installed. macOS: brew install tesseract · Ubuntu: apt install tesseract-ocr", fg="red", err=True)
         raise typer.Exit(2)
-    from .families import get_family
+    from .core.capture import task_view
 
-    tasks = read_tasks(run_dir / "tasks.jsonl")
+    tasks = read_tasks(run_dir / ("photos.jsonl" if photo else "tasks.jsonl"))
     total = 0
     for image in {t.image: t for t in tasks}.values():
-        family = get_family(image.family)
-        _, layout = family.render(family.scene_from_dict(image.scene))
+        _, layout = task_view(image)
         ids = {i.element_id for t in tasks if t.image == image.image for ref in t.depends_on for i in layout.find(ref) if i.kind == "text"}
         total += len(ids)
     with typer.progressbar(length=total, label="Reading") as bar:
-        summary = run_ocr(run_dir, workers, progress=bar.update)
+        summary = run_ocr(run_dir, workers, progress=bar.update, photos=photo)
     rate = summary["read_back"] / summary["labels"] if summary["labels"] else 0
     typer.echo(f"{summary['engine']} read back {summary['read_back']} of {summary['labels']} labels ({rate:.1%}).")
     typer.echo(f"Tasks with every label read back: {summary['tasks_fully_read_back']} of {summary['tasks']}.")
@@ -197,12 +234,13 @@ def audit(
     import_file: Annotated[
         Optional[Path], typer.Option("--import", exists=True, dir_okay=False, help="Results file downloaded from audit.html.")
     ] = None,
+    photo: Annotated[bool, typer.Option("--photos", help="Audit the photo twins (vtf photos) instead.")] = False,
 ) -> None:
     """Human audit. Without --import: write audit.html to review a sample blind. With it: score the results."""
     from .evidence.audit import build_audit, import_audit
 
     if import_file is None:
-        path = build_audit(run_dir, n, seed, targeted)
+        path = build_audit(run_dir, n, seed, targeted, photos=photo)
         typer.echo(f"Audit page: {path}")
         typer.echo("Open it in a browser, judge the tasks, click Download results, then run:")
         typer.echo(f"  vtf audit {run_dir} --import <downloaded file>")
@@ -233,7 +271,7 @@ def compare(
     first: RunDir,
     second: Annotated[Path, typer.Argument(exists=True, file_okay=False, help="Another run folder.")],
 ) -> None:
-    """Check two runs hold the same tasks and pairs (pixel hashes aside); exit 1 if they don't."""
+    """Check two runs hold the same tasks, pairs and photos (pixel hashes aside); exit 1 if they don't."""
     from .core.runs import compare_runs
 
     differences = compare_runs(first, second)
@@ -241,7 +279,7 @@ def compare(
         for line in differences:
             typer.secho(line, fg="red")
         raise typer.Exit(1)
-    typer.echo(f"{first} and {second} hold the same tasks and pairs.")
+    typer.echo(f"{first} and {second} hold the same tasks, pairs and photos.")
 
 
 @app.command()

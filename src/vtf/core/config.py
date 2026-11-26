@@ -17,6 +17,7 @@ VALIDATION_DEFAULTS: dict[str, Any] = {
     "clean_text": True,  # reject images where any two pieces of text collide, used by the question or not
     "visual_gap": 0.05,  # without printed values, deciding gaps must exceed this share of the axis
     "max_relative_tolerance": 0.2,  # numbers read off an axis must be readable to within this share
+    "min_feature_px": 4.0,  # scale ticks, gaps between parts...: the finest detail an answer may hinge on
     "dedup_max_hamming": 8,  # image-hash distance at or below which two images are near-copies
     "determinism_sample": 0.1,  # share of scenes rebuilt from their seed to confirm identical output
 }
@@ -34,13 +35,15 @@ BALANCE_DEFAULTS: dict[str, Any] = {
 def load_config(path: Path | None, family: Family) -> dict[str, Any]:
     cfg: dict[str, Any] = {
         "family": family.name,
-        "questions_per_scene": 3,
+        "questions_per_scene": getattr(family, "questions_per_scene", 3),
         "max_scenes": None,
         "templates": {t.id: t.weight for t in family.templates},
         "scene": copy.deepcopy(family.defaults),
         "validation": dict(VALIDATION_DEFAULTS),
         "balance": dict(BALANCE_DEFAULTS),
     }
+    # A family can tune a validation default for its images (see each family's `validation`).
+    cfg["validation"].update(getattr(family, "validation", {}))
     if path is not None:
         overrides = yaml.safe_load(Path(path).read_text()) or {}
         overrides.pop("family", None)

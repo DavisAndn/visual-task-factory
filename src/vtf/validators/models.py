@@ -11,16 +11,19 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
-from ..core.schema import Answer, GateResult, Task
+from ..core.schema import Answer, GateResult, Task, clock_gap, clock_minutes, set_members
 
 FORMAT = {
     "integer": "Reply with just the number.",
     "number": "Reply with just the number.",
     "label": "Reply with just the name, exactly as it is written in the image.",
     "yes_no": "Reply with just yes or no.",
+    "set": "Reply with just the names as written in the image, separated by commas, or none.",
+    "time": "Reply with just the time, as h:mm.",
 }
 _NUMBER = re.compile(r"-?\d[\d,]*(?:\.\d+)?|-?\.\d+")
 _TAG = re.compile(r"<[^>]*>")
+_ASIDE = re.compile(r"\([^()]*\)")
 
 
 def final_answer(reply: str) -> str:
@@ -28,9 +31,13 @@ def final_answer(reply: str) -> str:
 
     Asked for just the answer, models still sometimes show their working first ("335 - 238 = 97",
     then "97"), so scoring reads the last non-empty line, after its last "=", with markup removed.
+    A remark in brackets after the answer ("**A7** (best estimate; the cables cross tightly)") is
+    dropped too, unless the answer itself is in brackets.
     """
     lines = [line.strip() for line in _TAG.sub(" ", reply).splitlines() if line.strip()]
-    return lines[-1].rsplit("=", 1)[-1] if lines else ""
+    last = lines[-1].rsplit("=", 1)[-1] if lines else ""
+    trimmed = _ASIDE.sub(" ", last).strip()
+    return trimmed if re.search(r"[A-Za-z0-9]", trimmed) else last
 
 
 @dataclass
@@ -66,6 +73,11 @@ def blind_prompt(task: Task) -> str:
 
 def score_response(answer: Answer, reply: str) -> bool:
     """Whether a model's free-text reply matches the answer (numbers within tolerance)."""
+    if answer.type == "set":
+        return named_in(answer, final_answer(reply)) == set_members(answer)
+    if answer.type == "time":
+        got, want = clock_minutes(final_answer(reply)), clock_minutes(str(answer.value))
+        return got is not None and want is not None and clock_gap(got, want) <= answer.tolerance + 1e-9
     text = final_answer(reply).strip().lower().replace("−", "-")
     if answer.type == "yes_no":
         word = re.match(r"[^a-z]*([a-z]+)", text)  # skip markdown or quotes before the first word
@@ -77,6 +89,12 @@ def score_response(answer: Answer, reply: str) -> bool:
         value = float(match.group(0).replace(",", ""))
         return abs(value - float(answer.value)) <= answer.tolerance + 1e-9
     return _normalize(text) == _normalize(str(answer.value))
+
+
+def named_in(answer: Answer, line: str) -> set[str]:
+    """Which of a set answer's possible names a reply line gives (none, if it says none)."""
+    options = answer.options or sorted(set_members(answer))
+    return {name for name in options if re.search(rf"(?<![A-Za-z0-9]){re.escape(name)}(?![A-Za-z0-9])", line)}
 
 
 def _normalize(text: str) -> str:

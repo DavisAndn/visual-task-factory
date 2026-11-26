@@ -30,15 +30,23 @@ jobs:
       - name: Tests
         run: uv run pytest -v 2>&1 | tee pytest.log
 
-      # The committed samples must be what the code makes from their seeds: the same tasks and pairs.
+      # The committed samples must be what the code makes from their seeds: the same tasks, pairs and photos.
       - name: Committed samples regenerate
         run: |
           uv run vtf generate --n 300 --seed 42 --out out/standard | tee generate-standard.log
           uv run vtf pairs out/standard
+          uv run vtf photos out/standard
           uv run vtf generate --config configs/charts-hard.yaml --n 150 --seed 7 --out out/hard | tee generate-hard.log
           uv run vtf pairs out/hard
           uv run vtf compare out/standard samples/charts-seed42 | tee samples-match.log
           uv run vtf compare out/hard samples/charts-hard-seed7 | tee -a samples-match.log
+          for spec in instruments:300 connections:300 counting:150; do
+            family=${spec%%:*}; n=${spec##*:}
+            uv run vtf generate --family $family --n $n --seed 42 --out out/$family | tee generate-$family.log
+            uv run vtf pairs out/$family
+            uv run vtf photos out/$family
+            uv run vtf compare out/$family samples/$family-seed42 | tee -a samples-match.log
+          done
 
       - name: Sample run with pairs and OCR read-back
         run: |

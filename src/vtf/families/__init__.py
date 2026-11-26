@@ -4,8 +4,11 @@ from __future__ import annotations
 
 from ..core.family import Family
 from .charts import ChartsFamily
+from .connections import ConnectionsFamily
+from .counting import CountingFamily
+from .instruments import InstrumentsFamily
 
-FAMILIES: dict[str, Family] = {family.name: family for family in (ChartsFamily(),)}
+FAMILIES: dict[str, Family] = {family.name: family for family in (ChartsFamily(), InstrumentsFamily(), ConnectionsFamily(), CountingFamily())}
 
 
 def get_family(name: str) -> Family:

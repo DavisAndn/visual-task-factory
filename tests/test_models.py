@@ -111,6 +111,43 @@ def test_claude_request_puts_the_image_first_and_sends_no_sampling_params(monkey
         ClaudeClient("claude-opus-5-5", "extreme")
 
 
+def test_model_ids_pick_the_provider_and_the_request_shape(monkeypatch, tmp_path):
+    from vtf.clients import ChatCompletionsClient, key_present, make_client, provider_of
+
+    assert [provider_of(m) for m in ("claude-opus-5-5", "gpt-6.1", "openai/o9", "cerebras/gemma-4-31b")] == [
+        "anthropic", "openai", "openai", "cerebras"]
+    monkeypatch.delenv("CEREBRAS_API_KEY", raising=False)
+    assert key_present("cerebras/gemma-4-31b") == "CEREBRAS_API_KEY"
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    monkeypatch.setenv("CEREBRAS_API_KEY", "test-key")
+    assert key_present("gpt-6.1") is None and isinstance(make_client("claude-haiku-5-5"), ClaudeClient)
+    image = tmp_path / "a.jpg"
+    image.write_bytes(b"\xff\xd8 fake")
+    gpt = make_client("gpt-6.1", "high")
+    sent = gpt.request("Which bar is tallest?", image)
+    system, user = sent["messages"]
+    assert system["role"] == "system" and sent["model"] == "gpt-6.1" and sent["reasoning_effort"] == "high"
+    picture = user["content"][0]["image_url"]
+    assert picture["url"].startswith("data:image/jpeg;base64,") and picture["detail"] == "high"
+    assert user["content"][-1] == {"type": "text", "text": "Which bar is tallest?"}
+    gemma = ChatCompletionsClient("cerebras/gemma-4-31b")
+    sent = gemma.request("Which bar is tallest?", None)
+    assert sent["model"] == "gemma-4-31b" and "reasoning_effort" not in sent and len(sent["messages"][1]["content"]) == 1
+    assert gemma.name == "cerebras/gemma-4-31b" and gpt.name == "gpt-6.1 (high effort)"
+    assert gemma.signature != ChatCompletionsClient("cerebras/qwen-3.8-27b").signature
+
+
+def test_cost_uses_the_longest_matching_price(monkeypatch):
+    from vtf import clients
+
+    monkeypatch.setitem(clients.PRICES, "gpt-test", (1.0, 10.0))
+    dated = Reply(text="4", model="gpt-test-2026-10-01", input_tokens=1_000_000, output_tokens=100_000)
+    assert clients.cost_usd(dated) == pytest.approx(2.0)
+    opus = Reply(text="4", model="claude-opus-5-5", input_tokens=1_000_000, output_tokens=0)
+    assert clients.cost_usd(opus) == pytest.approx(4.0)  # not claude-opus-5's price
+    assert clients.cost_usd(Reply(text="4", model="unknown-model", input_tokens=5)) == 0.0
+
+
 def test_report_shows_the_model_evaluation(run_dir):
     from vtf.report import rebuild_report
 
@@ -118,3 +155,28 @@ def test_report_shows_the_model_evaluation(run_dir):
     run_model_checks(run_dir, [ScriptedClient(tasks, name="report-model", correct=False)], workers=4)
     page = rebuild_report(run_dir).read_text()
     assert "Model evaluation" in page and "report-model answered: wrong" in page
+
+
+def test_fallback_count_sees_through_the_cache_and_dated_names(run_dir, tmp_path):
+    tasks = read_tasks(run_dir / "tasks.jsonl")
+
+    class Dated(ScriptedClient):
+        api_model = "gpt-test"
+
+        def ask(self, prompt, image_path):
+            reply = super().ask(prompt, image_path)
+            reply.model = "gpt-test-2026-10-01" if image_path is not None else "other-model"
+            return reply
+
+    client = CachedClient(Dated(tasks, name="dated"), tmp_path / "cache.jsonl")
+    summary = run_model_checks(run_dir, [client], workers=2)["models"]["dated"]
+    blind_replies = summary["blind"]["of"]
+    assert summary["answered_by_fallback"] == blind_replies  # the dated snapshot isn't a fallback; "other-model" is
+
+
+def test_each_model_keeps_its_own_sample(run_dir):
+    tasks = read_tasks(run_dir / "tasks.jsonl")
+    run_model_checks(run_dir, [ScriptedClient(tasks, name="everything")], workers=2)
+    summary = run_model_checks(run_dir, [ScriptedClient(tasks, name="few")], sample=3, workers=2)
+    assert summary["models"]["few"]["sample"] == 3
+    assert summary["models"]["everything"]["sample"] == len(tasks) == summary["sample"]
