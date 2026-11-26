@@ -8,6 +8,9 @@ much is in the picture, and whether the picture was taken with a phone.
 
 Built for Track 2 (Visual Task Factory) of the Innodata AI Hackathon by team Plot Twist.
 
+**Demo video:** [watch it in the browser](https://davisandn.github.io/visual-task-factory/) (four minutes:
+the pitch, then the pipeline running end to end).
+
 ![One task from each kind of image](docs/figures/families.png)
 
 **What it found** with Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5 (high effort) on 990 tasks in four

@@ -11,7 +11,7 @@ on 6 Dec 2026 at 11:55 PM IST.
 | Prototype brief (max 1024 characters) | Below |
 | Technology stack (max 1024 characters) | Below |
 | GitHub public repository link | The repository URL. **Make the repository public before submitting.** |
-| Demo video link | https://github.com/DavisAndn/visual-task-factory/blob/main/docs/demo.mp4 (works once the repository is public) |
+| Demo video link | https://davisandn.github.io/visual-task-factory/ (a GitHub Pages page that plays docs/demo.mp4 in the browser; GitHub's own file view can't play a file this size) |
 | Solution deck | The deck, filled from [deck.md](deck.md), exported as a PDF under 5 MB |
 
 ### Prototype brief (965 characters)

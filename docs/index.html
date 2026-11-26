@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual Task Factory · demo</title>
+<meta name="description" content="Image questions whose answers are proven, not labelled, and two dials that find where each vision model breaks. Team Plot Twist, Innodata AI Hackathon, Track 2.">
+<meta property="og:title" content="Visual Task Factory">
+<meta property="og:description" content="Proven answers. Real-world pictures. Every model's breaking point.">
+<meta property="og:image" content="https://davisandn.github.io/visual-task-factory/poster.jpg">
+<style>
+  :root { color-scheme: dark; --bg: #0b1222; --ink: #f4f1ea; --muted: #a8b2c6; --accent: #f7ba3e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 56px; }
+  .kicker { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; margin: 0 0 6px; }
+  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 10px; }
+  .lede { color: var(--muted); margin: 0 0 22px; max-width: 760px; }
+  video { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; border-radius: 12px; background: #000; box-shadow: 0 12px 40px rgba(0, 0, 0, .45); }
+  nav { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 20px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">Team Plot Twist · Innodata AI Hackathon · Track 2</p>
+  <h1>Visual Task Factory</h1>
+  <p class="lede">Image questions whose answers are proven, not labelled, and two dials that find where each vision
+    model breaks. A four-minute pitch, with the pipeline running end to end.</p>
+  <video controls preload="metadata" playsinline poster="poster.jpg">
+    <source src="demo.mp4" type="video/mp4">
+    Your browser can't play this video. <a href="demo.mp4">Download it</a> instead.
+  </video>
+  <nav>
+    <a href="https://github.com/DavisAndn/visual-task-factory">Source code on GitHub</a>
+    <a href="https://github.com/DavisAndn/visual-task-factory#readme">How it works and the results</a>
+    <a href="https://github.com/DavisAndn/visual-task-factory/tree/main/samples">Sample task packages</a>
+    <a href="demo.mp4" download>Download the video (31 MB)</a>
+  </nav>
+  <p class="note">Narrated with an ElevenLabs voice, with subtitles. Every number on screen is read from the committed
+    samples' results.</p>
+</main>
+</body>
+</html>
