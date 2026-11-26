@@ -1,0 +1,9 @@
+# Keep secrets, local environments, generated runs and the demo video out of the image.
+.env
+.git
+.venv
+out
+docs
+**/__pycache__
+.pytest_cache
+.DS_Store

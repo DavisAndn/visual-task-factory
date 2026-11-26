@@ -65,3 +65,20 @@ jobs:
             out/ci/pairs_summary.json
             out/ci/ocr_summary.json
             out/ci/report.html
+
+  # Judges run submissions in Docker: build the image and run the pipeline inside it.
+  docker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the image
+        run: docker build -t vtf .
+
+      - name: Generate, pair and photograph a run inside the container
+        run: |
+          mkdir -p out
+          docker run --rm -v "$PWD/out:/app/out" vtf generate --family instruments --n 60 --seed 42 --out out/docker
+          docker run --rm -v "$PWD/out:/app/out" vtf pairs out/docker
+          docker run --rm -v "$PWD/out:/app/out" vtf photos out/docker
+          test -s out/docker/tasks.jsonl && test -s out/docker/photos.jsonl
