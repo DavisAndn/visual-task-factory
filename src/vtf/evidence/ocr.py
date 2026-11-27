@@ -13,6 +13,7 @@ from __future__ import annotations
 import io
 import json
 import math
+import os
 import re
 import shutil
 import subprocess
@@ -109,7 +110,11 @@ def read_text(prepared: Image.Image, digits_only: bool = False) -> str:
     command = [tesseract_path() or "tesseract", "stdin", "stdout", "--psm", "7", "-l", "eng"]
     if digits_only:
         command += ["-c", "tessedit_char_whitelist=0123456789.,%-"]
-    out = subprocess.run(command, input=buffer.getvalue(), capture_output=True, timeout=60)
+    # Labels are read by several workers at once. Tesseract builds that use OpenMP (Ubuntu's and
+    # Debian's) start their own threads per call, which then compete for the same cores and can
+    # stall a read for over a minute, so each call gets one thread. It reads the same text.
+    env = {**os.environ, "OMP_THREAD_LIMIT": "1"}
+    out = subprocess.run(command, input=buffer.getvalue(), capture_output=True, timeout=60, env=env)
     return out.stdout.decode("utf-8", "replace").strip()
 
 
